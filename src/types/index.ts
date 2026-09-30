@@ -49,6 +49,12 @@ export interface ImageSource {
   contributor?: string;
 }
 
+export interface ProductImage {
+  image: string;
+  alt?: string;
+  imageSource?: ImageSource;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -61,6 +67,7 @@ export interface Product {
   barcode?: string;
   image?: string; // Optional local image e.g. "/images/products/slug.webp"
   imageSource?: ImageSource;
+  imageGallery?: ProductImage[];
   buyUrl: string;
   skinTypes: ('oily' | 'dry' | 'combination' | 'sensitive' | 'normal')[];
   targetedConcerns: string[];

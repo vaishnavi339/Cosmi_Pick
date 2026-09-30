@@ -8,6 +8,8 @@ import {
   AlertTriangle,
   CheckCircle2,
   Info,
+  ChevronLeft,
+  ChevronRight,
   ChevronDown,
   ChevronUp,
   FileText,
@@ -22,6 +24,7 @@ interface SearchResultItem {
   name: string;
   brand: string;
   imageUrl: string;
+  imageGallery?: string[];
   barcode: string;
   ingredientsText: string;
   category: string;
@@ -53,6 +56,7 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
 
   // Expandable ingredients drawer for each result
   const [expandedIngredients, setExpandedIngredients] = useState<Record<string, boolean>>({});
+  const [activePhotos, setActivePhotos] = useState<Record<string, number>>({});
 
   const toggleExpand = (id: string) => {
     setExpandedIngredients((prev) => ({ ...prev, [id]: !prev[id] }));
@@ -235,6 +239,8 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
               const avoidCheck = checkAvoidIngredients(item.ingredientsText, userAvoidList);
               const actives = detectActives(item.ingredientsText);
               const isExpanded = expandedIngredients[item.id] || false;
+              const photos = [item.imageUrl, ...(item.imageGallery || [])].filter(Boolean);
+              const activePhoto = Math.min(activePhotos[item.id] || 0, Math.max(0, photos.length - 1));
 
               return (
                 <div
@@ -243,13 +249,13 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
                 >
                   <div className="flex flex-col sm:flex-row items-start gap-4">
                     {/* Clean White Rounded Tile for Image */}
-                    <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white border border-[#E8D3C0]/80 p-2 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                    <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-white border border-[#E8D3C0]/80 p-2 flex-shrink-0 flex items-center justify-center overflow-hidden shadow-sm">
                       {item.imageUrl ? (
                         <Image
-                          src={item.imageUrl}
-                          alt={`${item.brand} ${item.name}`}
+                          src={photos[activePhoto]}
+                          alt={`${item.brand} ${item.name}, product photo ${activePhoto + 1} of ${photos.length}`}
                           fill
-                          sizes="96px"
+                          sizes="128px"
                           loading="lazy"
                           className="object-contain p-1.5"
                         />
@@ -257,6 +263,27 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
                         <div className="text-center">
                           <span className="text-[9px] uppercase font-bold text-[#7E636E] block">Photo</span>
                           <span className="text-[8px] text-[#B59FA9]">Unavailable</span>
+                        </div>
+                      )}
+                      {photos.length > 1 && (
+                        <div className="absolute inset-x-2 bottom-2 z-10 flex items-center justify-between rounded-full bg-white/90 px-2 py-1 shadow-sm backdrop-blur-sm">
+                          <button
+                            type="button"
+                            aria-label="Show previous product photo"
+                            onClick={() => setActivePhotos((state) => ({ ...state, [item.id]: (activePhoto - 1 + photos.length) % photos.length }))}
+                            className="text-[#3B1F2B] hover:text-[#CE7F79]"
+                          >
+                            <ChevronLeft className="h-3.5 w-3.5" />
+                          </button>
+                          <span className="text-[9px] font-semibold tabular-nums text-[#3B1F2B]">{activePhoto + 1} / {photos.length}</span>
+                          <button
+                            type="button"
+                            aria-label="Show next product photo"
+                            onClick={() => setActivePhotos((state) => ({ ...state, [item.id]: (activePhoto + 1) % photos.length }))}
+                            className="text-[#3B1F2B] hover:text-[#CE7F79]"
+                          >
+                            <ChevronRight className="h-3.5 w-3.5" />
+                          </button>
                         </div>
                       )}
                     </div>

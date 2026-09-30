@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Product } from '@/types';
 
 interface Props {
@@ -21,6 +21,13 @@ export function ProductVisual({
   showAttribution = true,
 }: Props) {
   const [imageError, setImageError] = useState(false);
+  const photos = [
+    ...(product.image ? [{ image: product.image, imageSource: product.imageSource }] : []),
+    ...(product.imageGallery || []),
+  ];
+  const [activePhoto, setActivePhoto] = useState(0);
+  const safeActivePhoto = Math.min(activePhoto, Math.max(photos.length - 1, 0));
+  const currentPhoto = photos[safeActivePhoto] || { image: '', imageSource: product.imageSource };
 
   // Soft brand-tinted palette for intentional non-photo fallback design
   const getBrandTint = (brand: string) => {
@@ -49,8 +56,9 @@ export function ProductVisual({
     fill: 'w-full h-full aspect-square',
   };
 
-  const hasImage = Boolean(product.image && !imageError);
+  const hasImage = Boolean(currentPhoto?.image && !imageError);
   const brandTintClass = getBrandTint(product.brand);
+  const showGalleryControls = photos.length > 1 && size !== 'sm' && size !== 'md';
 
   return (
     <div
@@ -62,8 +70,8 @@ export function ProductVisual({
       {hasImage ? (
         <div className="relative w-full h-full rounded-2xl bg-white p-2.5 sm:p-3 border border-[#E8D3C0]/80 shadow-sm flex items-center justify-center overflow-hidden">
           <Image
-            src={product.image!}
-            alt={`${product.brand} ${product.name}`}
+            src={currentPhoto.image}
+            alt={currentPhoto.alt || `${product.brand} ${product.name}, photo ${safeActivePhoto + 1} of ${photos.length}`}
             fill
             sizes={
               size === 'hero'
@@ -77,15 +85,71 @@ export function ProductVisual({
             className="object-contain p-2 rounded-xl transition-transform duration-300 group-hover/visual:scale-105"
           />
 
+          {showGalleryControls && (
+            <>
+              <span className="absolute top-2 right-2 z-10 rounded-full bg-white/90 dark:bg-[#180F14]/90 px-2 py-1 text-[9px] font-semibold text-[#3B1F2B] dark:text-[#FAF3F0] shadow-sm">
+                {String(safeActivePhoto + 1).padStart(2, '0')} / {String(photos.length).padStart(2, '0')}
+              </span>
+              <button
+                type="button"
+                aria-label="Show previous product photo"
+                onMouseDown={(event) => event.stopPropagation()}
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  setImageError(false);
+                  setActivePhoto((index) => (index - 1 + photos.length) % photos.length);
+                }}
+                className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/5 bg-white/90 p-1.5 text-[#3B1F2B] shadow-md transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8C4A5A]"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <button
+                type="button"
+                aria-label="Show next product photo"
+                onMouseDown={(event) => event.stopPropagation()}
+                onClick={(event) => {
+                  event.preventDefault();
+                  event.stopPropagation();
+                  setImageError(false);
+                  setActivePhoto((index) => (index + 1) % photos.length);
+                }}
+                className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/5 bg-white/90 p-1.5 text-[#3B1F2B] shadow-md transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8C4A5A]"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+              <div className="absolute bottom-2 left-2 z-10 flex items-center gap-1 rounded-full bg-white/80 dark:bg-[#180F14]/80 px-2 py-1.5 backdrop-blur-sm" aria-label="Choose product photo">
+                {photos.map((photo, index) => (
+                  <button
+                    key={`${photo.image}-${index}`}
+                    type="button"
+                    aria-label={`Show product photo ${index + 1}`}
+                    aria-pressed={safeActivePhoto === index}
+                    onMouseDown={(event) => event.stopPropagation()}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      setImageError(false);
+                      setActivePhoto(index);
+                    }}
+                    className={`h-1.5 rounded-full transition-all ${safeActivePhoto === index ? 'w-4 bg-[#3B1F2B] dark:bg-[#F4D9D6]' : 'w-1.5 bg-[#3B1F2B]/30 dark:bg-white/40 hover:bg-[#3B1F2B]/60'}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+
           {/* Attribution for Open Beauty Facts */}
           {showAttribution && (size === 'lg' || size === 'hero' || size === 'fill') && (
-            <Link
-              href="/credits"
-              title="Photo: Open Beauty Facts contributors, CC BY-SA"
+            <a
+              href={currentPhoto.imageSource?.url || '/credits'}
+              target={currentPhoto.imageSource?.url ? '_blank' : undefined}
+              rel={currentPhoto.imageSource?.url ? 'noopener noreferrer' : undefined}
+              title={`Photo: ${currentPhoto.imageSource?.contributor || 'Open Beauty Facts contributors'} · ${currentPhoto.imageSource?.license || 'CC BY-SA'}`}
               className="absolute bottom-1 right-1.5 z-10 px-1.5 py-0.5 rounded bg-white/90 dark:bg-[#180F14]/90 backdrop-blur-xs text-[8px] sm:text-[9px] font-medium text-[#7E636E] dark:text-[#B59FA9] border border-[#E8D3C0]/50 hover:text-[#3B1F2B] dark:hover:text-[#FAF3F0] transition-colors line-clamp-1 max-w-[90%]"
             >
-              Photo: Open Beauty Facts (CC BY-SA)
-            </Link>
+              Photo: {currentPhoto.imageSource?.contributor || currentPhoto.imageSource?.name || 'Open Beauty Facts contributors'}
+            </a>
           )}
         </div>
       ) : (

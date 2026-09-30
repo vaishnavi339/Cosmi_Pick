@@ -28,7 +28,46 @@
     "description": "Clinical strength serum proven to regulate sebum excretion, fade post-acne dark marks, and soothe facial redness.",
     "volumeOrWeight": "30 ml",
     "badge": "Bestseller",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/min-01.png",
+    "imageSource": {
+      "name": "Minimalist official product catalog",
+      "url": "https://beminimalist.co/products/niacinamide-10-with-matmarine",
+      "license": "Brand product image",
+      "contributor": "Minimalist"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/min-01-view-1.png",
+        "alt": "Minimalist Niacinamide 10% + Zinc 1% Serum, product photo 2",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/niacinamide-10-with-matmarine",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-01-view-2.png",
+        "alt": "Minimalist Niacinamide 10% + Zinc 1% Serum, product photo 3",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/niacinamide-10-with-matmarine",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-01-view-3.png",
+        "alt": "Minimalist Niacinamide 10% + Zinc 1% Serum, product photo 4",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/niacinamide-10-with-matmarine",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "min-02",
@@ -57,7 +96,46 @@
     "description": "Daily gentle exfoliating face wash that clears out deep sebum plugs without stripping the moisture barrier.",
     "volumeOrWeight": "100 ml",
     "badge": "Top Rated",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/min-02.jpg",
+    "imageSource": {
+      "name": "Minimalist official product catalog",
+      "url": "https://beminimalist.co/products/salicylic-lha-2-cleanser",
+      "license": "Brand product image",
+      "contributor": "Minimalist"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/min-02-view-1.png",
+        "alt": "Minimalist Salicylic Acid 2% Face Cleanser, product photo 2",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/salicylic-lha-2-cleanser",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-02-view-2.png",
+        "alt": "Minimalist Salicylic Acid 2% Face Cleanser, product photo 3",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/salicylic-lha-2-cleanser",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-02-view-3.png",
+        "alt": "Minimalist Salicylic Acid 2% Face Cleanser, product photo 4",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/salicylic-lha-2-cleanser",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "min-03",
@@ -86,7 +164,46 @@
     "avoidFlags": [],
     "description": "Rich barrier replenishing cream formulated to instantly calm compromised skin, stop flaking, and restore ceramides.",
     "volumeOrWeight": "50 g",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/min-03.png",
+    "imageSource": {
+      "name": "Minimalist official product catalog",
+      "url": "https://beminimalist.co/products/ceramides-0-3-madecassoside",
+      "license": "Brand product image",
+      "contributor": "Minimalist"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/min-03-view-1.png",
+        "alt": "Minimalist Ceramides 0.3% + Madecassoside Moisturizer, product photo 2",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/ceramides-0-3-madecassoside",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-03-view-2.png",
+        "alt": "Minimalist Ceramides 0.3% + Madecassoside Moisturizer, product photo 3",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/ceramides-0-3-madecassoside",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-03-view-3.png",
+        "alt": "Minimalist Ceramides 0.3% + Madecassoside Moisturizer, product photo 4",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/ceramides-0-3-madecassoside",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "min-04",
@@ -116,7 +233,46 @@
     "description": "Ultra-lightweight invisible sun shield with 4 modern photostable UV filters that leaves zero white cast.",
     "volumeOrWeight": "50 g",
     "badge": "No White Cast",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/min-04.jpg",
+    "imageSource": {
+      "name": "Minimalist official product catalog",
+      "url": "https://beminimalist.co/products/light-fluid-spf-50-sunscreen",
+      "license": "Brand product image",
+      "contributor": "Minimalist"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/min-04-view-1.jpg",
+        "alt": "Minimalist Light Fluid SPF 50 PA++++ Sunscreen, product photo 2",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/light-fluid-spf-50-sunscreen",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-04-view-2.jpg",
+        "alt": "Minimalist Light Fluid SPF 50 PA++++ Sunscreen, product photo 3",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/light-fluid-spf-50-sunscreen",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/min-04-view-3.jpg",
+        "alt": "Minimalist Light Fluid SPF 50 PA++++ Sunscreen, product photo 4",
+        "imageSource": {
+          "name": "Minimalist official product catalog",
+          "url": "https://beminimalist.co/products/light-fluid-spf-50-sunscreen",
+          "contributor": "Minimalist",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "ord-01",
@@ -147,7 +303,15 @@
     "description": "Provides instant multi-depth surface and cellular hydration to plump fine dehydration lines and boost bounce.",
     "volumeOrWeight": "30 ml",
     "badge": "Global Icon",
-    "brandAccentColor": "#64748B"
+    "brandAccentColor": "#64748B",
+    "image": "/images/products/ord-01.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/0769915233506/hyaluronic-acid-2-b5-the-ordinary",
+      "license": "CC BY-SA",
+      "contributor": "smoothie-app"
+    },
+    "imageGallery": []
   },
   {
     "id": "ord-02",
@@ -178,7 +342,15 @@
     ],
     "description": "Multifunctional brightening cream-gel that noticeably targets stubborn erythema, rosacea flushing, and post-breakout dark marks.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#64748B"
+    "brandAccentColor": "#64748B",
+    "image": "/images/products/ord-02.jpg",
+    "imageSource": {
+      "name": "Hencevision",
+      "url": "https://hencevision.com/ja/products/scz102",
+      "license": "Retailer product image",
+      "contributor": "Hencevision"
+    },
+    "imageGallery": []
   },
   {
     "id": "ord-03",
@@ -211,14 +383,26 @@
     "volumeOrWeight": "30 ml",
     "badge": "Eye Hero",
     "brandAccentColor": "#64748B",
-    "image": "/images/products/the-ordinary-caffeine-solution-5pct-and-egcg.webp",
+    "image": "/images/products/ord-03.jpg",
     "barcode": "0769915190670",
     "imageSource": {
       "name": "Open Beauty Facts",
       "url": "https://world.openbeautyfacts.org/product/0769915190670/caffeine-solution-5-egcg-the-ordinary",
       "license": "CC BY-SA",
       "contributor": "jumati"
-    }
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/ord-03-view-1.jpg",
+        "alt": "The Ordinary Caffeine Solution 5% + EGCG, product photo 2",
+        "imageSource": {
+          "name": "Open Beauty Facts",
+          "url": "https://world.openbeautyfacts.org/product/0769915190670/caffeine-solution-5-egcg-the-ordinary",
+          "contributor": "Open Beauty Facts contributors",
+          "license": "CC BY-SA"
+        }
+      }
+    ]
   },
   {
     "id": "cer-01",
@@ -249,14 +433,15 @@
     "volumeOrWeight": "236 ml",
     "badge": "Derm Favorite",
     "brandAccentColor": "#0284C7",
-    "image": "/images/products/cerave-hydrating-facial-cleanser.webp",
+    "image": "/images/products/cer-01.jpg",
     "barcode": "3606000537576",
     "imageSource": {
       "name": "Open Beauty Facts",
       "url": "https://world.openbeautyfacts.org/product/3606000537576/hydrating-facial-cleanser-cerave",
       "license": "CC BY-SA",
       "contributor": "halal-app-chakib"
-    }
+    },
+    "imageGallery": []
   },
   {
     "id": "cer-02",
@@ -285,7 +470,26 @@
     "avoidFlags": [],
     "description": "Lightweight, oil-free moisturizer that provides 24-hour hydration and helps restore the protective skin barrier.",
     "volumeOrWeight": "236 ml",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cer-02.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/3606000560239/moisturizing-lotion-cerave",
+      "license": "CC BY-SA",
+      "contributor": "pakkie"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/cer-02-view-1.jpg",
+        "alt": "CeraVe Daily Moisturizing Lotion, product photo 2",
+        "imageSource": {
+          "name": "Open Beauty Facts",
+          "url": "https://world.openbeautyfacts.org/product/3606000560239/moisturizing-lotion-cerave",
+          "contributor": "Open Beauty Facts contributors",
+          "license": "CC BY-SA"
+        }
+      }
+    ]
   },
   {
     "id": "cer-03",
@@ -315,7 +519,15 @@
     "description": "Ultra-lightweight nighttime cream that calms redness, balances oil production, and repairs lipids while you sleep.",
     "volumeOrWeight": "89 ml",
     "badge": "Night Essential",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cer-03.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/3606000537453/pm-facial-moisturizing-lotion-cerave",
+      "license": "CC BY-SA",
+      "contributor": "openfoodfacts-contributors"
+    },
+    "imageGallery": []
   },
   {
     "id": "csx-01",
@@ -348,7 +560,46 @@
     "description": "Legendary Korean essence that revitalizes damaged, dehydrated skin with intense repair and glass-skin radiance.",
     "volumeOrWeight": "100 ml",
     "badge": "K-Beauty Holy Grail",
-    "brandAccentColor": "#D97706"
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/csx-01.jpg",
+    "imageSource": {
+      "name": "COSRX official product catalog",
+      "url": "https://cosrx.com/products/advanced-snail-96-mucin-power-essence-new-original",
+      "license": "Brand product image",
+      "contributor": "COSRX"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/csx-01-view-1.jpg",
+        "alt": "COSRX Advanced Snail 96 Mucin Power Essence, product photo 2",
+        "imageSource": {
+          "name": "COSRX official product catalog",
+          "url": "https://cosrx.com/products/advanced-snail-96-mucin-power-essence-new-original",
+          "contributor": "COSRX",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/csx-01-view-2.jpg",
+        "alt": "COSRX Advanced Snail 96 Mucin Power Essence, product photo 3",
+        "imageSource": {
+          "name": "COSRX official product catalog",
+          "url": "https://cosrx.com/products/advanced-snail-96-mucin-power-essence-new-original",
+          "contributor": "COSRX",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/csx-01-view-3.jpg",
+        "alt": "COSRX Advanced Snail 96 Mucin Power Essence, product photo 4",
+        "imageSource": {
+          "name": "COSRX official product catalog",
+          "url": "https://cosrx.com/products/advanced-snail-96-mucin-power-essence-new-original",
+          "contributor": "COSRX",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "csx-02",
@@ -376,7 +627,46 @@
     "avoidFlags": [],
     "description": "Gentle chemical exfoliant that dissolves oxidized sebum trapped inside pores and refines coarse skin texture.",
     "volumeOrWeight": "100 ml",
-    "brandAccentColor": "#D97706"
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/csx-02.jpg",
+    "imageSource": {
+      "name": "COSRX official product catalog",
+      "url": "https://cosrx.com/products/bha-blackhead-power-liquid",
+      "license": "Brand product image",
+      "contributor": "COSRX"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/csx-02-view-1.jpg",
+        "alt": "COSRX BHA Blackhead Power Liquid, product photo 2",
+        "imageSource": {
+          "name": "COSRX official product catalog",
+          "url": "https://cosrx.com/products/bha-blackhead-power-liquid",
+          "contributor": "COSRX",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/csx-02-view-2.jpg",
+        "alt": "COSRX BHA Blackhead Power Liquid, product photo 3",
+        "imageSource": {
+          "name": "COSRX official product catalog",
+          "url": "https://cosrx.com/products/bha-blackhead-power-liquid",
+          "contributor": "COSRX",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/csx-02-view-3.jpg",
+        "alt": "COSRX BHA Blackhead Power Liquid, product photo 4",
+        "imageSource": {
+          "name": "COSRX official product catalog",
+          "url": "https://cosrx.com/products/bha-blackhead-power-liquid",
+          "contributor": "COSRX",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "plm-01",
@@ -408,7 +698,46 @@
     "description": "Stable quick-absorbing vitamin C serum engineered to boost cellular glow and fade stubborn sunspots.",
     "volumeOrWeight": "30 ml",
     "badge": "Glow Booster",
-    "brandAccentColor": "#9333EA"
+    "brandAccentColor": "#9333EA",
+    "image": "/images/products/plm-01.jpg",
+    "imageSource": {
+      "name": "Plum official product catalog",
+      "url": "https://plumgoodness.com/products/15-vitamin-c-face-serum-with-mandarin-10ml-copy",
+      "license": "Brand product image",
+      "contributor": "Plum"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/plm-01-view-1.jpg",
+        "alt": "Plum 15% Vitamin C Face Serum with Mandarin, product photo 2",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/15-vitamin-c-face-serum-with-mandarin-10ml-copy",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/plm-01-view-2.jpg",
+        "alt": "Plum 15% Vitamin C Face Serum with Mandarin, product photo 3",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/15-vitamin-c-face-serum-with-mandarin-10ml-copy",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/plm-01-view-3.jpg",
+        "alt": "Plum 15% Vitamin C Face Serum with Mandarin, product photo 4",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/15-vitamin-c-face-serum-with-mandarin-10ml-copy",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "plm-02",
@@ -437,7 +766,46 @@
     ],
     "description": "Mild foaming soap-free wash packed with antioxidants to combat sebum oxidation and control midday shine.",
     "volumeOrWeight": "100 ml",
-    "brandAccentColor": "#9333EA"
+    "brandAccentColor": "#9333EA",
+    "image": "/images/products/plm-02.jpg",
+    "imageSource": {
+      "name": "Plum official product catalog",
+      "url": "https://plumgoodness.com/products/green-tea-pore-cleansing-face-wash-50-ml",
+      "license": "Brand product image",
+      "contributor": "Plum"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/plm-02-view-1.jpg",
+        "alt": "Plum Green Tea Pore Cleansing Face Wash, product photo 2",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/green-tea-pore-cleansing-face-wash-50-ml",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/plm-02-view-2.jpg",
+        "alt": "Plum Green Tea Pore Cleansing Face Wash, product photo 3",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/green-tea-pore-cleansing-face-wash-50-ml",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/plm-02-view-3.jpg",
+        "alt": "Plum Green Tea Pore Cleansing Face Wash, product photo 4",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/green-tea-pore-cleansing-face-wash-50-ml",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "plm-03",
@@ -464,7 +832,46 @@
     "avoidFlags": [],
     "description": "Featherlight cooling gel-cream that sinks in instantly, banishing greasy residue while reinforcing barrier strength.",
     "volumeOrWeight": "50 g",
-    "brandAccentColor": "#9333EA"
+    "brandAccentColor": "#9333EA",
+    "image": "/images/products/plm-03.jpg",
+    "imageSource": {
+      "name": "Plum official product catalog",
+      "url": "https://plumgoodness.com/products/rice-water-2-niacinamide-clear-moisture-gel-cream-7gm-mini-copy",
+      "license": "Brand product image",
+      "contributor": "Plum"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/plm-03-view-1.jpg",
+        "alt": "Plum 2% Niacinamide & Rice Water Clear Moisture Gel, product photo 2",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/2-niacinamide-rice-water-brightening-gel-moisturizer-25-g",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/plm-03-view-2.jpg",
+        "alt": "Plum 2% Niacinamide & Rice Water Clear Moisture Gel, product photo 3",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/2-niacinamide-rice-water-brightening-gel-moisturizer-25-g",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/plm-03-view-3.jpg",
+        "alt": "Plum 2% Niacinamide & Rice Water Clear Moisture Gel, product photo 4",
+        "imageSource": {
+          "name": "Plum official product catalog",
+          "url": "https://plumgoodness.com/products/2-niacinamide-rice-water-brightening-gel-moisturizer-25-g",
+          "contributor": "Plum",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "dnk-01",
@@ -495,7 +902,46 @@
     "description": "Breathable water-light sunscreen that cools flushed skin by 6°F on application with a powdery matte finish.",
     "volumeOrWeight": "50 g",
     "badge": "Cooling Matte",
-    "brandAccentColor": "#F43F5E"
+    "brandAccentColor": "#F43F5E",
+    "image": "/images/products/dnk-01.jpg",
+    "imageSource": {
+      "name": "Dot & Key official product catalog",
+      "url": "https://www.dotandkey.com/products/watermelon-cooling-spf-50-face-sunscreen",
+      "license": "Brand product image",
+      "contributor": "Dot & Key"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/dnk-01-view-1.jpg",
+        "alt": "Dot & Key Watermelon Cooling Sunscreen Matte Fluid SPF 50, product photo 2",
+        "imageSource": {
+          "name": "Dot & Key official product catalog",
+          "url": "https://www.dotandkey.com/products/watermelon-cooling-spf-50-face-sunscreen",
+          "contributor": "Dot & Key",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/dnk-01-view-2.jpg",
+        "alt": "Dot & Key Watermelon Cooling Sunscreen Matte Fluid SPF 50, product photo 3",
+        "imageSource": {
+          "name": "Dot & Key official product catalog",
+          "url": "https://www.dotandkey.com/products/watermelon-cooling-spf-50-face-sunscreen",
+          "contributor": "Dot & Key",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/dnk-01-view-3.jpg",
+        "alt": "Dot & Key Watermelon Cooling Sunscreen Matte Fluid SPF 50, product photo 4",
+        "imageSource": {
+          "name": "Dot & Key official product catalog",
+          "url": "https://www.dotandkey.com/products/watermelon-cooling-spf-50-face-sunscreen",
+          "contributor": "Dot & Key",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "dnk-02",
@@ -526,7 +972,46 @@
     ],
     "description": "Anti-inflammatory green gel packed with titrated Cica to cool stressed skin and shrink active acne overnight.",
     "volumeOrWeight": "60 ml",
-    "brandAccentColor": "#F43F5E"
+    "brandAccentColor": "#F43F5E",
+    "image": "/images/products/dnk-02.jpg",
+    "imageSource": {
+      "name": "Dot & Key official product catalog",
+      "url": "https://www.dotandkey.com/products/cica-calming-skin-renewing-night-gel",
+      "license": "Brand product image",
+      "contributor": "Dot & Key"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/dnk-02-view-1.jpg",
+        "alt": "Dot & Key Barrier Repair Cica Calming Night Gel, product photo 2",
+        "imageSource": {
+          "name": "Dot & Key official product catalog",
+          "url": "https://www.dotandkey.com/products/cica-calming-skin-renewing-night-gel",
+          "contributor": "Dot & Key",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/dnk-02-view-2.jpg",
+        "alt": "Dot & Key Barrier Repair Cica Calming Night Gel, product photo 3",
+        "imageSource": {
+          "name": "Dot & Key official product catalog",
+          "url": "https://www.dotandkey.com/products/cica-calming-skin-renewing-night-gel",
+          "contributor": "Dot & Key",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/dnk-02-view-3.jpg",
+        "alt": "Dot & Key Barrier Repair Cica Calming Night Gel, product photo 4",
+        "imageSource": {
+          "name": "Dot & Key official product catalog",
+          "url": "https://www.dotandkey.com/products/cica-calming-skin-renewing-night-gel",
+          "contributor": "Dot & Key",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "cet-01",
@@ -564,7 +1049,19 @@
       "url": "https://world.openbeautyfacts.org/product/3499320015431/gentle-skin-cleanser-cetaphil",
       "license": "CC BY-SA",
       "contributor": "drizzly7208"
-    }
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/cet-01-view-1.jpg",
+        "alt": "Cetaphil Gentle Skin Cleanser, product photo 2",
+        "imageSource": {
+          "name": "Open Beauty Facts",
+          "url": "https://world.openbeautyfacts.org/product/3499320015431/gentle-skin-cleanser-cetaphil",
+          "contributor": "Open Beauty Facts contributors",
+          "license": "CC BY-SA"
+        }
+      }
+    ]
   },
   {
     "id": "cet-02",
@@ -594,7 +1091,15 @@
     ],
     "description": "Rich, non-greasy emollient cream that seals in intense hydration for 48 hours to soothe severe flaking.",
     "volumeOrWeight": "100 g",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cet-02.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/3499320005678",
+      "license": "CC BY-SA",
+      "contributor": "Open Beauty Facts contributors"
+    },
+    "imageGallery": []
   },
   {
     "id": "dmc-01",
@@ -622,7 +1127,46 @@
     "avoidFlags": [],
     "description": "Formulated by dermatologists to clarify congestion, reduce acne lesions, and balance excess sebum production.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#2563EB"
+    "brandAccentColor": "#2563EB",
+    "image": "/images/products/dmc-01.jpg",
+    "imageSource": {
+      "name": "The Derma Co official product catalog",
+      "url": "https://thedermaco.com/products/10-niacinamide-face-serum-50ml",
+      "license": "Brand product image",
+      "contributor": "The Derma Co"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/dmc-01-view-1.jpg",
+        "alt": "The Derma Co 10% Niacinamide Face Serum with Zinc, product photo 2",
+        "imageSource": {
+          "name": "The Derma Co official product catalog",
+          "url": "https://thedermaco.com/products/10-niacinamide-face-serum-50ml",
+          "contributor": "The Derma Co",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/dmc-01-view-2.jpg",
+        "alt": "The Derma Co 10% Niacinamide Face Serum with Zinc, product photo 3",
+        "imageSource": {
+          "name": "The Derma Co official product catalog",
+          "url": "https://thedermaco.com/products/10-niacinamide-face-serum-50ml",
+          "contributor": "The Derma Co",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/dmc-01-view-3.jpg",
+        "alt": "The Derma Co 10% Niacinamide Face Serum with Zinc, product photo 4",
+        "imageSource": {
+          "name": "The Derma Co official product catalog",
+          "url": "https://thedermaco.com/products/10-niacinamide-face-serum-50ml",
+          "contributor": "The Derma Co",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "dmc-02",
@@ -654,7 +1198,26 @@
     "description": "Blue-light protecting aqua gel with an ultra-lightweight water texture that leaves skin soft and radiant.",
     "volumeOrWeight": "50 g",
     "badge": "Top Seller",
-    "brandAccentColor": "#2563EB"
+    "brandAccentColor": "#2563EB",
+    "image": "/images/products/dmc-02.jpg",
+    "imageSource": {
+      "name": "The Derma Co official product catalog",
+      "url": "https://thedermaco.com/products/1-hyaluronic-sunscreen-aqua-gel-with-spf-50-pa-10g-1",
+      "license": "Brand product image",
+      "contributor": "The Derma Co"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/dmc-02-view-1.jpg",
+        "alt": "The Derma Co 1% Hyaluronic Sunscreen Aqua Gel SPF 50, product photo 2",
+        "imageSource": {
+          "name": "The Derma Co official product catalog",
+          "url": "https://thedermaco.com/products/1-hyaluronic-sunscreen-aqua-gel-with-spf-50-pa-10g-1",
+          "contributor": "The Derma Co",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "lrp-01",
@@ -685,7 +1248,26 @@
     "description": "Multi-purpose soothing treatment clinically shown to accelerate epidermal repair and extinguish redness rapidly.",
     "volumeOrWeight": "40 ml",
     "badge": "Clinical Gold Standard",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/lrp-01.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/3337875816847",
+      "license": "CC BY-SA",
+      "contributor": "Open Beauty Facts contributors"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/lrp-01-view-1.jpg",
+        "alt": "La Roche-Posay Cicaplast Baume B5+ Ultra-Repairing Balm, product photo 2",
+        "imageSource": {
+          "name": "Open Beauty Facts",
+          "url": "https://world.openbeautyfacts.org/product/3337875816847",
+          "contributor": "Open Beauty Facts contributors",
+          "license": "CC BY-SA"
+        }
+      }
+    ]
   },
   {
     "id": "lrp-02",
@@ -716,7 +1298,15 @@
     ],
     "description": "Targeted corrective care that unclogs pores, clears breakouts in 12 hours, and shields against post-acne pigmentation.",
     "volumeOrWeight": "40 ml",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/lrp-02.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/3337875863377",
+      "license": "CC BY-SA",
+      "contributor": "Open Beauty Facts contributors"
+    },
+    "imageGallery": []
   },
   {
     "id": "pc-01",
@@ -746,7 +1336,46 @@
     "description": "World-famous gentle leave-on exfoliant that clears blackheads, shrinks enlarged pores, and smooths wrinkles.",
     "volumeOrWeight": "30 ml",
     "badge": "Cult Favorite",
-    "brandAccentColor": "#1E293B"
+    "brandAccentColor": "#1E293B",
+    "image": "/images/products/pc-01.jpg",
+    "imageSource": {
+      "name": "Paula's Choice official product catalog",
+      "url": "https://www.paulaschoice.in/products/skin-perfecting-2-bha-liquid-exfoliant",
+      "license": "Brand product image",
+      "contributor": "Paula's Choice"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/pc-01-view-1.jpg",
+        "alt": "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant, product photo 2",
+        "imageSource": {
+          "name": "Paula's Choice official product catalog",
+          "url": "https://www.paulaschoice.in/products/skin-perfecting-2-bha-liquid-exfoliant",
+          "contributor": "Paula's Choice",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/pc-01-view-2.jpg",
+        "alt": "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant, product photo 3",
+        "imageSource": {
+          "name": "Paula's Choice official product catalog",
+          "url": "https://www.paulaschoice.in/products/skin-perfecting-2-bha-liquid-exfoliant",
+          "contributor": "Paula's Choice",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/pc-01-view-3.jpg",
+        "alt": "Paula's Choice Skin Perfecting 2% BHA Liquid Exfoliant, product photo 4",
+        "imageSource": {
+          "name": "Paula's Choice official product catalog",
+          "url": "https://www.paulaschoice.in/products/skin-perfecting-2-bha-liquid-exfoliant",
+          "contributor": "Paula's Choice",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "pc-02",
@@ -777,7 +1406,46 @@
     "description": "Precision antioxidant power shot that brightens uneven skin tone, firms sagging, and fights environmental damage.",
     "volumeOrWeight": "20 ml",
     "badge": "Luxury Potency",
-    "brandAccentColor": "#1E293B"
+    "brandAccentColor": "#1E293B",
+    "image": "/images/products/pc-02.png",
+    "imageSource": {
+      "name": "Paula's Choice official product catalog",
+      "url": "https://www.paulaschoice.in/products/resist-c15-super-booster",
+      "license": "Brand product image",
+      "contributor": "Paula's Choice"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/pc-02-view-1.png",
+        "alt": "Paula's Choice C15 Super Booster (15% Vitamin C + Ferulic), product photo 2",
+        "imageSource": {
+          "name": "Paula's Choice official product catalog",
+          "url": "https://www.paulaschoice.in/products/resist-c15-super-booster",
+          "contributor": "Paula's Choice",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/pc-02-view-2.jpg",
+        "alt": "Paula's Choice C15 Super Booster (15% Vitamin C + Ferulic), product photo 3",
+        "imageSource": {
+          "name": "Paula's Choice official product catalog",
+          "url": "https://www.paulaschoice.in/products/resist-c15-super-booster",
+          "contributor": "Paula's Choice",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/pc-02-view-3.png",
+        "alt": "Paula's Choice C15 Super Booster (15% Vitamin C + Ferulic), product photo 4",
+        "imageSource": {
+          "name": "Paula's Choice official product catalog",
+          "url": "https://www.paulaschoice.in/products/resist-c15-super-booster",
+          "contributor": "Paula's Choice",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "boj-01",
@@ -807,7 +1475,36 @@
     "description": "Velvety organic chemical sunscreen that feels like a light moisturizing cream with zero stickiness or cast.",
     "volumeOrWeight": "50 ml",
     "badge": "Viral Sensation",
-    "brandAccentColor": "#059669"
+    "brandAccentColor": "#059669",
+    "image": "/images/products/boj-01.jpg",
+    "imageSource": {
+      "name": "Beauty of Joseon official product catalog",
+      "url": "https://beautyofjoseon.com/products/relief-sun-rice-probiotics",
+      "license": "Brand product image",
+      "contributor": "Beauty of Joseon"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/boj-01-view-1.jpg",
+        "alt": "Beauty of Joseon Relief Sun : Rice + Probiotics SPF50+ PA++++, product photo 2",
+        "imageSource": {
+          "name": "Beauty of Joseon official product catalog",
+          "url": "https://beautyofjoseon.com/products/relief-sun-rice-probiotics-spf50-pa-uk",
+          "contributor": "Beauty of Joseon",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/boj-01-view-2.jpg",
+        "alt": "Beauty of Joseon Relief Sun : Rice + Probiotics SPF50+ PA++++, product photo 3",
+        "imageSource": {
+          "name": "Beauty of Joseon official product catalog",
+          "url": "https://beautyofjoseon.com/products/relief-sun-rice-probiotics-spf50-pa-uk",
+          "contributor": "Beauty of Joseon",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "boj-02",
@@ -837,7 +1534,46 @@
     "avoidFlags": [],
     "description": "Honey-textured Hanbang serum formulated to soothe inflamed blemishes and confer a lit-from-within glow.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#059669"
+    "brandAccentColor": "#059669",
+    "image": "/images/products/boj-02.jpg",
+    "imageSource": {
+      "name": "Beauty of Joseon official product catalog",
+      "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
+      "license": "Brand product image",
+      "contributor": "Beauty of Joseon"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/boj-02-view-1.jpg",
+        "alt": "Beauty of Joseon Glow Serum : Propolis + Niacinamide, product photo 2",
+        "imageSource": {
+          "name": "Beauty of Joseon official product catalog",
+          "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
+          "contributor": "Beauty of Joseon",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/boj-02-view-2.png",
+        "alt": "Beauty of Joseon Glow Serum : Propolis + Niacinamide, product photo 3",
+        "imageSource": {
+          "name": "Beauty of Joseon official product catalog",
+          "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
+          "contributor": "Beauty of Joseon",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/boj-02-view-3.jpg",
+        "alt": "Beauty of Joseon Glow Serum : Propolis + Niacinamide, product photo 4",
+        "imageSource": {
+          "name": "Beauty of Joseon official product catalog",
+          "url": "https://beautyofjoseon.com/products/glow-serum-propolis-niacinamide",
+          "contributor": "Beauty of Joseon",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "lan-01",
@@ -868,7 +1604,15 @@
     "description": "Deeply hydrating barrier cream powered by micro-ionized hyaluronic acid that absorbs 2000x deeper.",
     "volumeOrWeight": "50 ml",
     "badge": "Prestige Hydration",
-    "brandAccentColor": "#38BDF8"
+    "brandAccentColor": "#38BDF8",
+    "image": "/images/products/lan-01.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/8809925136649",
+      "license": "CC BY-SA",
+      "contributor": "Open Beauty Facts contributors"
+    },
+    "imageGallery": []
   },
   {
     "id": "lan-02",
@@ -895,7 +1639,26 @@
     "description": "Overnight leave-on lip treatment that melts away dead skin cells to deliver plump, baby-soft lips by morning.",
     "volumeOrWeight": "8 g",
     "badge": "Global Must-Have",
-    "brandAccentColor": "#38BDF8"
+    "brandAccentColor": "#38BDF8",
+    "image": "/images/products/lan-02.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/8809643053273",
+      "license": "CC BY-SA",
+      "contributor": "Open Beauty Facts contributors"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/lan-02-view-1.jpg",
+        "alt": "Laneige Lip Sleeping Mask Berry, product photo 2",
+        "imageSource": {
+          "name": "Open Beauty Facts",
+          "url": "https://world.openbeautyfacts.org/product/8809643053273",
+          "contributor": "Open Beauty Facts contributors",
+          "license": "CC BY-SA"
+        }
+      }
+    ]
   },
   {
     "id": "req-01",
@@ -925,7 +1688,46 @@
     "description": "Velvety water-resistant silicone gel primer sunscreen providing extreme oil control even in 90% humidity.",
     "volumeOrWeight": "50 g",
     "badge": "Sweat & Oil Resistant",
-    "brandAccentColor": "#0D9488"
+    "brandAccentColor": "#0D9488",
+    "image": "/images/products/req-01.jpg",
+    "imageSource": {
+      "name": "Re'equil official product catalog",
+      "url": "https://reequil.com/products/ultra-matte-dry-touch-sunscreen-gel-spf-50-pa",
+      "license": "Brand product image",
+      "contributor": "Re'equil"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/req-01-view-1.jpg",
+        "alt": "Re'equil Ultra Matte Dry Touch Sunscreen Gel SPF 50, product photo 2",
+        "imageSource": {
+          "name": "Re'equil official product catalog",
+          "url": "https://reequil.com/products/ultra-matte-dry-touch-sunscreen-gel-spf-50-pa",
+          "contributor": "Re'equil",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/req-01-view-2.png",
+        "alt": "Re'equil Ultra Matte Dry Touch Sunscreen Gel SPF 50, product photo 3",
+        "imageSource": {
+          "name": "Re'equil official product catalog",
+          "url": "https://reequil.com/products/ultra-matte-dry-touch-sunscreen-gel-spf-50-pa",
+          "contributor": "Re'equil",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/req-01-view-3.png",
+        "alt": "Re'equil Ultra Matte Dry Touch Sunscreen Gel SPF 50, product photo 4",
+        "imageSource": {
+          "name": "Re'equil official product catalog",
+          "url": "https://reequil.com/products/ultra-matte-dry-touch-sunscreen-gel-spf-50-pa",
+          "contributor": "Re'equil",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "req-02",
@@ -954,7 +1756,46 @@
     ],
     "description": "Replenishes skin barrier lipids and reduces trans-epidermal water loss (TEWL) for parched, tight skin.",
     "volumeOrWeight": "100 g",
-    "brandAccentColor": "#0D9488"
+    "brandAccentColor": "#0D9488",
+    "image": "/images/products/req-02.jpg",
+    "imageSource": {
+      "name": "Re'equil official product catalog",
+      "url": "https://reequil.com/products/ceramide-hyaluronic-acid-moisturiser-for-normal-to-dry-skin",
+      "license": "Brand product image",
+      "contributor": "Re'equil"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/req-02-view-1.jpg",
+        "alt": "Re'equil Ceramide & Hyaluronic Acid Moisturiser, product photo 2",
+        "imageSource": {
+          "name": "Re'equil official product catalog",
+          "url": "https://reequil.com/products/ceramide-hyaluronic-acid-moisturiser-for-normal-to-dry-skin",
+          "contributor": "Re'equil",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/req-02-view-2.jpg",
+        "alt": "Re'equil Ceramide & Hyaluronic Acid Moisturiser, product photo 3",
+        "imageSource": {
+          "name": "Re'equil official product catalog",
+          "url": "https://reequil.com/products/ceramide-hyaluronic-acid-moisturiser-for-normal-to-dry-skin",
+          "contributor": "Re'equil",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/req-02-view-3.jpg",
+        "alt": "Re'equil Ceramide & Hyaluronic Acid Moisturiser, product photo 4",
+        "imageSource": {
+          "name": "Re'equil official product catalog",
+          "url": "https://reequil.com/products/ceramide-hyaluronic-acid-moisturiser-for-normal-to-dry-skin",
+          "contributor": "Re'equil",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "smp-01",
@@ -984,7 +1825,15 @@
     "description": "100% soap-free clean gel cleanser with zero artificial perfume, harsh chemicals, or colors for pure skin balance.",
     "volumeOrWeight": "150 ml",
     "badge": "100% Clean Pick",
-    "brandAccentColor": "#16A34A"
+    "brandAccentColor": "#16A34A",
+    "image": "/images/products/smp-01.jpg",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/50052806/refreshing-facial-wash-simple",
+      "license": "CC BY-SA",
+      "contributor": "swipe-studio"
+    },
+    "imageGallery": []
   },
   {
     "id": "smp-02",
@@ -1013,7 +1862,15 @@
     "avoidFlags": [],
     "description": "Instantly quenches thirsty skin cells with smart hydration that lasts all day without clogging pores.",
     "volumeOrWeight": "50 g",
-    "brandAccentColor": "#16A34A"
+    "brandAccentColor": "#16A34A",
+    "image": "/images/products/smp-02.jpg",
+    "imageSource": {
+      "name": "Carrefour product catalog",
+      "url": "https://www.carrefouruae.com/mafuae/en/gels-lotions/simple-waterbost-hydrtng-gel-50ml/p/1601226",
+      "license": "Retailer product image",
+      "contributor": "Carrefour"
+    },
+    "imageGallery": []
   },
   {
     "id": "drs-01",
@@ -1041,7 +1898,15 @@
     "avoidFlags": [],
     "description": "Formulated specifically for Indian skin to treat active breakouts and regulate heavy sebum secretion in tropical climates.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#D97706"
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/drs-01.jpg",
+    "imageSource": {
+      "name": "Nykaa product catalog",
+      "url": "https://www.nykaa.com/dr-sheth-s-centella-10percent-niacinamide-ampoule-serum/p/22343578",
+      "license": "Retailer product image",
+      "contributor": "Nykaa"
+    },
+    "imageGallery": []
   },
   {
     "id": "drs-02",
@@ -1072,7 +1937,46 @@
     ],
     "description": "Inhibits melanin overproduction to lighten post-inflammatory hyperpigmentation (PIH) and sun tan.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#D97706"
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/drs-02.jpg",
+    "imageSource": {
+      "name": "Dr. Sheth's official product catalog",
+      "url": "https://drsheths.com/products/kesar-kojic-acid-serum-30ml",
+      "license": "Brand product image",
+      "contributor": "Dr. Sheth's"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/drs-02-view-1.jpg",
+        "alt": "Dr. Sheth's Kesar & Kojic Acid Daily Pigmentation Serum, product photo 2",
+        "imageSource": {
+          "name": "Dr. Sheth's official product catalog",
+          "url": "https://drsheths.com/products/kesar-and-2-kojic-acid-ampoule-serum-10ml",
+          "contributor": "Dr. Sheth's",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/drs-02-view-2.jpg",
+        "alt": "Dr. Sheth's Kesar & Kojic Acid Daily Pigmentation Serum, product photo 3",
+        "imageSource": {
+          "name": "Dr. Sheth's official product catalog",
+          "url": "https://drsheths.com/products/kesar-and-2-kojic-acid-ampoule-serum-10ml",
+          "contributor": "Dr. Sheth's",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/drs-02-view-3.jpg",
+        "alt": "Dr. Sheth's Kesar & Kojic Acid Daily Pigmentation Serum, product photo 4",
+        "imageSource": {
+          "name": "Dr. Sheth's official product catalog",
+          "url": "https://drsheths.com/products/kesar-and-2-kojic-acid-ampoule-serum-10ml",
+          "contributor": "Dr. Sheth's",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "fox-01",
@@ -1100,7 +2004,15 @@
     "avoidFlags": [],
     "description": "High SPF defense with a radiant glass-like finish that prevents photofading and deeply nourishes skin.",
     "volumeOrWeight": "50 ml",
-    "brandAccentColor": "#EA580C"
+    "brandAccentColor": "#EA580C",
+    "image": "/images/products/fox-01.jpg",
+    "imageSource": {
+      "name": "Tira product catalog",
+      "url": "https://www.tirabeauty.com/product/foxtale-coverup-spf-50-broad-spectrum-dewy-sunscreen-50ml-7579043",
+      "license": "Retailer product image",
+      "contributor": "Tira"
+    },
+    "imageGallery": []
   },
   {
     "id": "fox-02",
@@ -1130,7 +2042,15 @@
     ],
     "description": "Clinically proven glow activator that reduces oxidative stress, boosts collagen, and brightens within 5 days.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#EA580C"
+    "brandAccentColor": "#EA580C",
+    "image": "/images/products/fox-02.png",
+    "imageSource": {
+      "name": "Foxtale official product catalog",
+      "url": "https://foxtale.in/products/c-for-yourself-vitamin-c-serum",
+      "license": "Brand product image",
+      "contributor": "Foxtale"
+    },
+    "imageGallery": []
   },
   {
     "id": "klr-01",
@@ -1163,7 +2083,46 @@
     "description": "Essential-oil-free hydrating toner that balances skin pH and floods dehydrated dermal layers with soothing moisture.",
     "volumeOrWeight": "180 ml",
     "badge": "Sensitive Must-Have",
-    "brandAccentColor": "#6366F1"
+    "brandAccentColor": "#6366F1",
+    "image": "/images/products/klr-01.jpg",
+    "imageSource": {
+      "name": "Dear, Klairs official product catalog",
+      "url": "https://klairs.com/products/supple-preparation-unscented-toner",
+      "license": "Brand product image",
+      "contributor": "Dear, Klairs"
+    },
+    "imageGallery": [
+      {
+        "image": "/images/products/klr-01-view-1.jpg",
+        "alt": "Dear, Klairs Supple Preparation Unscented Toner, product photo 2",
+        "imageSource": {
+          "name": "Dear, Klairs official product catalog",
+          "url": "https://klairs.com/products/supple-preparation-unscented-toner",
+          "contributor": "Dear, Klairs",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/klr-01-view-2.jpg",
+        "alt": "Dear, Klairs Supple Preparation Unscented Toner, product photo 3",
+        "imageSource": {
+          "name": "Dear, Klairs official product catalog",
+          "url": "https://klairs.com/products/supple-preparation-unscented-toner",
+          "contributor": "Dear, Klairs",
+          "license": "Brand product image"
+        }
+      },
+      {
+        "image": "/images/products/klr-01-view-3.jpg",
+        "alt": "Dear, Klairs Supple Preparation Unscented Toner, product photo 4",
+        "imageSource": {
+          "name": "Dear, Klairs official product catalog",
+          "url": "https://klairs.com/products/supple-preparation-unscented-toner",
+          "contributor": "Dear, Klairs",
+          "license": "Brand product image"
+        }
+      }
+    ]
   },
   {
     "id": "bio-01",
@@ -1193,7 +2152,15 @@
     "description": "World-renowned watery texture with micro-capsules that spread like water and vanish without any film.",
     "volumeOrWeight": "50 g",
     "badge": "Japanese Legend",
-    "brandAccentColor": "#06B6D4"
+    "brandAccentColor": "#06B6D4",
+    "image": "/images/products/bio-01.jpg",
+    "imageSource": {
+      "name": "Tesco product catalog",
+      "url": "https://www.tesco.com/groceries/en-GB/products/320570359",
+      "license": "Retailer product image",
+      "contributor": "Tesco"
+    },
+    "imageGallery": []
   },
   {
     "id": "min-05",
@@ -1222,6 +2189,14 @@
     "avoidFlags": [],
     "description": "Next-generation gentle retinoid that boosts cellular turnover to reduce fine lines without redness or flaking.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#0284C7"
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/min-05.jpg",
+    "imageSource": {
+      "name": "PharmEasy",
+      "url": "https://pharmeasy.in/health-care/products/minimalist-retinoid-2-anti-aging-serum-emulsion-for-wrinkles-fine-lines-30ml--3514855",
+      "license": "Retailer product image",
+      "contributor": "PharmEasy"
+    },
+    "imageGallery": []
   }
 ]

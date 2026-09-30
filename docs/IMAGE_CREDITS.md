@@ -19,12 +19,10 @@ This document records the provenance, attribution, and license details for all p
 | `/images/mood/ingredients-flatlay.webp` | Open cosmetic cream jars with fresh leaves and flower petals on white marble | Pexels (`photo-6690234`) | [Pexels Photo](https://www.pexels.com/photo/top-view-of-cream-jars-6690234/) | Pexels Free License | Active Ingredients Section |
 | `/images/mood/texture-closeup.webp` | Velvety moisturizer cream swatch with rich brush strokes on warm beige | Unsplash (`photo-1585945037805-5fd82c2e60b1`) | [Unsplash Photo](https://unsplash.com/photos/photo-1585945037805-5fd82c2e60b1) | Unsplash Commercial License | Active Texture Parallax Section |
 
-## Open Beauty Facts Product Photography & Data Attribution
-- **Source**: [Open Beauty Facts](https://world.openbeautyfacts.org/)
-- **Product Photography License**: Creative Commons Attribution-ShareAlike 3.0 / 4.0 (CC BY-SA) by Open Beauty Facts contributors.
-- **Database & Ingredients License**: Open Database License (ODbL).
-- **Public Credits Page**: Full interactive credits list available at [`/credits`](http://localhost:3000/credits) and linked from the footer.
-- **Verification Threshold**: Real images are automatically matched only with strict name similarity &ge; 0.80 and exact brand match, then downloaded locally to `/public/images/products/{slug}.webp` (optimized, max 800px, white background preserved).
-- **Fallback Rule**: Products without an approved Open Beauty Facts photo display an elegant "Image coming soon" tile. Never a wrong or broken image.
-- **Image Checklist**: Tracked in [`products-images-checklist.csv`](../products-images-checklist.csv).
-- **Automated Verification Report**: Generated in [`scripts/image-review-report.html`](../scripts/image-review-report.html).
+## Product Photo Attribution
+- **Sources**: Product images come from [Open Beauty Facts](https://world.openbeautyfacts.org/) and official brand or retailer product catalogs. Each entry in `src/data/products.json` records its source page, contributor, and applicable license or source terms.
+- **Open Beauty Facts**: Product photos are contributor-uploaded and shared under CC BY-SA; its product and ingredient database is under ODbL.
+- **Brand and retailer catalogs**: Product photos remain subject to their owners' terms and are credited to the listed brand or retailer.
+- **Local images**: Catalog images are stored under `/public/images/products/` so the website does not hotlink product photos.
+- **Public Credits Page**: The interactive source list is available at [`/credits`](http://localhost:3000/credits) and linked from the footer.
+- **Catalog refresh**: Run `node scripts/populate-catalog-images.mjs` to retrieve main images and `npm run fetch:galleries` to add verified alternate views and ingredient-panel photos.

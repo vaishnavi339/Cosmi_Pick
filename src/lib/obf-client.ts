@@ -19,6 +19,8 @@ export const ObfProductSchema = z.object({
   product_name_en: z.string().optional(),
   brands: z.string().optional().default(''),
   image_front_url: z.string().optional(),
+  image_back_url: z.string().optional(),
+  image_ingredients_url: z.string().optional(),
   image_url: z.string().optional(),
   ingredients_text: z.string().optional().default(''),
   ingredients_text_en: z.string().optional(),
@@ -50,6 +52,7 @@ export interface SearchResultItem {
   name: string;
   brand: string;
   imageUrl: string;
+  imageGallery?: string[];
   barcode: string;
   ingredientsText: string;
   category: string;
@@ -213,7 +216,7 @@ export async function getProductByBarcode(barcode: string): Promise<SearchResult
   if (cached) return cached;
 
   return productQueue.enqueue(async () => {
-    const url = `${OBF_PRODUCT_API}/${cleanBarcode}?fields=code,product_name,product_name_en,brands,image_front_url,image_url,ingredients_text,ingredients_text_en,categories,creator,url`;
+    const url = `${OBF_PRODUCT_API}/${cleanBarcode}?fields=code,product_name,product_name_en,brands,image_front_url,image_back_url,image_ingredients_url,image_url,ingredients_text,ingredients_text_en,categories,creator,url`;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
 
@@ -246,6 +249,9 @@ export async function getProductByBarcode(barcode: string): Promise<SearchResult
         name,
         brand: p.brands || 'Cosmetics',
         imageUrl: formatImageUrl(rawImg),
+        imageGallery: [p.image_back_url, p.image_ingredients_url]
+          .filter((image): image is string => Boolean(image && image !== rawImg))
+          .map((image) => formatImageUrl(image)),
         barcode: p.code,
         ingredientsText: ingredients,
         category: p.categories?.split(',')[0]?.trim() || 'Skincare',
@@ -295,7 +301,7 @@ export async function searchOpenBeautyFacts(query: string, limit = 6): Promise<S
       search_simple: '1',
       action: 'process',
       json: '1',
-      fields: 'code,product_name,product_name_en,brands,image_front_url,image_url,ingredients_text,ingredients_text_en,categories,categories_tags,creator,url',
+      fields: 'code,product_name,product_name_en,brands,image_front_url,image_back_url,image_ingredients_url,image_url,ingredients_text,ingredients_text_en,categories,categories_tags,creator,url',
       page_size: '40',
     });
     const url = `${OBF_SEARCH_API}?${params.toString()}`;
@@ -337,6 +343,9 @@ export async function searchOpenBeautyFacts(query: string, limit = 6): Promise<S
           name,
           brand: p.brands || 'Skincare',
           imageUrl: formatImageUrl(rawImg),
+          imageGallery: [p.image_back_url, p.image_ingredients_url]
+            .filter((image): image is string => Boolean(image && image !== rawImg))
+            .map((image) => formatImageUrl(image)),
           barcode: p.code,
           ingredientsText: ingredients,
           category: p.categories?.split(',')[0]?.trim() || 'Skincare',

@@ -50,7 +50,7 @@ export default function CreditsPage() {
                 Open Beauty Facts (world.openbeautyfacts.org)
               </h2>
               <p className="text-sm text-[#7E636E] dark:text-[#B59FA9] leading-relaxed mb-4">
-                All real cosmetic product photography, barcode verification, and ingredient lists are provided by <strong>Open Beauty Facts</strong>, a collaborative, free and open database of cosmetic products from around the world.
+                Product photos are sourced from the contributor-curated <strong>Open Beauty Facts</strong> database and official brand or retailer product catalogs. Each catalog entry links to the image source and names its contributor where available.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs mt-4">
@@ -59,7 +59,7 @@ export default function CreditsPage() {
                     Product Photography License:
                   </strong>
                   <span className="text-[#7E636E] dark:text-[#B59FA9]">
-                    Photos uploaded by Open Beauty Facts contributors are made available under the <strong>Creative Commons Attribution-ShareAlike (CC BY-SA 3.0 / 4.0)</strong> license.
+                    Open Beauty Facts product photos are shared under <strong>CC BY-SA</strong>. Brand and retailer catalog photos retain their source owners&apos; terms and are credited on each product entry.
                   </span>
                 </div>
 
@@ -105,7 +105,7 @@ export default function CreditsPage() {
                 Catalog Products Manifest
               </h2>
               <p className="text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9] mt-1">
-                Verified against Open Beauty Facts API v2 (minimum 80% similarity threshold).
+                Local product photos with their source, contributor, and license details.
               </p>
             </div>
             <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#EAF2E8] dark:bg-[#8CA583]/20 text-[#44633B] dark:text-[#C9D6C3] border border-[#C9D6C3]">
@@ -139,6 +139,9 @@ export default function CreditsPage() {
                     <div>Barcode: <code className="text-[#3B1F2B] dark:text-[#F4D9D6]">{product.barcode || '—'}</code></div>
                     <div>Photo: <span className="italic">{product.imageSource?.contributor || 'Open Beauty Facts contributors'}</span></div>
                     <div className="text-[10px] text-[#8CA583] font-semibold">{product.imageSource?.license || 'CC BY-SA'}</div>
+                    {product.imageGallery?.length ? (
+                      <div>{product.imageGallery.length} additional product photo{product.imageGallery.length === 1 ? '' : 's'}</div>
+                    ) : null}
                   </div>
                 </div>
                 {product.imageSource?.url && (

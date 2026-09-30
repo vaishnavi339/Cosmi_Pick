@@ -96,6 +96,9 @@ export function FeaturedProducts() {
         {/* Horizontal Drag/Scroll Carousel Track */}
         <div
           ref={scrollRef}
+          role="region"
+          aria-label="Featured skincare products"
+          aria-roledescription="carousel"
           onMouseDown={handleMouseDown}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
@@ -108,6 +111,9 @@ export function FeaturedProducts() {
           {featured.map((product) => (
             <motion.div
               key={product.id}
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${product.brand}: ${product.name}`}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="min-w-[280px] sm:min-w-[320px] max-w-[320px] rounded-3xl glass-card bg-white/85 dark:bg-[#20151C]/85 border border-[#E8D3C0] dark:border-white/10 p-5 shadow-soft-luxury hover:shadow-luxury-hover transition-shadow duration-300 flex flex-col justify-between group flex-shrink-0"
