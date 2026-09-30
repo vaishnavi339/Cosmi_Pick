@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Star, Sparkles, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import { Sparkles, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 export function LiveDemoCard() {
@@ -47,12 +47,7 @@ export function LiveDemoCard() {
                     Niacinamide 10% + Zinc 1% Serum
                   </h3>
                   <div className="flex items-center gap-2 mt-1.5 text-xs text-slate-500 dark:text-slate-400">
-                    <div className="flex items-center text-amber-400">
-                      <Star className="w-3.5 h-3.5 fill-amber-400" />
-                      <span className="ml-1 font-bold text-slate-700 dark:text-slate-200">4.8</span>
-                    </div>
-                    <span>•</span>
-                    <span>14,200 reviews</span>
+                    <span className="text-[11px] font-medium">Catalog score: 4.8 <span className="text-[9px] text-[#CE7F79]">(demo data)</span></span>
                     <span>•</span>
                     <span className="text-emerald-500 dark:text-emerald-400 font-medium">Fragrance-Free</span>
                   </div>
@@ -61,16 +56,15 @@ export function LiveDemoCard() {
 
               {/* Match Score Badge */}
               <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-start">
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 text-emerald-400 shadow-sm">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 text-emerald-400 shadow-sm" title="Match score based on your scan and preferences">
                   <Sparkles className="w-4 h-4 animate-pulse text-cyan-400" />
-                  <span className="font-display font-extrabold text-lg sm:text-xl">98%</span>
-                  <span className="text-[11px] font-medium text-emerald-300">Match</span>
+                  <span className="font-display font-extrabold text-sm sm:text-base">Match Score</span>
                 </div>
                 <div className="text-right sm:mt-2">
                   <span className="font-display font-bold text-xl text-slate-900 dark:text-white">
                     ₹599
                   </span>
-                  <span className="text-xs text-slate-400 line-through ml-1.5">₹649</span>
+                  <span className="text-[10px] text-[#CE7F79] block">(demo data)</span>
                 </div>
               </div>
             </div>

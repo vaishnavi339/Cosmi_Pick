@@ -1,10 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import { z } from 'zod';
-import { Product } from '@/types';
 import { computeNameSimilarity, normalizeString } from './name-matching';
 
-const OBF_SEARCH_API = 'https://world.openbeautyfacts.org/api/v2/search';
+// OBF's legacy search endpoint supports actual free-text search. API v2's
+// /api/v2/search endpoint is for structured filters and can return unrelated
+// catalog entries for arbitrary product names.
+const OBF_SEARCH_API = 'https://world.openbeautyfacts.org/cgi/search.pl';
 const OBF_PRODUCT_API = 'https://world.openbeautyfacts.org/api/v2/product';
 const USER_AGENT = 'CosmicPick/1.0 (student portfolio project - contact: vaishnavi339@users.noreply.github.com)';
 const CACHE_FILE = path.join(process.cwd(), 'data', 'obf-search-cache.json');
@@ -53,6 +55,8 @@ export interface SearchResultItem {
   category: string;
   source: 'local_catalog' | 'open_beauty_facts';
   obfUrl?: string;
+  imageContributor?: string;
+  imageLicense?: string;
 }
 
 // ---------------- Cache Storage (LRU + Disk) ----------------
@@ -196,48 +200,6 @@ export function formatImageUrl(remoteUrl: string | undefined, localFallback?: st
 }
 
 /**
- * Searches local catalog products matching query terms
- */
-function searchLocalCatalog(query: string): SearchResultItem[] {
-  try {
-    const productsPath = path.join(process.cwd(), 'src', 'data', 'products.json');
-    if (!fs.existsSync(productsPath)) return [];
-    const products: Product[] = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
-
-    const normQ = normalizeString(query);
-    const results: SearchResultItem[] = [];
-
-    for (const p of products) {
-      const normName = normalizeString(p.name);
-      const normBrand = normalizeString(p.brand);
-      const combined = `${normBrand} ${normName}`;
-
-      const similarity = computeNameSimilarity(normQ, combined);
-      const matchesKeyword = normName.includes(normQ) || normBrand.includes(normQ) || combined.includes(normQ) || normQ.includes(normName);
-
-      if (matchesKeyword || similarity >= 0.5) {
-        results.push({
-          id: p.id,
-          name: p.name,
-          brand: p.brand,
-          imageUrl: p.image || '',
-          barcode: p.barcode || '',
-          ingredientsText: Array.isArray(p.keyIngredients) ? p.keyIngredients.join(', ') : '',
-          category: p.category,
-          source: 'local_catalog',
-          obfUrl: p.imageSource?.url,
-        });
-      }
-    }
-
-    return results;
-  } catch (err) {
-    console.error('Error searching local catalog:', err);
-    return [];
-  }
-}
-
-/**
  * Fetch a single product by barcode from OBF v2
  */
 export async function getProductByBarcode(barcode: string): Promise<SearchResultItem | null> {
@@ -289,6 +251,8 @@ export async function getProductByBarcode(barcode: string): Promise<SearchResult
         category: p.categories?.split(',')[0]?.trim() || 'Skincare',
         source: 'open_beauty_facts',
         obfUrl: p.url || `https://world.openbeautyfacts.org/product/${p.code}`,
+        imageContributor: p.creator || 'Open Beauty Facts contributors',
+        imageLicense: 'CC BY-SA',
       };
 
       setCache(cacheKey, item);
@@ -307,7 +271,7 @@ export async function getProductByBarcode(barcode: string): Promise<SearchResult
  */
 export async function searchOpenBeautyFacts(query: string, limit = 6): Promise<SearchResultItem[]> {
   const trimmed = query.trim();
-  const cacheKey = `search:${normalizeString(trimmed)}`;
+  const cacheKey = `search:photos-v2:${normalizeString(trimmed)}`;
   const cached = getCache<SearchResultItem[]>(cacheKey);
   if (cached) {
     return cached.slice(0, limit);
@@ -316,83 +280,24 @@ export async function searchOpenBeautyFacts(query: string, limit = 6): Promise<S
   // 1. If query is a barcode
   if (/^\d{8,14}$/.test(trimmed)) {
     const direct = await getProductByBarcode(trimmed);
-    if (direct) {
+    if (direct?.imageUrl) {
       setCache(cacheKey, [direct]);
       return [direct];
     }
   }
 
-  // 2. Search local catalog first for immediate high-confidence hits
-  const localHits = searchLocalCatalog(trimmed);
-
-  // 3. Search Open Beauty Facts via tag query in queue
+  // Search Open Beauty Facts by the user's actual product query. The previous
+  // brand/category tag search frequently returned unrelated products, and
+  // local demo catalog entries often have no real product photo.
   const obfHits = await searchQueue.enqueue(async (): Promise<SearchResultItem[]> => {
-    const norm = normalizeString(trimmed);
-    const words = norm.split(' ').filter((w) => w.length > 2);
-
-    // Identify brand tag candidate
-    const brandAliases: Record<string, string> = {
-      cerave: 'cerave',
-      ordinary: 'the-ordinary',
-      minimalist: 'minimalist',
-      cetaphil: 'cetaphil',
-      cosrx: 'cosrx',
-      roche: 'la-roche-posay',
-      posay: 'la-roche-posay',
-      plum: 'plum',
-      foxtale: 'foxtale',
-      laneige: 'laneige',
-      simple: 'simple',
-      biore: 'biore',
-      klairs: 'dear-klairs',
-      sheth: 'dr-sheths',
-      reequil: 'reequil',
-      paula: 'paulas-choice',
-    };
-
-    let brandTag: string | undefined;
-    for (const [key, tag] of Object.entries(brandAliases)) {
-      if (norm.includes(key)) {
-        brandTag = tag;
-        break;
-      }
-    }
-
     const params = new URLSearchParams({
-      fields: 'code,product_name,product_name_en,brands,image_front_url,image_url,ingredients_text,ingredients_text_en,categories,creator,url',
-      page_size: '20',
+      search_terms: trimmed,
+      search_simple: '1',
+      action: 'process',
+      json: '1',
+      fields: 'code,product_name,product_name_en,brands,image_front_url,image_url,ingredients_text,ingredients_text_en,categories,categories_tags,creator,url',
+      page_size: '40',
     });
-
-    if (brandTag) {
-      params.set('brands_tags', brandTag);
-    } else {
-      // If no recognized brand, try category or general tag
-      const categories: Record<string, string> = {
-        cleanser: 'cleansers',
-        serum: 'serums',
-        moisturizer: 'creams',
-        cream: 'creams',
-        sunscreen: 'sunscreens',
-        sun: 'sunscreens',
-        spf: 'sunscreens',
-        toner: 'toners',
-        lotion: 'lotions',
-      };
-      let categoryTag: string | undefined;
-      for (const [key, tag] of Object.entries(categories)) {
-        if (norm.includes(key)) {
-          categoryTag = tag;
-          break;
-        }
-      }
-
-      if (categoryTag) {
-        params.set('categories_tags', categoryTag);
-      } else if (words.length > 0) {
-        params.set('brands_tags', words[0]);
-      }
-    }
-
     const url = `${OBF_SEARCH_API}?${params.toString()}`;
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 9000);
@@ -422,6 +327,9 @@ export async function searchOpenBeautyFacts(query: string, limit = 6): Promise<S
         if (!name) continue;
 
         const rawImg = p.image_front_url || p.image_url;
+        // A photo is the point of this lookup: don't return entries without
+        // an actual submitted package photo and imply that we found one.
+        if (!rawImg || !p.code) continue;
         const ingredients = p.ingredients_text || p.ingredients_text_en || '';
 
         items.push({
@@ -434,10 +342,13 @@ export async function searchOpenBeautyFacts(query: string, limit = 6): Promise<S
           category: p.categories?.split(',')[0]?.trim() || 'Skincare',
           source: 'open_beauty_facts',
           obfUrl: p.url || `https://world.openbeautyfacts.org/product/${p.code}`,
+          imageContributor: p.creator || 'Open Beauty Facts contributors',
+          imageLicense: 'CC BY-SA',
         });
       }
 
       // Sort items by relevance to query
+      const norm = normalizeString(trimmed);
       items.sort((a, b) => {
         const simA = computeNameSimilarity(norm, `${normalizeString(a.brand)} ${normalizeString(a.name)}`);
         const simB = computeNameSimilarity(norm, `${normalizeString(b.brand)} ${normalizeString(b.name)}`);
@@ -453,19 +364,12 @@ export async function searchOpenBeautyFacts(query: string, limit = 6): Promise<S
     }
   });
 
-  // Combine local catalog hits and OBF hits, avoiding duplicate barcodes/names
-  const seen = new Set<string>();
-  const combined: SearchResultItem[] = [];
+  // Return the catalog's photo-bearing matches first and deduplicate barcode
+  // records; image-less local demo entries are not useful for a photo lookup.
+  const unique = obfHits.filter((item, index, all) =>
+    all.findIndex((candidate) => candidate.barcode === item.barcode) === index
+  ).slice(0, limit);
 
-  for (const item of [...localHits, ...obfHits]) {
-    const key = (item.barcode || `${normalizeString(item.brand)}-${normalizeString(item.name)}`).toLowerCase();
-    if (!seen.has(key)) {
-      seen.add(key);
-      combined.push(item);
-    }
-    if (combined.length >= limit) break;
-  }
-
-  setCache(cacheKey, combined);
-  return combined;
+  setCache(cacheKey, unique);
+  return unique;
 }

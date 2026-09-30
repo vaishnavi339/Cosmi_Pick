@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import {
   Sparkles,
-  Star,
   ExternalLink,
   Check,
   ChevronDown,
@@ -68,7 +67,7 @@ export function HeroPickCard({
         <div className="flex items-center justify-between gap-4 mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FAF5F0] dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-xs font-bold tracking-wider uppercase text-[#3B1F2B] dark:text-[#FAF3F0] shadow-sm">
             <Crown className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-            <span>Your #1 Formulation Fit</span>
+            <span>Your Recommended Pick</span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -186,25 +185,12 @@ export function HeroPickCard({
                 </div>
 
                 <div className="space-y-1">
-                  <div className="flex items-center text-amber-500 text-xs">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`w-3.5 h-3.5 ${
-                            i < Math.floor(product.rating)
-                              ? 'fill-amber-500 text-amber-500'
-                              : 'fill-transparent text-[#E8D3C0]'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="ml-1.5 font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
-                      {product.rating}
-                    </span>
+                  <div className="text-xs text-[#7E636E] dark:text-[#B59FA9]">
+                    Catalog score: <span className="font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">{product.rating}</span>{' '}
+                    <span className="text-[10px] text-[#CE7F79] font-medium">(demo data)</span>
                   </div>
-                  <span className="text-[11px] font-semibold text-[#8CA583] block">
-                    Highest Precision Fit
+                  <span className="text-[11px] font-medium text-[#7E636E] dark:text-[#B59FA9] block">
+                    Suggestions, not medical advice
                   </span>
                 </div>
               </div>
@@ -212,7 +198,7 @@ export function HeroPickCard({
               {/* Price Block */}
               <div className="text-right">
                 <span className="text-[10px] text-[#7E636E] dark:text-[#B59FA9] font-medium block">
-                  Best Available Price
+                  Estimated Price <span className="text-[9px] text-[#CE7F79]">(demo data)</span>
                 </span>
                 <span className="font-serif font-bold text-2xl sm:text-3xl text-[#3B1F2B] dark:text-[#FAF3F0]">
                   {formatINR(product.priceINR)}

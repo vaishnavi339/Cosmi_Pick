@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { X, Sparkles, Star, ExternalLink, Trash2 } from 'lucide-react';
+import { X, Sparkles, ExternalLink, Trash2 } from 'lucide-react';
 import { RecommendationResult } from '@/types';
 import { ProductVisual } from '@/components/common/ProductVisual';
 import { formatINR } from '@/lib/utils';
@@ -123,14 +123,14 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
                     <span className="font-serif font-bold text-[#3B1F2B] dark:text-[#FAF3F0] text-sm">
                       {formatINR(product.priceINR)}
                     </span>
+                    <span className="text-[10px] text-[#CE7F79] ml-1">(demo)</span>
                     <span className="text-xs text-[#7E636E] dark:text-[#B59FA9] ml-1.5">({product.volumeOrWeight})</span>
                   </div>
 
                   {/* Rating */}
-                  <div className="h-8 flex items-center text-xs text-[#7E636E] dark:text-[#B59FA9] gap-1.5">
-                    <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-                    <span className="font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">{product.rating}</span>
-                    <span className="opacity-70">/ 5.0</span>
+                  <div className="h-8 flex items-center text-xs text-[#7E636E] dark:text-[#B59FA9] gap-1">
+                    <span>Score: <strong className="text-[#3B1F2B] dark:text-[#FAF3F0]">{product.rating}</strong></span>
+                    <span className="text-[10px] text-[#CE7F79]">(demo)</span>
                   </div>
 
                   {/* Category */}

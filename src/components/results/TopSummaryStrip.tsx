@@ -65,7 +65,7 @@ export function TopSummaryStrip({
             className="inline-flex items-center gap-1.5 text-[11px] px-2.5 py-0.5 rounded-full bg-[#FAF5F0] dark:bg-white/5 text-[#7E636E] dark:text-[#B59FA9] font-medium border border-[#E8D3C0] dark:border-white/10"
           >
             <Info className="w-3 h-3 text-[#CE7F79]" />
-            Demo data
+            Demo data (prices & ratings) • Suggestions, not medical advice
           </span>
         </div>
 

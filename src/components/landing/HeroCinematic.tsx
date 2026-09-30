@@ -48,9 +48,12 @@ export function HeroCinematic() {
   };
 
   return (
-    <section className="relative w-full min-h-[92vh] lg:min-h-screen flex flex-col justify-between overflow-hidden pt-4 pb-8 lg:pt-8 lg:pb-12">
-      {/* Background Image with Slow Ken Burns Breathing Zoom */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+    <section
+      className="relative isolate overflow-clip w-full min-h-[92vh] lg:min-h-screen flex flex-col justify-between bg-[#FBF7F4] dark:bg-[#180F14] section-stack pt-4 pb-8 lg:pt-8 lg:pb-12"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
+    >
+      {/* Background Image with Slow Ken Burns Breathing Zoom (z-0, NO negative z-index) */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#FBF7F4] dark:bg-[#180F14]">
         <motion.div
           animate={shouldReduceMotion ? {} : { scale: [1, 1.06, 1] }}
           transition={{ duration: 24, repeat: Infinity, ease: 'easeInOut' }}
@@ -72,7 +75,7 @@ export function HeroCinematic() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#FBF7F4] via-transparent to-[#FBF7F4]/40 dark:from-[#180F14] dark:to-[#180F14]/40" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Column: Line-by-Line Staggered Headline, Subheading, CTAs & Reassurance */}
@@ -312,15 +315,15 @@ export function HeroCinematic() {
                   />
                 </svg>
                 <span className="absolute font-bold text-xs text-[#3B1F2B] dark:text-[#FAF3F0]">
-                  98%
+                  Match
                 </span>
               </div>
               <div>
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-[#CE7F79]">
-                  Trait Match Fit
+                  Preference Match
                 </span>
                 <span className="font-serif font-bold text-xs sm:text-sm text-[#3B1F2B] dark:text-[#FAF3F0]">
-                  Precision Routine
+                  Tailored Routine
                 </span>
               </div>
             </motion.div>

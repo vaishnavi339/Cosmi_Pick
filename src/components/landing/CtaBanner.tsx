@@ -5,12 +5,15 @@ import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
 
 export function CtaBanner() {
   return (
-    <section className="py-20 sm:py-24 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="py-20 sm:py-24 relative isolate overflow-clip bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="rounded-3xl p-10 sm:p-16 lg:p-20 relative overflow-hidden border border-[#E8D3C0] dark:border-white/10 text-center space-y-6 shadow-soft-luxury">
           
-          {/* Real Photography Background with Luxury Overlay */}
-          <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          {/* Real Photography Background with Luxury Overlay (z-0, NO negative z-index) */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#FBF7F4] dark:bg-[#180F14]">
             <Image
               src="/images/mood/hero-woman-applying.webp"
               alt="Woman gently applying serum to cheek"

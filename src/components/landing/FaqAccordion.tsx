@@ -38,8 +38,12 @@ export function FaqAccordion() {
   };
 
   return (
-    <section id="faq" className="py-20 relative scroll-mt-24">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="faq"
+      className="py-20 relative isolate overflow-clip scroll-mt-24 bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
+    >
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-14 space-y-4">

@@ -21,10 +21,11 @@ export function TextureSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center overflow-hidden my-12"
+      className="relative isolate overflow-clip w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center bg-[#FBF7F4] dark:bg-[#180F14] section-stack my-12"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
     >
-      {/* Parallax Background Photo */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+      {/* Parallax Background Photo (z-0, NO negative z-index) */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#FBF7F4] dark:bg-[#180F14]">
         <motion.div
           style={{
             y: shouldReduceMotion ? 0 : y,
@@ -44,11 +45,11 @@ export function TextureSection() {
 
         {/* Ambient Overlay for High Legibility */}
         <div className="absolute inset-0 bg-[#3B1F2B]/40 dark:bg-[#180F14]/55 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FBF7F4] via-transparent to-[#FBF7F4] dark:from-[#120B0F] dark:to-[#120B0F]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#FBF7F4] via-transparent to-[#FBF7F4] dark:from-[#180F14] dark:to-[#180F14]" />
       </div>
 
       {/* Editorial Copy */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-16 z-10 space-y-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-16 relative z-10 space-y-6">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}

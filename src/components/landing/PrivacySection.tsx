@@ -17,8 +17,11 @@ export function PrivacySection() {
   const [showTechnical, setShowTechnical] = useState(false);
 
   return (
-    <section className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      className="py-20 relative isolate overflow-clip bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Container */}
         <div className="rounded-3xl glass-card bg-white/80 dark:bg-[#20151C]/80 border border-[#E8D3C0] dark:border-white/10 p-8 sm:p-12 shadow-soft-luxury">

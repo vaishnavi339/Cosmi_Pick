@@ -3,7 +3,7 @@
 import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Sparkles, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Sparkles, ArrowRight } from 'lucide-react';
 import { ProductVisual } from '@/components/common/ProductVisual';
 import productsData from '@/data/products.json';
 import { Product } from '@/types';
@@ -52,9 +52,10 @@ export function FeaturedProducts() {
   return (
     <section
       id="featured"
-      className="py-20 sm:py-24 relative overflow-hidden scroll-mt-24 bg-gradient-to-b from-transparent via-[#F4D9D6]/20 to-transparent dark:via-white/[0.01]"
+      className="py-20 sm:py-24 relative isolate overflow-clip scroll-mt-24 bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header with Arrows */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
@@ -64,10 +65,10 @@ export function FeaturedProducts() {
               <span>Curated Formulations</span>
             </div>
             <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#3B1F2B] dark:text-[#FAF3F0] tracking-tight">
-              Featured in our clinical catalog
+              Curated Formulations Catalog
             </h2>
             <p className="text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9] leading-relaxed">
-              Every formulation is verified against dermal safety benchmarks, free from unnecessary fillers, and ready to pair with your face scan. Drag or scroll to browse.
+              Thoughtful formulations matched to skin concerns and ingredient preferences. Suggestions, not medical advice. Drag or scroll to browse.
             </p>
           </div>
 
@@ -135,14 +136,13 @@ export function FeaturedProducts() {
                   </h3>
                 </div>
 
-                {/* Category & Rating */}
+                {/* Category & Demo Rating */}
                 <div className="flex items-center justify-between text-xs text-[#7E636E] dark:text-[#B59FA9] pt-3">
                   <span className="font-medium text-[#CE7F79] dark:text-[#D9B99B]">
                     {product.category}
                   </span>
-                  <div className="flex items-center text-amber-500 font-bold gap-1">
-                    <Star className="w-3.5 h-3.5 fill-amber-500" />
-                    <span>{product.rating}</span>
+                  <div className="text-[11px] font-medium text-[#7E636E] dark:text-[#B59FA9]">
+                    Catalog score: <span className="font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">{product.rating}</span> <span className="text-[9px] text-[#CE7F79]">(demo data)</span>
                   </div>
                 </div>
               </div>
@@ -150,7 +150,9 @@ export function FeaturedProducts() {
               {/* Price & Buy/Scan Action */}
               <div className="pt-4 mt-4 border-t border-[#E8D3C0]/60 dark:border-white/5 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] text-[#7E636E] dark:text-[#B59FA9] block">Price</span>
+                  <span className="text-[10px] text-[#7E636E] dark:text-[#B59FA9] block">
+                    Price <span className="text-[9px] text-[#CE7F79]">(demo data)</span>
+                  </span>
                   <span className="font-bold text-base text-[#3B1F2B] dark:text-[#FAF3F0]">
                     {formatINR(product.priceINR)}
                   </span>

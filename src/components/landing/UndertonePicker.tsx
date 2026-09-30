@@ -112,8 +112,12 @@ export function UndertonePicker() {
   const [selected, setSelected] = useState<UndertoneInfo>(undertones[0]);
 
   return (
-    <section id="undertone" className="py-20 sm:py-24 relative scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="undertone"
+      className="py-20 sm:py-24 relative isolate overflow-clip scroll-mt-24 bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-4">
@@ -125,7 +129,7 @@ export function UndertonePicker() {
             Discover your skin undertone
           </h2>
           <p className="text-sm sm:text-base text-[#7E636E] dark:text-[#B59FA9] leading-relaxed">
-            Unlike surface tanning, undertones never change. Tap each undertone below to see how our optical scan matches your pigments to clinical routines in real time.
+            Unlike surface tanning, undertones never change. Tap each undertone below to see how our optical scan matches your pigments to personalized routines in real time. Suggestions, not medical advice.
           </p>
         </div>
 
@@ -260,7 +264,7 @@ export function UndertonePicker() {
                       </h4>
                     </div>
                     <div className="px-2.5 py-1 rounded-full bg-[#3B1F2B] text-white text-[10px] font-bold flex-shrink-0 shadow-sm">
-                      {selected.sampleProduct.matchScore}% Match
+                      Match Score: {selected.sampleProduct.matchScore}
                     </div>
                   </div>
 

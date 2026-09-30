@@ -12,6 +12,11 @@
     --border-highlight: rgba(217, 185, 155, 0.6);
     --muted: #7E636E;
     --muted-bg: rgba(244, 217, 214, 0.25);
+    /* Consistent Z-Index Scale */
+    --z-background: 0;
+    --z-content: 10;
+    --z-sticky-nav: 50;
+    --z-modal: 100;
     --luxury-glow: 
       radial-gradient(circle at 20% 10%, rgba(244, 217, 214, 0.45) 0%, transparent 50%),
       radial-gradient(circle at 85% 60%, rgba(201, 214, 195, 0.35) 0%, transparent 50%),
@@ -27,6 +32,11 @@
     --border-highlight: rgba(244, 217, 214, 0.3);
     --muted: #B59FA9;
     --muted-bg: rgba(255, 255, 255, 0.05);
+    /* Consistent Z-Index Scale */
+    --z-background: 0;
+    --z-content: 10;
+    --z-sticky-nav: 50;
+    --z-modal: 100;
     --luxury-glow: 
       radial-gradient(circle at 25% 10%, rgba(59, 31, 43, 0.5) 0%, transparent 55%),
       radial-gradient(circle at 80% 65%, rgba(45, 26, 36, 0.4) 0%, transparent 50%),
@@ -155,6 +165,14 @@
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border: 1px solid var(--border-color);
+  }
+
+  /* Robust Stacking Context Utility */
+  .section-stack {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    background-color: var(--background);
   }
 
   /* Soft Animated Hero Border */

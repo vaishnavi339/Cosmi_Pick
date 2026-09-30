@@ -27,6 +27,8 @@ interface SearchResultItem {
   category: string;
   source: 'local_catalog' | 'open_beauty_facts';
   obfUrl?: string;
+  imageContributor?: string;
+  imageLicense?: string;
 }
 
 interface Props {
@@ -109,13 +111,13 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FAF5F0] dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-xs font-semibold text-[#8C4A5A] dark:text-[#F4D9D6] mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Open Beauty Facts Live Verification</span>
+            <span>Live Product Photos & Ingredient Lookup</span>
           </div>
           <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
             Search Any Cosmetic Product
           </h3>
           <p className="text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9] mt-1 max-w-xl">
-            Look up any skincare product to inspect verified formulation ingredients against your profile&apos;s avoid criteria and detect key actives.
+            Search a skincare product to see its real package photo, photo credit, source, and available ingredients. Results come from the community-curated Open Beauty Facts catalog.
           </p>
         </div>
 
@@ -163,7 +165,7 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
           {isSearching ? (
             <>
               <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-              <span>Searching OBF...</span>
+              <span>Searching products...</span>
             </>
           ) : (
             <>
@@ -223,7 +225,7 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
         <div className="space-y-4 pt-2">
           <div className="flex items-center justify-between text-xs text-[#7E636E] dark:text-[#B59FA9]">
             <span className="font-semibold text-[#3B1F2B] dark:text-[#FAF3F0]">
-              Found {results.length} result{results.length === 1 ? '' : 's'} in Open Beauty Facts
+              Found {results.length} photographed result{results.length === 1 ? '' : 's'} in Open Beauty Facts
             </span>
             <span className="text-[11px] italic">Ingredients data from Open Beauty Facts (ODbL)</span>
           </div>
@@ -365,9 +367,11 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
                     </div>
                   )}
 
-                  {/* Card Footer: OBF Attribution & Direct Link */}
-                  <div className="flex items-center justify-between text-[11px] text-[#7E636E] dark:text-[#B59FA9] pt-2 border-t border-[#E8D3C0]/30 dark:border-white/5">
-                    <span>Ingredients data from Open Beauty Facts (ODbL)</span>
+                  {/* Photo and product data attribution */}
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-[11px] text-[#7E636E] dark:text-[#B59FA9] pt-2 border-t border-[#E8D3C0]/30 dark:border-white/5">
+                    <span>
+                      Photo: {item.imageContributor || 'Open Beauty Facts contributors'} · {item.imageLicense || 'CC BY-SA'}
+                    </span>
                     {item.obfUrl && (
                       <a
                         href={item.obfUrl}
@@ -375,11 +379,14 @@ export function ProductLookupSection({ userAvoidList = ['fragrance', 'parabens',
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 hover:text-[#3B1F2B] dark:hover:text-white font-medium transition-colors"
                       >
-                        <span>View on Open Beauty Facts</span>
+                        <span>Photo & product source: Open Beauty Facts</span>
                         <ExternalLink className="w-3 h-3" />
                       </a>
                     )}
                   </div>
+                  <p className="text-[10px] text-[#7E636E]/80 dark:text-[#B59FA9]/80">
+                    Product and ingredient database: Open Beauty Facts (ODbL). Community photo license: CC BY-SA.
+                  </p>
                 </div>
               );
             })}

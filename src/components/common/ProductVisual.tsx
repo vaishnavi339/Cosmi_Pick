@@ -3,15 +3,6 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  Droplets,
-  Sun,
-  Sparkles,
-  Wind,
-  Heart,
-  Flower2,
-  Package,
-} from 'lucide-react';
 import { Product } from '@/types';
 
 interface Props {
@@ -31,23 +22,27 @@ export function ProductVisual({
 }: Props) {
   const [imageError, setImageError] = useState(false);
 
-  // Category Icon Resolver
-  const getCategoryIcon = (category: string) => {
-    const c = (category || '').toLowerCase();
-    if (c.includes('sunscreen') || c.includes('spf')) return Sun;
-    if (c.includes('serum') || c.includes('ampoule')) return Droplets;
-    if (c.includes('cleanser') || c.includes('wash')) return Wind;
-    if (c.includes('moisturizer') || c.includes('cream') || c.includes('lotion')) return Flower2;
-    if (c.includes('treatment') || c.includes('exfoliant')) return Sparkles;
-    if (c.includes('eye')) return Heart;
-    return Package;
+  // Soft brand-tinted palette for intentional non-photo fallback design
+  const getBrandTint = (brand: string) => {
+    const b = (brand || '').toLowerCase();
+    if (b.includes('cerave') || b.includes('cetaphil') || b.includes('simple') || b.includes('klairs')) {
+      return 'bg-[#F2F7F9] dark:bg-[#152026] border-[#D0E2EC] dark:border-[#243B47] text-[#1E3A4C] dark:text-[#D5E6F0]';
+    }
+    if (b.includes('minimalist') || b.includes('ordinary') || b.includes('paula')) {
+      return 'bg-[#F8F5F2] dark:bg-[#211D1A] border-[#E5DDD4] dark:border-[#38312B] text-[#382F28] dark:text-[#EDE6DE]';
+    }
+    if (b.includes('plum') || b.includes('dot') || b.includes('laneige') || b.includes('foxtale')) {
+      return 'bg-[#FAF3F4] dark:bg-[#25171F] border-[#EED4DC] dark:border-[#422533] text-[#4A2033] dark:text-[#F3DDE5]';
+    }
+    if (b.includes('cosrx') || b.includes('joseon') || b.includes('sheth') || b.includes('derma') || b.includes('equil')) {
+      return 'bg-[#F6F7F3] dark:bg-[#1A2219] border-[#DCE4D5] dark:border-[#2D3D2B] text-[#2F3D2A] dark:text-[#DEE8D9]';
+    }
+    return 'bg-[#FAF6F3] dark:bg-[#211B1F] border-[#E8DDD4] dark:border-[#382B33] text-[#3B2932] dark:text-[#EFE2E8]';
   };
-
-  const CategoryIcon = getCategoryIcon(product.category);
 
   // Aspect sizes
   const sizeClasses = {
-    sm: 'w-12 h-12',
+    sm: 'w-14 h-14',
     md: 'w-24 h-24 sm:w-28 sm:h-28',
     lg: 'w-36 h-36 sm:w-44 sm:h-44',
     hero: 'w-48 h-48 sm:w-60 sm:h-60',
@@ -55,6 +50,7 @@ export function ProductVisual({
   };
 
   const hasImage = Boolean(product.image && !imageError);
+  const brandTintClass = getBrandTint(product.brand);
 
   return (
     <div
@@ -74,15 +70,15 @@ export function ProductVisual({
                 ? '(max-width: 768px) 240px, 300px'
                 : size === 'lg'
                 ? '(max-width: 768px) 180px, 220px'
-                : '120px'
+                : '(max-width: 768px) 140px, 180px'
             }
             loading="lazy"
             onError={() => setImageError(true)}
             className="object-contain p-2 rounded-xl transition-transform duration-300 group-hover/visual:scale-105"
           />
 
-          {/* Small Attribution for larger tiles */}
-          {showAttribution && (size === 'lg' || size === 'hero') && (
+          {/* Attribution for Open Beauty Facts */}
+          {showAttribution && (size === 'lg' || size === 'hero' || size === 'fill') && (
             <Link
               href="/credits"
               title="Photo: Open Beauty Facts contributors, CC BY-SA"
@@ -93,22 +89,39 @@ export function ProductVisual({
           )}
         </div>
       ) : (
-        /* Neutral "Image Coming Soon" Luxury Fallback Tile */
-        <div className="w-full h-full rounded-2xl bg-gradient-to-b from-[#F4D9D6]/35 via-[#FBF7F4] to-[#E8D3C0]/30 dark:from-[#3B1F2B]/40 dark:via-[#24181E] dark:to-[#180F14] border border-[#E8D3C0]/70 dark:border-white/10 p-3 flex flex-col items-center justify-center text-center shadow-inner select-none">
-          {/* Category Icon Badge */}
-          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/80 dark:bg-white/10 shadow-sm border border-[#E8D3C0]/50 dark:border-white/10 flex items-center justify-center mb-1.5 flex-shrink-0">
-            <CategoryIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#3B1F2B] dark:text-[#F4D9D6]" />
-          </div>
-
-          {/* Brand Name */}
-          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#3B1F2B] dark:text-[#FAF3F0] line-clamp-1 max-w-[90%]">
+        /* Intentional Fallback Design: Soft brand-tinted tile, brand name, large serif title, product-type, Photo coming soon */
+        <div
+          className={`w-full h-full rounded-2xl ${brandTintClass} border p-3 sm:p-4 flex flex-col items-center justify-between text-center shadow-inner select-none transition-colors duration-200`}
+        >
+          {/* Top Brand Tag */}
+          <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest opacity-80 line-clamp-1">
             {product.brand}
           </span>
 
-          {/* Subtle Coming Soon Caption */}
-          <span className="text-[9px] sm:text-[10px] text-[#7E636E] dark:text-[#B59FA9] font-medium tracking-wide mt-0.5">
-            Image coming soon
-          </span>
+          {/* Large Serif Product Title */}
+          <div className="my-auto py-1 w-full px-1">
+            <h4
+              className={`font-serif font-bold text-[#3B1F2B] dark:text-[#FAF3F0] line-clamp-2 leading-snug ${
+                size === 'sm'
+                  ? 'text-[10px]'
+                  : size === 'md'
+                  ? 'text-xs sm:text-sm'
+                  : 'text-sm sm:text-base'
+              }`}
+            >
+              {product.name}
+            </h4>
+          </div>
+
+          {/* Bottom Row: Product Category & Photo Coming Soon Note */}
+          <div className="flex flex-col items-center gap-0.5 w-full">
+            <span className="inline-block text-[8px] sm:text-[9px] font-semibold px-2 py-0.5 rounded-full bg-white/80 dark:bg-white/10 border border-current/20 opacity-90 line-clamp-1">
+              {product.category}
+            </span>
+            <span className="text-[8px] sm:text-[9px] text-[#7E636E] dark:text-[#B59FA9] font-medium tracking-wide">
+              Photo coming soon
+            </span>
+          </div>
         </div>
       )}
     </div>

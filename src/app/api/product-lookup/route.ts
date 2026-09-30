@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
         query: q,
         count: results.length,
         results,
-        disclaimer: 'Ingredients data from Open Beauty Facts (ODbL).',
+        disclaimer: 'Product and ingredients data from Open Beauty Facts (ODbL); community product photos are credited to their contributors under CC BY-SA.',
       },
       {
         status: 200,

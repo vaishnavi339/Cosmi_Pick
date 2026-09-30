@@ -43,6 +43,16 @@ export function PinnedScrollStory() {
   const img2Opacity = useTransform(scrollYProgress, [0.28, 0.36, 0.62, 0.70], [0, 1, 1, 0]);
   const img3Opacity = useTransform(scrollYProgress, [0.62, 0.70, 1], [0, 1, 1]);
 
+  // Derived Visibility & Pointer Events: strictly hide layers when opacity is 0
+  const img1Visibility = useTransform(img1Opacity, (v) => (v > 0.01 ? 'visible' : 'hidden'));
+  const img1PointerEvents = useTransform(img1Opacity, (v) => (v > 0.01 ? 'auto' : 'none'));
+
+  const img2Visibility = useTransform(img2Opacity, (v) => (v > 0.01 ? 'visible' : 'hidden'));
+  const img2PointerEvents = useTransform(img2Opacity, (v) => (v > 0.01 ? 'auto' : 'none'));
+
+  const img3Visibility = useTransform(img3Opacity, (v) => (v > 0.01 ? 'visible' : 'hidden'));
+  const img3PointerEvents = useTransform(img3Opacity, (v) => (v > 0.01 ? 'auto' : 'none'));
+
   // Image Scale Transforms (subtle cinematic zoom per step)
   const img1Scale = useTransform(scrollYProgress, [0, 0.35], [1, 1.05]);
   const img2Scale = useTransform(scrollYProgress, [0.3, 0.7], [1, 1.05]);
@@ -52,6 +62,15 @@ export function PinnedScrollStory() {
   const card1Opacity = useTransform(scrollYProgress, [0, 0.26, 0.34], [1, 1, 0]);
   const card2Opacity = useTransform(scrollYProgress, [0.28, 0.36, 0.60, 0.68], [0, 1, 1, 0]);
   const card3Opacity = useTransform(scrollYProgress, [0.62, 0.70, 1], [0, 1, 1]);
+
+  const card1Visibility = useTransform(card1Opacity, (v) => (v > 0.01 ? 'visible' : 'hidden'));
+  const card1PointerEvents = useTransform(card1Opacity, (v) => (v > 0.01 ? 'auto' : 'none'));
+
+  const card2Visibility = useTransform(card2Opacity, (v) => (v > 0.01 ? 'visible' : 'hidden'));
+  const card2PointerEvents = useTransform(card2Opacity, (v) => (v > 0.01 ? 'auto' : 'none'));
+
+  const card3Visibility = useTransform(card3Opacity, (v) => (v > 0.01 ? 'visible' : 'hidden'));
+  const card3PointerEvents = useTransform(card3Opacity, (v) => (v > 0.01 ? 'auto' : 'none'));
 
   // Mock UI y-offset shifts
   const card1Y = useTransform(scrollYProgress, [0, 0.26, 0.34], [0, 0, -20]);
@@ -88,25 +107,45 @@ export function PinnedScrollStory() {
       title: 'Get Your Picks',
       subtitle: 'Transparent rationale for every choice.',
       description:
-        'Receive a clinically ranked AM/PM routine where every cleanser, active serum, and barrier moisturizer includes clear reasons for its score. Zero sponsored placements or fake ratings.',
+        'Receive a routine where every cleanser, active serum, and barrier moisturizer includes clear reasons for its match score based on your scan and preferences. Suggestions, not medical advice.',
       icon: Sparkles,
       pill: 'Clear Active Ingredient Rationale',
     },
   ];
 
   return (
-    <section id="how-it-works" className="relative scroll-mt-24">
+    <section
+      id="how-it-works"
+      className="relative isolate overflow-clip scroll-mt-24 bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
+    >
       {/* ================= DESKTOP PINNED SCROLL (lg and above) ================= */}
-      <div ref={containerRef} className="hidden lg:block relative h-[300vh]">
+      <div
+        ref={containerRef}
+        className="hidden lg:block relative h-[300vh] isolate overflow-clip bg-[#FBF7F4] dark:bg-[#180F14]"
+      >
         {/* Sticky 100vh Viewport */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between py-12 px-6 sm:px-10 lg:px-16">
-          {/* Background Images Crossfading with Depth */}
-          <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between py-12 px-6 sm:px-10 lg:px-16 bg-[#FBF7F4] dark:bg-[#180F14] z-0">
+          {/* Background Images Crossfading with Depth (z-0, NO negative z-index) */}
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#FBF7F4] dark:bg-[#180F14]">
+            {/* Solid opaque background layer under any image */}
+            <div className="absolute inset-0 bg-[#FBF7F4] dark:bg-[#180F14] z-0" />
+
             {/* Step 1 Image */}
             <motion.div
               style={{
                 opacity: shouldReduceMotion ? (activeStep === 0 ? 1 : 0) : img1Opacity,
                 scale: shouldReduceMotion ? 1 : img1Scale,
+                visibility: shouldReduceMotion
+                  ? activeStep === 0
+                    ? 'visible'
+                    : 'hidden'
+                  : img1Visibility,
+                pointerEvents: shouldReduceMotion
+                  ? activeStep === 0
+                    ? 'auto'
+                    : 'none'
+                  : img1PointerEvents,
               }}
               className="absolute inset-0 w-full h-full"
             >
@@ -124,6 +163,16 @@ export function PinnedScrollStory() {
               style={{
                 opacity: shouldReduceMotion ? (activeStep === 1 ? 1 : 0) : img2Opacity,
                 scale: shouldReduceMotion ? 1 : img2Scale,
+                visibility: shouldReduceMotion
+                  ? activeStep === 1
+                    ? 'visible'
+                    : 'hidden'
+                  : img2Visibility,
+                pointerEvents: shouldReduceMotion
+                  ? activeStep === 1
+                    ? 'auto'
+                    : 'none'
+                  : img2PointerEvents,
               }}
               className="absolute inset-0 w-full h-full"
             >
@@ -141,6 +190,16 @@ export function PinnedScrollStory() {
               style={{
                 opacity: shouldReduceMotion ? (activeStep === 2 ? 1 : 0) : img3Opacity,
                 scale: shouldReduceMotion ? 1 : img3Scale,
+                visibility: shouldReduceMotion
+                  ? activeStep === 2
+                    ? 'visible'
+                    : 'hidden'
+                  : img3Visibility,
+                pointerEvents: shouldReduceMotion
+                  ? activeStep === 2
+                    ? 'auto'
+                    : 'none'
+                  : img3PointerEvents,
               }}
               className="absolute inset-0 w-full h-full"
             >
@@ -158,8 +217,8 @@ export function PinnedScrollStory() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#FBF7F4] via-transparent to-[#FBF7F4]/40 dark:from-[#180F14] dark:to-[#180F14]/40" />
           </div>
 
-          {/* Top Section Header */}
-          <div className="max-w-7xl mx-auto w-full flex items-center justify-between z-10">
+          {/* Top Section Header (z-10) */}
+          <div className="max-w-7xl mx-auto w-full flex items-center justify-between relative z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#3B1F2B]/5 dark:bg-white/10 border border-[#3B1F2B]/15 dark:border-white/10 text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0] uppercase tracking-wider">
               <span>The 3-Step Precision Story</span>
             </div>
@@ -183,9 +242,9 @@ export function PinnedScrollStory() {
           </div>
 
           {/* Main Interactive Stage */}
-          <div className="max-w-7xl mx-auto w-full my-auto grid grid-cols-12 gap-12 items-center z-10">
+          <div className="max-w-7xl mx-auto w-full my-auto grid grid-cols-12 gap-12 items-center relative z-10">
             {/* Left Narrative Column (Text & Step Details) */}
-            <div className="col-span-6 space-y-6">
+            <div className="col-span-6 space-y-6 relative z-10">
               <div className="relative min-h-[300px] flex flex-col justify-center">
                 {steps.map((step, idx) => {
                   const isCurrent = activeStep === idx;
@@ -247,21 +306,29 @@ export function PinnedScrollStory() {
             </div>
 
             {/* Right Column: Dynamic Mock UI Stage */}
-            <div className="col-span-6 relative flex items-center justify-center">
+            <div className="col-span-6 relative flex items-center justify-center z-10">
               {/* Glass Frame Container */}
-              <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl glass-card bg-white/85 dark:bg-[#1C1218]/90 border border-white/80 dark:border-white/15 p-6 shadow-2xl backdrop-blur-xl overflow-hidden">
+              <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl glass-card bg-white/85 dark:bg-[#1C1218]/90 border border-white/80 dark:border-white/15 p-6 shadow-2xl backdrop-blur-xl overflow-hidden z-10">
                 
                 {/* Step 1 Mock UI: Optical Camera & Face Landmarker Radar */}
                 <motion.div
                   style={{
                     opacity: shouldReduceMotion ? (activeStep === 0 ? 1 : 0) : card1Opacity,
                     y: shouldReduceMotion ? 0 : card1Y,
+                    visibility: shouldReduceMotion
+                      ? activeStep === 0
+                        ? 'visible'
+                        : 'hidden'
+                      : card1Visibility,
+                    pointerEvents: shouldReduceMotion
+                      ? activeStep === 0
+                        ? 'auto'
+                        : 'none'
+                      : card1PointerEvents,
                   }}
-                  className={`absolute inset-0 p-6 flex flex-col justify-between transition-opacity ${
-                    activeStep === 0 ? 'pointer-events-auto' : 'pointer-events-none'
-                  }`}
+                  className="absolute inset-0 p-6 flex flex-col justify-between"
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                       <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
@@ -273,12 +340,12 @@ export function PinnedScrollStory() {
                     </span>
                   </div>
 
-                  {/* Simulated Face Oval with Scanning Laser */}
-                  <div className="relative my-auto w-40 h-52 mx-auto rounded-[50%] border-2 border-dashed border-[#CE7F79]/60 flex items-center justify-center overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#F4D9D6]/20 via-transparent to-[#F4D9D6]/30" />
+                  {/* Simulated Face Oval with Scanning Laser (strictly kept inside mock scanner area, z-0 below text) */}
+                  <div className="relative my-auto w-40 h-52 mx-auto rounded-[50%] border-2 border-dashed border-[#CE7F79]/60 flex items-center justify-center overflow-hidden z-0">
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#F4D9D6]/20 via-transparent to-[#F4D9D6]/30 z-0" />
                     {/* Scanning radar line */}
-                    <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#3B1F2B] dark:via-[#F4D9D6] to-transparent animate-bounce opacity-80" />
-                    <div className="text-center space-y-1 z-10">
+                    <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#3B1F2B] dark:via-[#F4D9D6] to-transparent animate-bounce opacity-80 z-0" />
+                    <div className="text-center space-y-1 relative z-10">
                       <Camera className="w-6 h-6 text-[#3B1F2B] dark:text-[#FAF3F0] mx-auto opacity-70" />
                       <span className="text-[10px] font-semibold text-[#3B1F2B] dark:text-[#FAF3F0] block">
                         Align Face
@@ -287,7 +354,7 @@ export function PinnedScrollStory() {
                   </div>
 
                   {/* Real-time telemetry badges */}
-                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#E8D3C0]/50 dark:border-white/10">
+                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
                     <div className="p-2 rounded-xl bg-[#FBF7F4] dark:bg-white/5 text-center">
                       <span className="text-[9px] text-[#7E636E] dark:text-[#B59FA9] block">Undertone</span>
                       <strong className="text-xs text-[#3B1F2B] dark:text-[#FAF3F0]">Warm Peach</strong>
@@ -310,12 +377,20 @@ export function PinnedScrollStory() {
                   style={{
                     opacity: shouldReduceMotion ? (activeStep === 1 ? 1 : 0) : card2Opacity,
                     y: shouldReduceMotion ? 0 : card2Y,
+                    visibility: shouldReduceMotion
+                      ? activeStep === 1
+                        ? 'visible'
+                        : 'hidden'
+                      : card2Visibility,
+                    pointerEvents: shouldReduceMotion
+                      ? activeStep === 1
+                        ? 'auto'
+                        : 'none'
+                      : card2PointerEvents,
                   }}
-                  className={`absolute inset-0 p-6 flex flex-col justify-between transition-opacity ${
-                    activeStep === 1 ? 'pointer-events-auto' : 'pointer-events-none'
-                  }`}
+                  className="absolute inset-0 p-6 flex flex-col justify-between"
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
                     <div className="flex items-center gap-2">
                       <Sliders className="w-4 h-4 text-[#CE7F79]" />
                       <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
@@ -327,7 +402,7 @@ export function PinnedScrollStory() {
                     </span>
                   </div>
 
-                  <div className="space-y-3.5 my-auto">
+                  <div className="space-y-3.5 my-auto relative z-10">
                     {/* Primary Goal */}
                     <div className="p-3 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/60 dark:border-white/10 flex items-center justify-between">
                       <span className="text-xs text-[#7E636E] dark:text-[#B59FA9]">Focus Concern:</span>
@@ -363,22 +438,30 @@ export function PinnedScrollStory() {
                     </div>
                   </div>
 
-                  <div className="text-center pt-2 text-[11px] text-[#7E636E] dark:text-[#B59FA9]">
-                    Every recommendation is mathematically filtered against these rules.
+                  <div className="text-center pt-2 text-[11px] text-[#7E636E] dark:text-[#B59FA9] relative z-10">
+                    Recommendations are filtered strictly against your constraints.
                   </div>
                 </motion.div>
 
-                {/* Step 3 Mock UI: Verified Routine Picks */}
+                {/* Step 3 Mock UI: Verified Routine Picks (oval never shown here) */}
                 <motion.div
                   style={{
                     opacity: shouldReduceMotion ? (activeStep === 2 ? 1 : 0) : card3Opacity,
                     y: shouldReduceMotion ? 0 : card3Y,
+                    visibility: shouldReduceMotion
+                      ? activeStep === 2
+                        ? 'visible'
+                        : 'hidden'
+                      : card3Visibility,
+                    pointerEvents: shouldReduceMotion
+                      ? activeStep === 2
+                        ? 'auto'
+                        : 'none'
+                      : card3PointerEvents,
                   }}
-                  className={`absolute inset-0 p-6 flex flex-col justify-between transition-opacity ${
-                    activeStep === 2 ? 'pointer-events-auto' : 'pointer-events-none'
-                  }`}
+                  className="absolute inset-0 p-6 flex flex-col justify-between z-10"
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
                     <div className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-[#CE7F79]" />
                       <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
@@ -386,12 +469,12 @@ export function PinnedScrollStory() {
                       </span>
                     </div>
                     <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#3B1F2B] text-white text-[10px] font-bold">
-                      <span>98% Fit</span>
+                      <span>Match score based on preferences</span>
                     </div>
                   </div>
 
                   {/* Recommendation Card */}
-                  <div className="my-auto p-4 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/70 dark:border-white/10 space-y-3">
+                  <div className="my-auto p-4 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/70 dark:border-white/10 space-y-3 relative z-10">
                     <div className="flex items-start justify-between">
                       <div>
                         <span className="text-[10px] uppercase tracking-wider font-bold text-[#7E636E] dark:text-[#B59FA9]">
@@ -401,9 +484,14 @@ export function PinnedScrollStory() {
                           Ceramides 0.3% + Madecassoside
                         </h4>
                       </div>
-                      <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
-                        ₹599
-                      </span>
+                      <div className="text-right">
+                        <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0] block">
+                          ₹599
+                        </span>
+                        <span className="text-[9px] text-[#CE7F79] font-medium block">
+                          (demo data)
+                        </span>
+                      </div>
                     </div>
 
                     <div className="space-y-1.5 text-xs text-[#5A404C] dark:text-[#E0CFD7]">
@@ -419,11 +507,11 @@ export function PinnedScrollStory() {
 
                     <div className="flex items-center justify-between pt-2 border-t border-[#E8D3C0]/50 dark:border-white/5 text-[10px] text-[#7E636E] dark:text-[#B59FA9]">
                       <span>Key Actives: Pure Ceramide NP + Centella</span>
-                      <span className="font-bold text-[#CE7F79]">Optimal for Warm Peach</span>
+                      <span className="font-medium text-[#7E636E] dark:text-[#B59FA9]">Suggestions, not medical advice</span>
                     </div>
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between text-xs">
+                  <div className="pt-2 flex items-center justify-between text-xs relative z-10">
                     <span className="text-[#7E636E] dark:text-[#B59FA9]">Full 3-step routine ready</span>
                     <span className="font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
                       Cleanser · Serum · SPF
@@ -435,15 +523,18 @@ export function PinnedScrollStory() {
             </div>
           </div>
 
-          {/* Bottom subtle scroll helper cue */}
-          <div className="max-w-7xl mx-auto w-full text-center text-xs text-[#7E636E] dark:text-[#B59FA9] z-10">
+          {/* Bottom subtle scroll helper cue (z-10) */}
+          <div className="max-w-7xl mx-auto w-full text-center text-xs text-[#7E636E] dark:text-[#B59FA9] relative z-10">
             <span>Scroll downward to progress through the optical story</span>
           </div>
         </div>
       </div>
 
       {/* ================= MOBILE / TABLET VIEW (< lg) ================= */}
-      <div className="block lg:hidden py-16 px-4 sm:px-6">
+      <div
+        className="block lg:hidden py-16 px-4 sm:px-6 relative isolate overflow-clip bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+        style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
+      >
         <div className="max-w-xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-center space-y-3">
@@ -454,7 +545,7 @@ export function PinnedScrollStory() {
               How CosmicPick works
             </h2>
             <p className="text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9]">
-              Three simple steps replacing beauty trial-and-error with clinical, private matching.
+              Three simple steps replacing beauty trial-and-error with private, preference-based matching. Suggestions, not medical advice.
             </p>
           </div>
 

@@ -150,7 +150,7 @@ export function HeroSection() {
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
                     <span className="text-[9px] font-bold uppercase tracking-wider text-[#CE7F79]">
-                      98% Fit
+                      Preference Match
                     </span>
                     <span className="w-1 h-1 rounded-full bg-[#8CA583]" />
                     <span className="text-[9px] text-[#7E636E] dark:text-[#B59FA9]">

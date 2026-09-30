@@ -92,6 +92,12 @@ const config: Config = {
           '100%': { opacity: '0.3', transform: 'scale(0.98)' },
         },
       },
+      zIndex: {
+        'bg': 'var(--z-background, 0)',
+        'content': 'var(--z-content, 10)',
+        'nav': 'var(--z-sticky-nav, 50)',
+        'modal': 'var(--z-modal, 100)',
+      },
       animation: {
         float: 'float 6s ease-in-out infinite',
         'mesh-scan': 'meshScan 4s ease-in-out infinite',

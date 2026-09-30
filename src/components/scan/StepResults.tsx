@@ -244,10 +244,10 @@ export function StepResults({
           <div className="flex items-center justify-between px-2">
             <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#3B1F2B] dark:text-[#FAF3F0] flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-[#CE7F79]" />
-              <span>Your #1 Calibrated Pick</span>
+              <span>Your Recommended Pick</span>
             </h3>
             <span className="text-xs font-semibold text-[#7E636E] dark:text-[#B59FA9]">
-              Highest Dermal Affinity
+              Suggestions, not medical advice
             </span>
           </div>
 

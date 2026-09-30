@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import {
-  Star,
   Sparkles,
   ShieldAlert,
   ExternalLink,
@@ -138,12 +137,12 @@ export function ProductCard({
                 {product.name}
               </h4>
 
-              {/* Meta row: Stars, Category, Volume */}
+              {/* Meta row: Rating, Category, Volume */}
               <div className="flex flex-wrap items-center gap-2 mt-2 text-xs text-[#7E636E] dark:text-[#B59FA9]">
-                <div className="flex items-center text-amber-500 font-bold">
-                  <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500 mr-1" />
-                  <span>{product.rating}</span>
-                </div>
+                <span className="text-[11px] font-medium text-[#7E636E] dark:text-[#B59FA9]">
+                  Catalog score: <strong className="text-[#3B1F2B] dark:text-[#FAF3F0]">{product.rating}</strong>{' '}
+                  <span className="text-[9px] text-[#CE7F79]">(demo data)</span>
+                </span>
                 <span>•</span>
                 <span className="text-[#CE7F79] dark:text-[#D9B99B] font-medium">{product.category}</span>
                 <span>•</span>
@@ -152,7 +151,7 @@ export function ProductCard({
             </div>
 
             {/* Circular Match Ring */}
-            <div className="relative w-14 h-14 flex items-center justify-center flex-shrink-0">
+            <div className="relative w-14 h-14 flex items-center justify-center flex-shrink-0" title="Match score based on your scan and preferences">
               <svg className="w-full h-full -rotate-90" viewBox="0 0 54 54">
                 <circle
                   cx="27"
@@ -196,7 +195,9 @@ export function ProductCard({
 
           {/* Price Strip */}
           <div className="flex items-baseline justify-between pt-1">
-            <span className="text-xs text-[#7E636E] dark:text-[#B59FA9] font-medium">Price:</span>
+            <span className="text-xs text-[#7E636E] dark:text-[#B59FA9] font-medium">
+              Price <span className="text-[9px] text-[#CE7F79]">(demo data)</span>:
+            </span>
             <span className="font-serif font-bold text-lg sm:text-xl text-[#3B1F2B] dark:text-[#FAF3F0]">
               {formatINR(product.priceINR)}
             </span>
