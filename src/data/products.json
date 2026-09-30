@@ -1,0 +1,1243 @@
+[
+  {
+    "id": "min-01",
+    "name": "Niacinamide 10% + Zinc 1% Serum",
+    "brand": "Minimalist",
+    "category": "Serum",
+    "priceINR": 599,
+    "rating": 4.8,
+    "buyUrl": "https://example.com/products/min-01",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "oiliness",
+      "acne",
+      "blemishes",
+      "clogged_pores",
+      "redness"
+    ],
+    "keyIngredients": [
+      "10% Niacinamide",
+      "1% Zinc PCA",
+      "Aloe Vera Extract"
+    ],
+    "avoidFlags": [],
+    "description": "Clinical strength serum proven to regulate sebum excretion, fade post-acne dark marks, and soothe facial redness.",
+    "volumeOrWeight": "30 ml",
+    "badge": "Bestseller",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/minimalist-niacinamide-10pct-and-zinc-1pct-serum.webp"
+  },
+  {
+    "id": "min-02",
+    "name": "Salicylic Acid 2% Face Cleanser",
+    "brand": "Minimalist",
+    "category": "Cleanser",
+    "priceINR": 399,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/min-02",
+    "skinTypes": [
+      "oily",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "acne",
+      "clogged_pores",
+      "oiliness",
+      "uneven_texture"
+    ],
+    "keyIngredients": [
+      "2% Salicylic Acid (BHA)",
+      "LHA",
+      "Betaine"
+    ],
+    "avoidFlags": [],
+    "description": "Daily gentle exfoliating face wash that clears out deep sebum plugs without stripping the moisture barrier.",
+    "volumeOrWeight": "100 ml",
+    "badge": "Top Rated",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/minimalist-salicylic-acid-2pct-face-cleanser.webp"
+  },
+  {
+    "id": "min-03",
+    "name": "Ceramides 0.3% + Madecassoside Moisturizer",
+    "brand": "Minimalist",
+    "category": "Moisturizer",
+    "priceINR": 599,
+    "rating": 4.6,
+    "buyUrl": "https://example.com/products/min-03",
+    "skinTypes": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "barrier_repair",
+      "redness",
+      "sensitivity"
+    ],
+    "keyIngredients": [
+      "Ceramide Complex (NP, EOP, AP)",
+      "Madecassoside (Centella)",
+      "Bisabolol"
+    ],
+    "avoidFlags": [],
+    "description": "Rich barrier replenishing cream formulated to instantly calm compromised skin, stop flaking, and restore ceramides.",
+    "volumeOrWeight": "50 g",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/minimalist-ceramides-0-3pct-and-madecassoside-moisturizer.webp"
+  },
+  {
+    "id": "min-04",
+    "name": "Light Fluid SPF 50 PA++++ Sunscreen",
+    "brand": "Minimalist",
+    "category": "Sunscreen",
+    "priceINR": 499,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/min-04",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "normal",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dullness",
+      "hyperpigmentation",
+      "anti_aging"
+    ],
+    "keyIngredients": [
+      "Uvinul A Plus",
+      "Tinosorb S",
+      "Niacinamide"
+    ],
+    "avoidFlags": [],
+    "description": "Ultra-lightweight invisible sun shield with 4 modern photostable UV filters that leaves zero white cast.",
+    "volumeOrWeight": "50 g",
+    "badge": "No White Cast",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/minimalist-light-fluid-spf-50-paandandandand-sunscreen.webp"
+  },
+  {
+    "id": "ord-01",
+    "name": "Hyaluronic Acid 2% + B5 (with Ceramide)",
+    "brand": "The Ordinary",
+    "category": "Serum",
+    "priceINR": 850,
+    "rating": 4.6,
+    "buyUrl": "https://example.com/products/ord-01",
+    "skinTypes": [
+      "dry",
+      "dehydrated",
+      "normal",
+      "combination",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "barrier_repair",
+      "dullness"
+    ],
+    "keyIngredients": [
+      "Multi-Molecular Hyaluronic Acid",
+      "Pro-Vitamin B5",
+      "Ceramides"
+    ],
+    "avoidFlags": [],
+    "description": "Provides instant multi-depth surface and cellular hydration to plump fine dehydration lines and boost bounce.",
+    "volumeOrWeight": "30 ml",
+    "badge": "Global Icon",
+    "brandAccentColor": "#64748B",
+    "image": "/images/products/the-ordinary-hyaluronic-acid-2pct-and-b5-with-ceramide.webp"
+  },
+  {
+    "id": "ord-02",
+    "name": "Azelaic Acid Suspension 10%",
+    "brand": "The Ordinary",
+    "category": "Treatment",
+    "priceINR": 1050,
+    "rating": 4.5,
+    "buyUrl": "https://example.com/products/ord-02",
+    "skinTypes": [
+      "sensitive",
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "redness",
+      "hyperpigmentation",
+      "acne",
+      "uneven_texture"
+    ],
+    "keyIngredients": [
+      "10% High-Purity Azelaic Acid",
+      "Vitamin E"
+    ],
+    "avoidFlags": [
+      "silicones"
+    ],
+    "description": "Multifunctional brightening cream-gel that noticeably targets stubborn erythema, rosacea flushing, and post-breakout dark marks.",
+    "volumeOrWeight": "30 ml",
+    "brandAccentColor": "#64748B",
+    "image": "/images/products/the-ordinary-azelaic-acid-suspension-10pct.webp"
+  },
+  {
+    "id": "ord-03",
+    "name": "Caffeine Solution 5% + EGCG",
+    "brand": "The Ordinary",
+    "category": "Serum",
+    "priceINR": 750,
+    "rating": 4.4,
+    "buyUrl": "https://example.com/products/ord-03",
+    "skinTypes": [
+      "all",
+      "oily",
+      "dry",
+      "combination",
+      "normal",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dark_circles",
+      "puffiness",
+      "dullness"
+    ],
+    "keyIngredients": [
+      "5% Epigallocatechin Gallatyl Glucoside (EGCG)",
+      "Purified Caffeine",
+      "Hyaluronic Acid"
+    ],
+    "avoidFlags": [],
+    "description": "Targeted under-eye treatment that reduces vascular dark circles, sluggish fluid retention, and morning eye puffiness.",
+    "volumeOrWeight": "30 ml",
+    "badge": "Eye Hero",
+    "brandAccentColor": "#64748B",
+    "image": "/images/products/the-ordinary-caffeine-solution-5pct-and-egcg.webp"
+  },
+  {
+    "id": "cer-01",
+    "name": "Hydrating Facial Cleanser",
+    "brand": "CeraVe",
+    "category": "Cleanser",
+    "priceINR": 899,
+    "rating": 4.9,
+    "buyUrl": "https://example.com/products/cer-01",
+    "skinTypes": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "barrier_repair",
+      "redness",
+      "sensitivity"
+    ],
+    "keyIngredients": [
+      "3 Essential Ceramides (1, 3, 6-II)",
+      "Hyaluronic Acid",
+      "MVE Delivery Technology"
+    ],
+    "avoidFlags": [],
+    "description": "Non-foaming lotion cleanser developed with dermatologists to wash away impurities without disrupting the skin barrier.",
+    "volumeOrWeight": "236 ml",
+    "badge": "Derm Favorite",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cerave-hydrating-facial-cleanser.webp"
+  },
+  {
+    "id": "cer-02",
+    "name": "Daily Moisturizing Lotion",
+    "brand": "CeraVe",
+    "category": "Moisturizer",
+    "priceINR": 999,
+    "rating": 4.8,
+    "buyUrl": "https://example.com/products/cer-02",
+    "skinTypes": [
+      "dry",
+      "normal",
+      "sensitive",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "barrier_repair",
+      "sensitivity"
+    ],
+    "keyIngredients": [
+      "Ceramides 1, 3, 6-II",
+      "Hyaluronic Acid",
+      "Glycerin"
+    ],
+    "avoidFlags": [],
+    "description": "Lightweight, oil-free moisturizer that provides 24-hour hydration and helps restore the protective skin barrier.",
+    "volumeOrWeight": "236 ml",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cerave-daily-moisturizing-lotion.webp"
+  },
+  {
+    "id": "cer-03",
+    "name": "PM Facial Moisturizing Lotion with Niacinamide",
+    "brand": "CeraVe",
+    "category": "Moisturizer",
+    "priceINR": 1399,
+    "rating": 4.8,
+    "buyUrl": "https://example.com/products/cer-03",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "normal",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "oiliness",
+      "redness",
+      "barrier_repair"
+    ],
+    "keyIngredients": [
+      "4% Niacinamide",
+      "3 Essential Ceramides",
+      "Hyaluronic Acid"
+    ],
+    "avoidFlags": [],
+    "description": "Ultra-lightweight nighttime cream that calms redness, balances oil production, and repairs lipids while you sleep.",
+    "volumeOrWeight": "89 ml",
+    "badge": "Night Essential",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cerave-pm-facial-moisturizing-lotion-with-niacinamide.webp"
+  },
+  {
+    "id": "csx-01",
+    "name": "Advanced Snail 96 Mucin Power Essence",
+    "brand": "COSRX",
+    "category": "Toner",
+    "priceINR": 1450,
+    "rating": 4.9,
+    "buyUrl": "https://example.com/products/csx-01",
+    "skinTypes": [
+      "all",
+      "dry",
+      "combination",
+      "sensitive",
+      "normal",
+      "oily"
+    ],
+    "targetedConcerns": [
+      "dullness",
+      "barrier_repair",
+      "dryness",
+      "uneven_texture"
+    ],
+    "keyIngredients": [
+      "96.3% Snail Secretion Filtrate",
+      "Sodium Hyaluronate",
+      "Allantoin"
+    ],
+    "avoidFlags": [],
+    "description": "Legendary Korean essence that revitalizes damaged, dehydrated skin with intense repair and glass-skin radiance.",
+    "volumeOrWeight": "100 ml",
+    "badge": "K-Beauty Holy Grail",
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/cosrx-advanced-snail-96-mucin-power-essence.webp"
+  },
+  {
+    "id": "csx-02",
+    "name": "BHA Blackhead Power Liquid",
+    "brand": "COSRX",
+    "category": "Treatment",
+    "priceINR": 1590,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/csx-02",
+    "skinTypes": [
+      "oily",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "clogged_pores",
+      "oiliness",
+      "acne",
+      "uneven_texture"
+    ],
+    "keyIngredients": [
+      "4% Betaine Salicylate",
+      "Willow Bark Water",
+      "Niacinamide"
+    ],
+    "avoidFlags": [],
+    "description": "Gentle chemical exfoliant that dissolves oxidized sebum trapped inside pores and refines coarse skin texture.",
+    "volumeOrWeight": "100 ml",
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/cosrx-bha-blackhead-power-liquid.webp"
+  },
+  {
+    "id": "plm-01",
+    "name": "15% Vitamin C Face Serum with Mandarin",
+    "brand": "Plum",
+    "category": "Serum",
+    "priceINR": 699,
+    "rating": 4.6,
+    "buyUrl": "https://example.com/products/plm-01",
+    "skinTypes": [
+      "normal",
+      "combination",
+      "oily",
+      "dry"
+    ],
+    "targetedConcerns": [
+      "dullness",
+      "hyperpigmentation",
+      "dark_circles"
+    ],
+    "keyIngredients": [
+      "15% Ethyl Ascorbic Acid",
+      "Japanese Mandarin Extract",
+      "Kakadu Plum"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Stable quick-absorbing vitamin C serum engineered to boost cellular glow and fade stubborn sunspots.",
+    "volumeOrWeight": "30 ml",
+    "badge": "Glow Booster",
+    "brandAccentColor": "#9333EA",
+    "image": "/images/products/plum-15pct-vitamin-c-face-serum-with-mandarin.webp"
+  },
+  {
+    "id": "plm-02",
+    "name": "Green Tea Pore Cleansing Face Wash",
+    "brand": "Plum",
+    "category": "Cleanser",
+    "priceINR": 345,
+    "rating": 4.5,
+    "buyUrl": "https://example.com/products/plm-02",
+    "skinTypes": [
+      "oily",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "acne",
+      "oiliness",
+      "clogged_pores"
+    ],
+    "keyIngredients": [
+      "Green Tea Extract",
+      "Glycolic Acid",
+      "Cellulose Beads"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Mild foaming soap-free wash packed with antioxidants to combat sebum oxidation and control midday shine.",
+    "volumeOrWeight": "100 ml",
+    "brandAccentColor": "#9333EA",
+    "image": "/images/products/plum-green-tea-pore-cleansing-face-wash.webp"
+  },
+  {
+    "id": "plm-03",
+    "name": "2% Niacinamide & Rice Water Clear Moisture Gel",
+    "brand": "Plum",
+    "category": "Moisturizer",
+    "priceINR": 525,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/plm-03",
+    "skinTypes": [
+      "oily",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "oiliness",
+      "dullness",
+      "clogged_pores"
+    ],
+    "keyIngredients": [
+      "2% Niacinamide",
+      "Fermented Rice Water",
+      "Cactus Water"
+    ],
+    "avoidFlags": [],
+    "description": "Featherlight cooling gel-cream that sinks in instantly, banishing greasy residue while reinforcing barrier strength.",
+    "volumeOrWeight": "50 g",
+    "brandAccentColor": "#9333EA",
+    "image": "/images/products/plum-2pct-niacinamide-rice-water-clear-moisture-gel.webp"
+  },
+  {
+    "id": "dnk-01",
+    "name": "Watermelon Cooling Sunscreen Matte Fluid SPF 50",
+    "brand": "Dot & Key",
+    "category": "Sunscreen",
+    "priceINR": 445,
+    "rating": 4.6,
+    "buyUrl": "https://example.com/products/dnk-01",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "oiliness",
+      "redness",
+      "dullness"
+    ],
+    "keyIngredients": [
+      "Watermelon Extract",
+      "Hyaluronic Acid",
+      "UV Filters"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Breathable water-light sunscreen that cools flushed skin by 6°F on application with a powdery matte finish.",
+    "volumeOrWeight": "50 g",
+    "badge": "Cooling Matte",
+    "brandAccentColor": "#F43F5E",
+    "image": "/images/products/dot-key-watermelon-cooling-sunscreen-matte-fluid-spf-50.webp"
+  },
+  {
+    "id": "dnk-02",
+    "name": "Barrier Repair Cica Calming Night Gel",
+    "brand": "Dot & Key",
+    "category": "Moisturizer",
+    "priceINR": 495,
+    "rating": 4.5,
+    "buyUrl": "https://example.com/products/dnk-02",
+    "skinTypes": [
+      "sensitive",
+      "oily",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "redness",
+      "acne",
+      "sensitivity",
+      "barrier_repair"
+    ],
+    "keyIngredients": [
+      "Centella Asiatica (Cica)",
+      "Tea Tree Oil",
+      "Niacinamide"
+    ],
+    "avoidFlags": [
+      "essential_oils"
+    ],
+    "description": "Anti-inflammatory green gel packed with titrated Cica to cool stressed skin and shrink active acne overnight.",
+    "volumeOrWeight": "60 ml",
+    "brandAccentColor": "#F43F5E",
+    "image": "/images/products/dot-key-barrier-repair-cica-calming-night-gel.webp"
+  },
+  {
+    "id": "cet-01",
+    "name": "Gentle Skin Cleanser",
+    "brand": "Cetaphil",
+    "category": "Cleanser",
+    "priceINR": 399,
+    "rating": 4.8,
+    "buyUrl": "https://example.com/products/cet-01",
+    "skinTypes": [
+      "dry",
+      "sensitive",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "sensitivity",
+      "dryness",
+      "redness",
+      "barrier_repair"
+    ],
+    "keyIngredients": [
+      "Hydrating Glycerin",
+      "Vitamin B3 (Niacinamide)",
+      "Pro-Vitamin B5"
+    ],
+    "avoidFlags": [],
+    "description": "Soap-free, hypoallergenic mild cleanser trusted for sensitive skin to defend against dryness, tightness, and weakening.",
+    "volumeOrWeight": "125 ml",
+    "badge": "#1 Sensitive Pick",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cetaphil-gentle-skin-cleanser.webp"
+  },
+  {
+    "id": "cet-02",
+    "name": "Moisturizing Cream for Dry & Sensitive Skin",
+    "brand": "Cetaphil",
+    "category": "Moisturizer",
+    "priceINR": 485,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/cet-02",
+    "skinTypes": [
+      "dry",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "barrier_repair",
+      "sensitivity"
+    ],
+    "keyIngredients": [
+      "Sweet Almond Oil",
+      "Niacinamide",
+      "Panthenol",
+      "Glycerin"
+    ],
+    "avoidFlags": [
+      "comedogenic_oils"
+    ],
+    "description": "Rich, non-greasy emollient cream that seals in intense hydration for 48 hours to soothe severe flaking.",
+    "volumeOrWeight": "100 g",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/cetaphil-moisturizing-cream-for-dry-sensitive-skin.webp"
+  },
+  {
+    "id": "dmc-01",
+    "name": "10% Niacinamide Face Serum with Zinc",
+    "brand": "The Derma Co",
+    "category": "Serum",
+    "priceINR": 599,
+    "rating": 4.5,
+    "buyUrl": "https://example.com/products/dmc-01",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "acne",
+      "oiliness",
+      "hyperpigmentation"
+    ],
+    "keyIngredients": [
+      "10% Niacinamide",
+      "Zinc PCA",
+      "Purified Water"
+    ],
+    "avoidFlags": [],
+    "description": "Formulated by dermatologists to clarify congestion, reduce acne lesions, and balance excess sebum production.",
+    "volumeOrWeight": "30 ml",
+    "brandAccentColor": "#2563EB",
+    "image": "/images/products/the-derma-co-10pct-niacinamide-face-serum-with-zinc.webp"
+  },
+  {
+    "id": "dmc-02",
+    "name": "1% Hyaluronic Sunscreen Aqua Gel SPF 50",
+    "brand": "The Derma Co",
+    "category": "Sunscreen",
+    "priceINR": 499,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/dmc-02",
+    "skinTypes": [
+      "all",
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "dullness",
+      "dryness",
+      "anti_aging"
+    ],
+    "keyIngredients": [
+      "1% Hyaluronic Acid",
+      "Titanium Dioxide",
+      "Vitamin E"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Blue-light protecting aqua gel with an ultra-lightweight water texture that leaves skin soft and radiant.",
+    "volumeOrWeight": "50 g",
+    "badge": "Top Seller",
+    "brandAccentColor": "#2563EB",
+    "image": "/images/products/the-derma-co-1pct-hyaluronic-sunscreen-aqua-gel-spf-50.webp"
+  },
+  {
+    "id": "lrp-01",
+    "name": "Cicaplast Baume B5+ Ultra-Repairing Balm",
+    "brand": "La Roche-Posay",
+    "category": "Treatment",
+    "priceINR": 1850,
+    "rating": 4.9,
+    "buyUrl": "https://example.com/products/lrp-01",
+    "skinTypes": [
+      "sensitive",
+      "dry",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "redness",
+      "barrier_repair",
+      "sensitivity",
+      "dryness"
+    ],
+    "keyIngredients": [
+      "Madecassoside",
+      "5% Panthenol (Vitamin B5)",
+      "Tribioma Prebiotic Complex"
+    ],
+    "avoidFlags": [],
+    "description": "Multi-purpose soothing treatment clinically shown to accelerate epidermal repair and extinguish redness rapidly.",
+    "volumeOrWeight": "40 ml",
+    "badge": "Clinical Gold Standard",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/la-roche-posay-cicaplast-baume-b5and-ultra-repairing-balm.webp"
+  },
+  {
+    "id": "lrp-02",
+    "name": "Effaclar Duo (+) Anti-Imperfections Treatment",
+    "brand": "La Roche-Posay",
+    "category": "Treatment",
+    "priceINR": 1790,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/lrp-02",
+    "skinTypes": [
+      "oily",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "acne",
+      "clogged_pores",
+      "hyperpigmentation",
+      "oiliness"
+    ],
+    "keyIngredients": [
+      "Niacinamide",
+      "LHA & Salicylic Acid",
+      "Procerad (Anti-marks)",
+      "Zinc PCA"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Targeted corrective care that unclogs pores, clears breakouts in 12 hours, and shields against post-acne pigmentation.",
+    "volumeOrWeight": "40 ml",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/la-roche-posay-effaclar-duo-and-anti-imperfections-treatment.webp"
+  },
+  {
+    "id": "pc-01",
+    "name": "Skin Perfecting 2% BHA Liquid Exfoliant",
+    "brand": "Paula's Choice",
+    "category": "Treatment",
+    "priceINR": 1200,
+    "rating": 4.9,
+    "buyUrl": "https://example.com/products/pc-01",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "clogged_pores",
+      "acne",
+      "uneven_texture",
+      "oiliness"
+    ],
+    "keyIngredients": [
+      "2% Salicylic Acid",
+      "Green Tea Extract",
+      "Methylpropanediol"
+    ],
+    "avoidFlags": [],
+    "description": "World-famous gentle leave-on exfoliant that clears blackheads, shrinks enlarged pores, and smooths wrinkles.",
+    "volumeOrWeight": "30 ml",
+    "badge": "Cult Favorite",
+    "brandAccentColor": "#1E293B",
+    "image": "/images/products/paula-s-choice-skin-perfecting-2pct-bha-liquid-exfoliant.webp"
+  },
+  {
+    "id": "pc-02",
+    "name": "C15 Super Booster (15% Vitamin C + Ferulic)",
+    "brand": "Paula's Choice",
+    "category": "Serum",
+    "priceINR": 3499,
+    "rating": 4.8,
+    "buyUrl": "https://example.com/products/pc-02",
+    "skinTypes": [
+      "all",
+      "normal",
+      "dry",
+      "combination",
+      "oily"
+    ],
+    "targetedConcerns": [
+      "dullness",
+      "hyperpigmentation",
+      "anti_aging"
+    ],
+    "keyIngredients": [
+      "15% Pure Vitamin C (L-Ascorbic Acid)",
+      "Ferulic Acid",
+      "Ergothioneine"
+    ],
+    "avoidFlags": [],
+    "description": "Precision antioxidant power shot that brightens uneven skin tone, firms sagging, and fights environmental damage.",
+    "volumeOrWeight": "20 ml",
+    "badge": "Luxury Potency",
+    "brandAccentColor": "#1E293B",
+    "image": "/images/products/paula-s-choice-c15-super-booster-15pct-vitamin-c-and-ferulic.webp"
+  },
+  {
+    "id": "boj-01",
+    "name": "Relief Sun : Rice + Probiotics SPF50+ PA++++",
+    "brand": "Beauty of Joseon",
+    "category": "Sunscreen",
+    "priceINR": 1250,
+    "rating": 4.9,
+    "buyUrl": "https://example.com/products/boj-01",
+    "skinTypes": [
+      "dry",
+      "combination",
+      "normal",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "dullness",
+      "sensitivity"
+    ],
+    "keyIngredients": [
+      "30% Rice Extract",
+      "Grain Fermented Probiotics",
+      "Niacinamide"
+    ],
+    "avoidFlags": [],
+    "description": "Velvety organic chemical sunscreen that feels like a light moisturizing cream with zero stickiness or cast.",
+    "volumeOrWeight": "50 ml",
+    "badge": "Viral Sensation",
+    "brandAccentColor": "#059669",
+    "image": "/images/products/beauty-of-joseon-relief-sun-rice-and-probiotics-spf50and-paandandandand.webp"
+  },
+  {
+    "id": "boj-02",
+    "name": "Glow Serum : Propolis + Niacinamide",
+    "brand": "Beauty of Joseon",
+    "category": "Serum",
+    "priceINR": 1290,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/boj-02",
+    "skinTypes": [
+      "acne-prone",
+      "combination",
+      "oily",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "acne",
+      "clogged_pores",
+      "dullness",
+      "redness"
+    ],
+    "keyIngredients": [
+      "60% Propolis Extract",
+      "2% Niacinamide",
+      "0.5% BHA (Betaine Salicylate)"
+    ],
+    "avoidFlags": [],
+    "description": "Honey-textured Hanbang serum formulated to soothe inflamed blemishes and confer a lit-from-within glow.",
+    "volumeOrWeight": "30 ml",
+    "brandAccentColor": "#059669",
+    "image": "/images/products/beauty-of-joseon-glow-serum-propolis-and-niacinamide.webp"
+  },
+  {
+    "id": "lan-01",
+    "name": "Water Bank Blue Hyaluronic Cream Moisturizer",
+    "brand": "Laneige",
+    "category": "Moisturizer",
+    "priceINR": 2450,
+    "rating": 4.8,
+    "buyUrl": "https://example.com/products/lan-01",
+    "skinTypes": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "barrier_repair",
+      "dullness"
+    ],
+    "keyIngredients": [
+      "Blue Hyaluronic Acid",
+      "Ceramide NP",
+      "Beta-Glucan"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Deeply hydrating barrier cream powered by micro-ionized hyaluronic acid that absorbs 2000x deeper.",
+    "volumeOrWeight": "50 ml",
+    "badge": "Prestige Hydration",
+    "brandAccentColor": "#38BDF8",
+    "image": "/images/products/laneige-water-bank-blue-hyaluronic-cream-moisturizer.webp"
+  },
+  {
+    "id": "lan-02",
+    "name": "Lip Sleeping Mask Berry",
+    "brand": "Laneige",
+    "category": "Treatment",
+    "priceINR": 600,
+    "rating": 4.9,
+    "buyUrl": "https://example.com/products/lan-02",
+    "skinTypes": [
+      "all"
+    ],
+    "targetedConcerns": [
+      "dryness"
+    ],
+    "keyIngredients": [
+      "Berry Fruit Complex",
+      "Vitamin C",
+      "Coconut Oil"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Overnight leave-on lip treatment that melts away dead skin cells to deliver plump, baby-soft lips by morning.",
+    "volumeOrWeight": "8 g",
+    "badge": "Global Must-Have",
+    "brandAccentColor": "#38BDF8",
+    "image": "/images/products/laneige-lip-sleeping-mask-berry.webp"
+  },
+  {
+    "id": "req-01",
+    "name": "Ultra Matte Dry Touch Sunscreen Gel SPF 50",
+    "brand": "Re'equil",
+    "category": "Sunscreen",
+    "priceINR": 780,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/req-01",
+    "skinTypes": [
+      "oily",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "oiliness",
+      "anti_aging"
+    ],
+    "keyIngredients": [
+      "Zinc Oxide",
+      "Titanium Dioxide",
+      "Silicone Elastomers"
+    ],
+    "avoidFlags": [
+      "fragrance",
+      "silicones"
+    ],
+    "description": "Velvety water-resistant silicone gel primer sunscreen providing extreme oil control even in 90% humidity.",
+    "volumeOrWeight": "50 g",
+    "badge": "Sweat & Oil Resistant",
+    "brandAccentColor": "#0D9488",
+    "image": "/images/products/re-equil-ultra-matte-dry-touch-sunscreen-gel-spf-50.webp"
+  },
+  {
+    "id": "req-02",
+    "name": "Ceramide & Hyaluronic Acid Moisturiser",
+    "brand": "Re'equil",
+    "category": "Moisturizer",
+    "priceINR": 395,
+    "rating": 4.6,
+    "buyUrl": "https://example.com/products/req-02",
+    "skinTypes": [
+      "dry",
+      "normal",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "barrier_repair"
+    ],
+    "keyIngredients": [
+      "Ceramide III",
+      "Hyaluronic Acid",
+      "Mango Butter"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Replenishes skin barrier lipids and reduces trans-epidermal water loss (TEWL) for parched, tight skin.",
+    "volumeOrWeight": "100 g",
+    "brandAccentColor": "#0D9488",
+    "image": "/images/products/re-equil-ceramide-hyaluronic-acid-moisturiser.webp"
+  },
+  {
+    "id": "smp-01",
+    "name": "Kind to Skin Refreshing Facial Wash",
+    "brand": "Simple",
+    "category": "Cleanser",
+    "priceINR": 385,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/smp-01",
+    "skinTypes": [
+      "all",
+      "sensitive",
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "targetedConcerns": [
+      "sensitivity",
+      "redness"
+    ],
+    "keyIngredients": [
+      "Triple Purified Water",
+      "Pro-Vitamin B5",
+      "Vitamin E"
+    ],
+    "avoidFlags": [],
+    "description": "100% soap-free clean gel cleanser with zero artificial perfume, harsh chemicals, or colors for pure skin balance.",
+    "volumeOrWeight": "150 ml",
+    "badge": "100% Clean Pick",
+    "brandAccentColor": "#16A34A",
+    "image": "/images/products/simple-kind-to-skin-refreshing-facial-wash.webp"
+  },
+  {
+    "id": "smp-02",
+    "name": "Water Boost Hydrating Gel Cream",
+    "brand": "Simple",
+    "category": "Moisturizer",
+    "priceINR": 499,
+    "rating": 4.5,
+    "buyUrl": "https://example.com/products/smp-02",
+    "skinTypes": [
+      "dehydrated",
+      "oily",
+      "combination",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "dullness",
+      "sensitivity"
+    ],
+    "keyIngredients": [
+      "PENTAVITIN Plant Actives",
+      "Minerals",
+      "Glycerin"
+    ],
+    "avoidFlags": [],
+    "description": "Instantly quenches thirsty skin cells with smart hydration that lasts all day without clogging pores.",
+    "volumeOrWeight": "50 g",
+    "brandAccentColor": "#16A34A",
+    "image": "/images/products/simple-water-boost-hydrating-gel-cream.webp"
+  },
+  {
+    "id": "drs-01",
+    "name": "Centella & Niacinamide Oil & Acne Control Serum",
+    "brand": "Dr. Sheth's",
+    "category": "Serum",
+    "priceINR": 649,
+    "rating": 4.6,
+    "buyUrl": "https://example.com/products/drs-01",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "sensitive"
+    ],
+    "targetedConcerns": [
+      "oiliness",
+      "acne",
+      "redness"
+    ],
+    "keyIngredients": [
+      "10% Niacinamide",
+      "Centella Asiatica Extract",
+      "Zinc PCA"
+    ],
+    "avoidFlags": [],
+    "description": "Formulated specifically for Indian skin to treat active breakouts and regulate heavy sebum secretion in tropical climates.",
+    "volumeOrWeight": "30 ml",
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/dr-sheth-s-centella-niacinamide-oil-acne-control-serum.webp"
+  },
+  {
+    "id": "drs-02",
+    "name": "Kesar & Kojic Acid Daily Pigmentation Serum",
+    "brand": "Dr. Sheth's",
+    "category": "Serum",
+    "priceINR": 699,
+    "rating": 4.5,
+    "buyUrl": "https://example.com/products/drs-02",
+    "skinTypes": [
+      "all",
+      "normal",
+      "combination",
+      "oily"
+    ],
+    "targetedConcerns": [
+      "hyperpigmentation",
+      "dullness",
+      "dark_circles"
+    ],
+    "keyIngredients": [
+      "2% Kojic Acid",
+      "1% Niacinamide",
+      "Kesar (Saffron) Extract"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Inhibits melanin overproduction to lighten post-inflammatory hyperpigmentation (PIH) and sun tan.",
+    "volumeOrWeight": "30 ml",
+    "brandAccentColor": "#D97706",
+    "image": "/images/products/dr-sheth-s-kesar-kojic-acid-daily-pigmentation-serum.webp"
+  },
+  {
+    "id": "fox-01",
+    "name": "CoverUp Dewy Finish Sunscreen SPF 70 PA++++",
+    "brand": "Foxtale",
+    "category": "Sunscreen",
+    "priceINR": 595,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/fox-01",
+    "skinTypes": [
+      "dry",
+      "normal",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "dullness",
+      "anti_aging",
+      "dryness"
+    ],
+    "keyIngredients": [
+      "Niacinamide",
+      "D-Panthenol",
+      "Hybrid UV Filters"
+    ],
+    "avoidFlags": [],
+    "description": "High SPF defense with a radiant glass-like finish that prevents photofading and deeply nourishes skin.",
+    "volumeOrWeight": "50 ml",
+    "brandAccentColor": "#EA580C",
+    "image": "/images/products/foxtale-coverup-dewy-finish-sunscreen-spf-70-paandandandand.webp"
+  },
+  {
+    "id": "fox-02",
+    "name": "Super Glow Vitamin C Face Serum with L-Ascorbic",
+    "brand": "Foxtale",
+    "category": "Serum",
+    "priceINR": 545,
+    "rating": 4.6,
+    "buyUrl": "https://example.com/products/fox-02",
+    "skinTypes": [
+      "normal",
+      "dry",
+      "combination"
+    ],
+    "targetedConcerns": [
+      "dullness",
+      "hyperpigmentation",
+      "anti_aging"
+    ],
+    "keyIngredients": [
+      "15% L-Ascorbic Acid",
+      "1% Tocopherol (Vitamin E)",
+      "Dicaprylyl Carbonate"
+    ],
+    "avoidFlags": [
+      "fragrance"
+    ],
+    "description": "Clinically proven glow activator that reduces oxidative stress, boosts collagen, and brightens within 5 days.",
+    "volumeOrWeight": "30 ml",
+    "brandAccentColor": "#EA580C",
+    "image": "/images/products/foxtale-super-glow-vitamin-c-face-serum-with-l-ascorbic.webp"
+  },
+  {
+    "id": "klr-01",
+    "name": "Supple Preparation Unscented Toner",
+    "brand": "Dear, Klairs",
+    "category": "Toner",
+    "priceINR": 1430,
+    "rating": 4.8,
+    "buyUrl": "https://example.com/products/klr-01",
+    "skinTypes": [
+      "sensitive",
+      "dry",
+      "combination",
+      "normal",
+      "oily"
+    ],
+    "targetedConcerns": [
+      "dryness",
+      "sensitivity",
+      "redness",
+      "barrier_repair"
+    ],
+    "keyIngredients": [
+      "Centella Asiatica",
+      "Lipidure",
+      "Beta-Glucan",
+      "Hyaluronic Acid"
+    ],
+    "avoidFlags": [],
+    "description": "Essential-oil-free hydrating toner that balances skin pH and floods dehydrated dermal layers with soothing moisture.",
+    "volumeOrWeight": "180 ml",
+    "badge": "Sensitive Must-Have",
+    "brandAccentColor": "#6366F1",
+    "image": "/images/products/dear-klairs-supple-preparation-unscented-toner.webp"
+  },
+  {
+    "id": "bio-01",
+    "name": "UV Aqua Rich Watery Essence SPF 50+ PA++++",
+    "brand": "Bioré",
+    "category": "Sunscreen",
+    "priceINR": 1150,
+    "rating": 4.9,
+    "buyUrl": "https://example.com/products/bio-01",
+    "skinTypes": [
+      "oily",
+      "combination",
+      "normal"
+    ],
+    "targetedConcerns": [
+      "oiliness",
+      "anti_aging"
+    ],
+    "keyIngredients": [
+      "Micro Defense Formula",
+      "Hyaluronic Acid",
+      "Royal Jelly Extract"
+    ],
+    "avoidFlags": [
+      "drying_alcohol"
+    ],
+    "description": "World-renowned watery texture with micro-capsules that spread like water and vanish without any film.",
+    "volumeOrWeight": "50 g",
+    "badge": "Japanese Legend",
+    "brandAccentColor": "#06B6D4",
+    "image": "/images/products/bior-uv-aqua-rich-watery-essence-spf-50and-paandandandand.webp"
+  },
+  {
+    "id": "min-05",
+    "name": "Granactive Retinoid 2% Anti-Aging Night Serum",
+    "brand": "Minimalist",
+    "category": "Serum",
+    "priceINR": 699,
+    "rating": 4.7,
+    "buyUrl": "https://example.com/products/min-05",
+    "skinTypes": [
+      "normal",
+      "dry",
+      "combination",
+      "oily"
+    ],
+    "targetedConcerns": [
+      "anti_aging",
+      "uneven_texture",
+      "hyperpigmentation"
+    ],
+    "keyIngredients": [
+      "2% Granactive Retinoid (Hydroxypinacolone Retinoate)",
+      "17 Amino Acids",
+      "Squalane"
+    ],
+    "avoidFlags": [],
+    "description": "Next-generation gentle retinoid that boosts cellular turnover to reduce fine lines without redness or flaking.",
+    "volumeOrWeight": "30 ml",
+    "brandAccentColor": "#0284C7",
+    "image": "/images/products/minimalist-granactive-retinoid-2pct-anti-aging-night-serum.webp"
+  }
+]
