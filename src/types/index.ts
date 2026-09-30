@@ -42,6 +42,13 @@ export interface UserRequirements {
   additionalNotes?: string;
 }
 
+export interface ImageSource {
+  name: string;
+  url: string;
+  license: string;
+  contributor?: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -51,7 +58,9 @@ export interface Product {
   originalPriceINR?: number;
   rating: number; // e.g. 4.7
   reviewCount?: number;
-  image?: string; // Optional local image e.g. "/products/min-01.png"
+  barcode?: string;
+  image?: string; // Optional local image e.g. "/images/products/slug.webp"
+  imageSource?: ImageSource;
   buyUrl: string;
   skinTypes: ('oily' | 'dry' | 'combination' | 'sensitive' | 'normal')[];
   targetedConcerns: string[];

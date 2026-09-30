@@ -21,6 +21,7 @@ import { ProfileCard } from '@/components/results/ProfileCard';
 import { RoutineBuilderModal } from '@/components/results/RoutineBuilderModal';
 import { ResultsSkeleton } from '@/components/results/ResultsSkeleton';
 import { ProductVisual } from '@/components/common/ProductVisual';
+import { ProductLookupSection } from '@/components/results/ProductLookupSection';
 
 interface Props {
   initialResults: RecommendationResult[];
@@ -370,7 +371,12 @@ export function StepResults({
         </div>
       )}
 
-      {/* 6. BOTTOM COMPARISON TRAY (When 1+ products selected) */}
+      {/* 6. SEARCH ANY PRODUCT ON OPEN BEAUTY FACTS (Live Lookups & Ingredient Avoid-Check) */}
+      <motion.div variants={itemVariants}>
+        <ProductLookupSection userAvoidList={requirements.avoidIngredients} />
+      </motion.div>
+
+      {/* 7. BOTTOM COMPARISON TRAY (When 1+ products selected) */}
       {comparedIds.length > 0 && (
         <motion.div
           initial={{ y: 60, opacity: 0 }}

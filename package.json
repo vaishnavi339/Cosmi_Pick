@@ -7,14 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "tsx --test src/lib/scoring.test.ts"
+    "test": "tsx --test src/**/*.test.ts",
+    "fetch:images": "tsx scripts/fetch-product-images.ts"
   },
   "dependencies": {
+    "@jimp/wasm-webp": "^1.6.1",
     "@mediapipe/tasks-vision": "^1.0.1",
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "framer-motion": "^13.4.5",
     "html-to-image": "^1.11.13",
+    "jimp": "^1.6.1",
     "lucide-react": "^1.48.0",
     "next": "^14.2.35",
     "react": "^18",

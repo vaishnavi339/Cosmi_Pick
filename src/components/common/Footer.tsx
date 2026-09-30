@@ -83,6 +83,11 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9]">
               <li>
+                <Link href="/credits" className="hover:text-[#3B1F2B] dark:hover:text-[#FAF3F0] font-medium transition-colors">
+                  Image & Open Beauty Facts Credits
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy" className="hover:text-[#3B1F2B] dark:hover:text-[#FAF3F0] font-medium transition-colors">
                   Privacy Policy & Whitepaper
                 </Link>

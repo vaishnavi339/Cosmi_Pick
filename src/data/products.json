@@ -28,8 +28,7 @@
     "description": "Clinical strength serum proven to regulate sebum excretion, fade post-acne dark marks, and soothe facial redness.",
     "volumeOrWeight": "30 ml",
     "badge": "Bestseller",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/minimalist-niacinamide-10pct-and-zinc-1pct-serum.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "min-02",
@@ -58,8 +57,7 @@
     "description": "Daily gentle exfoliating face wash that clears out deep sebum plugs without stripping the moisture barrier.",
     "volumeOrWeight": "100 ml",
     "badge": "Top Rated",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/minimalist-salicylic-acid-2pct-face-cleanser.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "min-03",
@@ -88,8 +86,7 @@
     "avoidFlags": [],
     "description": "Rich barrier replenishing cream formulated to instantly calm compromised skin, stop flaking, and restore ceramides.",
     "volumeOrWeight": "50 g",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/minimalist-ceramides-0-3pct-and-madecassoside-moisturizer.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "min-04",
@@ -119,8 +116,7 @@
     "description": "Ultra-lightweight invisible sun shield with 4 modern photostable UV filters that leaves zero white cast.",
     "volumeOrWeight": "50 g",
     "badge": "No White Cast",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/minimalist-light-fluid-spf-50-paandandandand-sunscreen.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "ord-01",
@@ -151,8 +147,7 @@
     "description": "Provides instant multi-depth surface and cellular hydration to plump fine dehydration lines and boost bounce.",
     "volumeOrWeight": "30 ml",
     "badge": "Global Icon",
-    "brandAccentColor": "#64748B",
-    "image": "/images/products/the-ordinary-hyaluronic-acid-2pct-and-b5-with-ceramide.webp"
+    "brandAccentColor": "#64748B"
   },
   {
     "id": "ord-02",
@@ -183,8 +178,7 @@
     ],
     "description": "Multifunctional brightening cream-gel that noticeably targets stubborn erythema, rosacea flushing, and post-breakout dark marks.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#64748B",
-    "image": "/images/products/the-ordinary-azelaic-acid-suspension-10pct.webp"
+    "brandAccentColor": "#64748B"
   },
   {
     "id": "ord-03",
@@ -217,7 +211,14 @@
     "volumeOrWeight": "30 ml",
     "badge": "Eye Hero",
     "brandAccentColor": "#64748B",
-    "image": "/images/products/the-ordinary-caffeine-solution-5pct-and-egcg.webp"
+    "image": "/images/products/the-ordinary-caffeine-solution-5pct-and-egcg.webp",
+    "barcode": "0769915190670",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/0769915190670/caffeine-solution-5-egcg-the-ordinary",
+      "license": "CC BY-SA",
+      "contributor": "jumati"
+    }
   },
   {
     "id": "cer-01",
@@ -248,7 +249,14 @@
     "volumeOrWeight": "236 ml",
     "badge": "Derm Favorite",
     "brandAccentColor": "#0284C7",
-    "image": "/images/products/cerave-hydrating-facial-cleanser.webp"
+    "image": "/images/products/cerave-hydrating-facial-cleanser.webp",
+    "barcode": "3606000537576",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/3606000537576/hydrating-facial-cleanser-cerave",
+      "license": "CC BY-SA",
+      "contributor": "halal-app-chakib"
+    }
   },
   {
     "id": "cer-02",
@@ -277,8 +285,7 @@
     "avoidFlags": [],
     "description": "Lightweight, oil-free moisturizer that provides 24-hour hydration and helps restore the protective skin barrier.",
     "volumeOrWeight": "236 ml",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/cerave-daily-moisturizing-lotion.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "cer-03",
@@ -308,8 +315,7 @@
     "description": "Ultra-lightweight nighttime cream that calms redness, balances oil production, and repairs lipids while you sleep.",
     "volumeOrWeight": "89 ml",
     "badge": "Night Essential",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/cerave-pm-facial-moisturizing-lotion-with-niacinamide.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "csx-01",
@@ -342,8 +348,7 @@
     "description": "Legendary Korean essence that revitalizes damaged, dehydrated skin with intense repair and glass-skin radiance.",
     "volumeOrWeight": "100 ml",
     "badge": "K-Beauty Holy Grail",
-    "brandAccentColor": "#D97706",
-    "image": "/images/products/cosrx-advanced-snail-96-mucin-power-essence.webp"
+    "brandAccentColor": "#D97706"
   },
   {
     "id": "csx-02",
@@ -371,8 +376,7 @@
     "avoidFlags": [],
     "description": "Gentle chemical exfoliant that dissolves oxidized sebum trapped inside pores and refines coarse skin texture.",
     "volumeOrWeight": "100 ml",
-    "brandAccentColor": "#D97706",
-    "image": "/images/products/cosrx-bha-blackhead-power-liquid.webp"
+    "brandAccentColor": "#D97706"
   },
   {
     "id": "plm-01",
@@ -404,8 +408,7 @@
     "description": "Stable quick-absorbing vitamin C serum engineered to boost cellular glow and fade stubborn sunspots.",
     "volumeOrWeight": "30 ml",
     "badge": "Glow Booster",
-    "brandAccentColor": "#9333EA",
-    "image": "/images/products/plum-15pct-vitamin-c-face-serum-with-mandarin.webp"
+    "brandAccentColor": "#9333EA"
   },
   {
     "id": "plm-02",
@@ -434,8 +437,7 @@
     ],
     "description": "Mild foaming soap-free wash packed with antioxidants to combat sebum oxidation and control midday shine.",
     "volumeOrWeight": "100 ml",
-    "brandAccentColor": "#9333EA",
-    "image": "/images/products/plum-green-tea-pore-cleansing-face-wash.webp"
+    "brandAccentColor": "#9333EA"
   },
   {
     "id": "plm-03",
@@ -462,8 +464,7 @@
     "avoidFlags": [],
     "description": "Featherlight cooling gel-cream that sinks in instantly, banishing greasy residue while reinforcing barrier strength.",
     "volumeOrWeight": "50 g",
-    "brandAccentColor": "#9333EA",
-    "image": "/images/products/plum-2pct-niacinamide-rice-water-clear-moisture-gel.webp"
+    "brandAccentColor": "#9333EA"
   },
   {
     "id": "dnk-01",
@@ -494,8 +495,7 @@
     "description": "Breathable water-light sunscreen that cools flushed skin by 6°F on application with a powdery matte finish.",
     "volumeOrWeight": "50 g",
     "badge": "Cooling Matte",
-    "brandAccentColor": "#F43F5E",
-    "image": "/images/products/dot-key-watermelon-cooling-sunscreen-matte-fluid-spf-50.webp"
+    "brandAccentColor": "#F43F5E"
   },
   {
     "id": "dnk-02",
@@ -526,8 +526,7 @@
     ],
     "description": "Anti-inflammatory green gel packed with titrated Cica to cool stressed skin and shrink active acne overnight.",
     "volumeOrWeight": "60 ml",
-    "brandAccentColor": "#F43F5E",
-    "image": "/images/products/dot-key-barrier-repair-cica-calming-night-gel.webp"
+    "brandAccentColor": "#F43F5E"
   },
   {
     "id": "cet-01",
@@ -558,7 +557,14 @@
     "volumeOrWeight": "125 ml",
     "badge": "#1 Sensitive Pick",
     "brandAccentColor": "#0284C7",
-    "image": "/images/products/cetaphil-gentle-skin-cleanser.webp"
+    "image": "/images/products/cetaphil-gentle-skin-cleanser.webp",
+    "barcode": "3499320015431",
+    "imageSource": {
+      "name": "Open Beauty Facts",
+      "url": "https://world.openbeautyfacts.org/product/3499320015431/gentle-skin-cleanser-cetaphil",
+      "license": "CC BY-SA",
+      "contributor": "drizzly7208"
+    }
   },
   {
     "id": "cet-02",
@@ -588,8 +594,7 @@
     ],
     "description": "Rich, non-greasy emollient cream that seals in intense hydration for 48 hours to soothe severe flaking.",
     "volumeOrWeight": "100 g",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/cetaphil-moisturizing-cream-for-dry-sensitive-skin.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "dmc-01",
@@ -617,8 +622,7 @@
     "avoidFlags": [],
     "description": "Formulated by dermatologists to clarify congestion, reduce acne lesions, and balance excess sebum production.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#2563EB",
-    "image": "/images/products/the-derma-co-10pct-niacinamide-face-serum-with-zinc.webp"
+    "brandAccentColor": "#2563EB"
   },
   {
     "id": "dmc-02",
@@ -650,8 +654,7 @@
     "description": "Blue-light protecting aqua gel with an ultra-lightweight water texture that leaves skin soft and radiant.",
     "volumeOrWeight": "50 g",
     "badge": "Top Seller",
-    "brandAccentColor": "#2563EB",
-    "image": "/images/products/the-derma-co-1pct-hyaluronic-sunscreen-aqua-gel-spf-50.webp"
+    "brandAccentColor": "#2563EB"
   },
   {
     "id": "lrp-01",
@@ -682,8 +685,7 @@
     "description": "Multi-purpose soothing treatment clinically shown to accelerate epidermal repair and extinguish redness rapidly.",
     "volumeOrWeight": "40 ml",
     "badge": "Clinical Gold Standard",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/la-roche-posay-cicaplast-baume-b5and-ultra-repairing-balm.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "lrp-02",
@@ -714,8 +716,7 @@
     ],
     "description": "Targeted corrective care that unclogs pores, clears breakouts in 12 hours, and shields against post-acne pigmentation.",
     "volumeOrWeight": "40 ml",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/la-roche-posay-effaclar-duo-and-anti-imperfections-treatment.webp"
+    "brandAccentColor": "#0284C7"
   },
   {
     "id": "pc-01",
@@ -745,8 +746,7 @@
     "description": "World-famous gentle leave-on exfoliant that clears blackheads, shrinks enlarged pores, and smooths wrinkles.",
     "volumeOrWeight": "30 ml",
     "badge": "Cult Favorite",
-    "brandAccentColor": "#1E293B",
-    "image": "/images/products/paula-s-choice-skin-perfecting-2pct-bha-liquid-exfoliant.webp"
+    "brandAccentColor": "#1E293B"
   },
   {
     "id": "pc-02",
@@ -777,8 +777,7 @@
     "description": "Precision antioxidant power shot that brightens uneven skin tone, firms sagging, and fights environmental damage.",
     "volumeOrWeight": "20 ml",
     "badge": "Luxury Potency",
-    "brandAccentColor": "#1E293B",
-    "image": "/images/products/paula-s-choice-c15-super-booster-15pct-vitamin-c-and-ferulic.webp"
+    "brandAccentColor": "#1E293B"
   },
   {
     "id": "boj-01",
@@ -808,8 +807,7 @@
     "description": "Velvety organic chemical sunscreen that feels like a light moisturizing cream with zero stickiness or cast.",
     "volumeOrWeight": "50 ml",
     "badge": "Viral Sensation",
-    "brandAccentColor": "#059669",
-    "image": "/images/products/beauty-of-joseon-relief-sun-rice-and-probiotics-spf50and-paandandandand.webp"
+    "brandAccentColor": "#059669"
   },
   {
     "id": "boj-02",
@@ -839,8 +837,7 @@
     "avoidFlags": [],
     "description": "Honey-textured Hanbang serum formulated to soothe inflamed blemishes and confer a lit-from-within glow.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#059669",
-    "image": "/images/products/beauty-of-joseon-glow-serum-propolis-and-niacinamide.webp"
+    "brandAccentColor": "#059669"
   },
   {
     "id": "lan-01",
@@ -871,8 +868,7 @@
     "description": "Deeply hydrating barrier cream powered by micro-ionized hyaluronic acid that absorbs 2000x deeper.",
     "volumeOrWeight": "50 ml",
     "badge": "Prestige Hydration",
-    "brandAccentColor": "#38BDF8",
-    "image": "/images/products/laneige-water-bank-blue-hyaluronic-cream-moisturizer.webp"
+    "brandAccentColor": "#38BDF8"
   },
   {
     "id": "lan-02",
@@ -899,8 +895,7 @@
     "description": "Overnight leave-on lip treatment that melts away dead skin cells to deliver plump, baby-soft lips by morning.",
     "volumeOrWeight": "8 g",
     "badge": "Global Must-Have",
-    "brandAccentColor": "#38BDF8",
-    "image": "/images/products/laneige-lip-sleeping-mask-berry.webp"
+    "brandAccentColor": "#38BDF8"
   },
   {
     "id": "req-01",
@@ -930,8 +925,7 @@
     "description": "Velvety water-resistant silicone gel primer sunscreen providing extreme oil control even in 90% humidity.",
     "volumeOrWeight": "50 g",
     "badge": "Sweat & Oil Resistant",
-    "brandAccentColor": "#0D9488",
-    "image": "/images/products/re-equil-ultra-matte-dry-touch-sunscreen-gel-spf-50.webp"
+    "brandAccentColor": "#0D9488"
   },
   {
     "id": "req-02",
@@ -960,8 +954,7 @@
     ],
     "description": "Replenishes skin barrier lipids and reduces trans-epidermal water loss (TEWL) for parched, tight skin.",
     "volumeOrWeight": "100 g",
-    "brandAccentColor": "#0D9488",
-    "image": "/images/products/re-equil-ceramide-hyaluronic-acid-moisturiser.webp"
+    "brandAccentColor": "#0D9488"
   },
   {
     "id": "smp-01",
@@ -991,8 +984,7 @@
     "description": "100% soap-free clean gel cleanser with zero artificial perfume, harsh chemicals, or colors for pure skin balance.",
     "volumeOrWeight": "150 ml",
     "badge": "100% Clean Pick",
-    "brandAccentColor": "#16A34A",
-    "image": "/images/products/simple-kind-to-skin-refreshing-facial-wash.webp"
+    "brandAccentColor": "#16A34A"
   },
   {
     "id": "smp-02",
@@ -1021,8 +1013,7 @@
     "avoidFlags": [],
     "description": "Instantly quenches thirsty skin cells with smart hydration that lasts all day without clogging pores.",
     "volumeOrWeight": "50 g",
-    "brandAccentColor": "#16A34A",
-    "image": "/images/products/simple-water-boost-hydrating-gel-cream.webp"
+    "brandAccentColor": "#16A34A"
   },
   {
     "id": "drs-01",
@@ -1050,8 +1041,7 @@
     "avoidFlags": [],
     "description": "Formulated specifically for Indian skin to treat active breakouts and regulate heavy sebum secretion in tropical climates.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#D97706",
-    "image": "/images/products/dr-sheth-s-centella-niacinamide-oil-acne-control-serum.webp"
+    "brandAccentColor": "#D97706"
   },
   {
     "id": "drs-02",
@@ -1082,8 +1072,7 @@
     ],
     "description": "Inhibits melanin overproduction to lighten post-inflammatory hyperpigmentation (PIH) and sun tan.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#D97706",
-    "image": "/images/products/dr-sheth-s-kesar-kojic-acid-daily-pigmentation-serum.webp"
+    "brandAccentColor": "#D97706"
   },
   {
     "id": "fox-01",
@@ -1111,8 +1100,7 @@
     "avoidFlags": [],
     "description": "High SPF defense with a radiant glass-like finish that prevents photofading and deeply nourishes skin.",
     "volumeOrWeight": "50 ml",
-    "brandAccentColor": "#EA580C",
-    "image": "/images/products/foxtale-coverup-dewy-finish-sunscreen-spf-70-paandandandand.webp"
+    "brandAccentColor": "#EA580C"
   },
   {
     "id": "fox-02",
@@ -1142,8 +1130,7 @@
     ],
     "description": "Clinically proven glow activator that reduces oxidative stress, boosts collagen, and brightens within 5 days.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#EA580C",
-    "image": "/images/products/foxtale-super-glow-vitamin-c-face-serum-with-l-ascorbic.webp"
+    "brandAccentColor": "#EA580C"
   },
   {
     "id": "klr-01",
@@ -1176,8 +1163,7 @@
     "description": "Essential-oil-free hydrating toner that balances skin pH and floods dehydrated dermal layers with soothing moisture.",
     "volumeOrWeight": "180 ml",
     "badge": "Sensitive Must-Have",
-    "brandAccentColor": "#6366F1",
-    "image": "/images/products/dear-klairs-supple-preparation-unscented-toner.webp"
+    "brandAccentColor": "#6366F1"
   },
   {
     "id": "bio-01",
@@ -1207,8 +1193,7 @@
     "description": "World-renowned watery texture with micro-capsules that spread like water and vanish without any film.",
     "volumeOrWeight": "50 g",
     "badge": "Japanese Legend",
-    "brandAccentColor": "#06B6D4",
-    "image": "/images/products/bior-uv-aqua-rich-watery-essence-spf-50and-paandandandand.webp"
+    "brandAccentColor": "#06B6D4"
   },
   {
     "id": "min-05",
@@ -1237,7 +1222,6 @@
     "avoidFlags": [],
     "description": "Next-generation gentle retinoid that boosts cellular turnover to reduce fine lines without redness or flaking.",
     "volumeOrWeight": "30 ml",
-    "brandAccentColor": "#0284C7",
-    "image": "/images/products/minimalist-granactive-retinoid-2pct-anti-aging-night-serum.webp"
+    "brandAccentColor": "#0284C7"
   }
 ]

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CosmicPick · Open Beauty Facts Image Review Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #FAF7F5; color: #3B1F2B; margin: 0; padding: 30px; }
+    .container { max-width: 1200px; margin: 0 auto; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(59,31,43,0.06); padding: 32px; }
+    h1 { font-family: Georgia, serif; color: #3B1F2B; margin-top: 0; }
+    .stats { display: flex; gap: 20px; margin: 24px 0; }
+    .stat-card { flex: 1; padding: 20px; border-radius: 14px; background: #FBF7F4; border: 1px solid #E8D3C0; }
+    .stat-number { font-size: 32px; font-weight: bold; color: #3B1F2B; }
+    .stat-label { font-size: 13px; color: #7E636E; text-transform: uppercase; letter-spacing: 0.5px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 13px; }
+    th { text-align: left; padding: 12px; background: #3B1F2B; color: #FAF3F0; font-weight: 600; }
+    td { padding: 14px 12px; border-bottom: 1px solid #EFE4DC; vertical-align: middle; }
+    tr:hover { background: #FDF9F6; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; }
+    .badge-accepted { background: #D1E7DD; color: #0F5132; }
+    .badge-rejected { background: #F8D7DA; color: #842029; }
+    .badge-missing { background: #FFF3CD; color: #664D03; }
+    .img-thumb { width: 70px; height: 70px; object-fit: contain; background: #FAFAFA; border: 1px solid #E8D3C0; border-radius: 10px; padding: 4px; }
+    .img-placeholder { width: 70px; height: 70px; background: #F4D9D6; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #3B1F2B; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CosmicPick · Product Image Verification Report</h1>
+    <p>Automated verification against <strong>Open Beauty Facts API v2</strong>. Threshold required: <strong>&ge; 0.80</strong> + brand match.</p>
+    
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-number">40</div>
+        <div class="stat-label">Total Catalog Products</div>
+      </div>
+      <div class="stat-card" style="border-left: 4px solid #198754;">
+        <div class="stat-number" style="color: #198754;">3</div>
+        <div class="stat-label">Auto-Accepted (&ge;0.80)</div>
+      </div>
+      <div class="stat-card" style="border-left: 4px solid #dc3545;">
+        <div class="stat-number" style="color: #dc3545;">37</div>
+        <div class="stat-label">Needs Manual Image</div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Preview</th>
+          <th>Catalog Product</th>
+          <th>OBF Matched Product</th>
+          <th>Similarity</th>
+          <th>Barcode</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>
+              Niacinamide 10% + Zinc 1% Serum<br/>
+              <small style="color: #888;">Serum · min-01</small>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>Minimalist Face Serum
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                26%
+              </strong>
+            </td>
+            <td><code>7906100784464</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>
+              Salicylic Acid 2% Face Cleanser<br/>
+              <small style="color: #888;">Cleanser · min-02</small>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>Minimalist Face Serum
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                23%
+              </strong>
+            </td>
+            <td><code>7906100784464</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>
+              Ceramides 0.3% + Madecassoside Moisturizer<br/>
+              <small style="color: #888;">Moisturizer · min-03</small>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>Minimalist Face Serum
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                11%
+              </strong>
+            </td>
+            <td><code>7906100784464</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>
+              Light Fluid SPF 50 PA++++ Sunscreen<br/>
+              <small style="color: #888;">Sunscreen · min-04</small>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>Minimalist Face Serum
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                4%
+              </strong>
+            </td>
+            <td><code>7906100784464</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>
+              Granactive Retinoid 2% Anti-Aging Night Serum<br/>
+              <small style="color: #888;">Serum · min-05</small>
+            </td>
+            <td>
+              <strong>Minimalist</strong><br/>Minimalist Face Serum
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                18%
+              </strong>
+            </td>
+            <td><code>7906100784464</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>The Ordinary</strong><br/>
+              Hyaluronic Acid 2% + B5 (with Ceramide)<br/>
+              <small style="color: #888;">Serum · ord-01</small>
+            </td>
+            <td>
+              <strong>The Ordinary</strong><br/>Caffeine solution
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                17%
+              </strong>
+            </td>
+            <td><code>0769915195712</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>The Ordinary</strong><br/>
+              Azelaic Acid Suspension 10%<br/>
+              <small style="color: #888;">Treatment · ord-02</small>
+            </td>
+            <td>
+              <strong>The Ordinary</strong><br/>Caffeine solution
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                36%
+              </strong>
+            </td>
+            <td><code>0769915195712</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <img class="img-thumb" src="../public/images/products/the-ordinary-caffeine-solution-5pct-and-egcg.webp" alt="Caffeine Solution 5% + EGCG" />
+            </td>
+            <td>
+              <strong>The Ordinary</strong><br/>
+              Caffeine Solution 5% + EGCG<br/>
+              <small style="color: #888;">Serum · ord-03</small>
+            </td>
+            <td>
+              <strong>The Ordinary</strong><br/>Caffeine Solution 5% + EGCG
+              <br/><a href="https://world.openbeautyfacts.org/product/0769915190670/caffeine-solution-5-egcg-the-ordinary" target="_blank" style="color: #3B1F2B; font-size: 11px;">View on Open Beauty Facts &rarr;</a>
+            </td>
+            <td>
+              <strong style="color: #198754;">
+                100%
+              </strong>
+            </td>
+            <td><code>0769915190670</code></td>
+            <td>
+              <span class="badge badge-accepted">
+                Auto-Accepted
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <img class="img-thumb" src="../public/images/products/cerave-hydrating-facial-cleanser.webp" alt="Hydrating Facial Cleanser" />
+            </td>
+            <td>
+              <strong>CeraVe</strong><br/>
+              Hydrating Facial Cleanser<br/>
+              <small style="color: #888;">Cleanser · cer-01</small>
+            </td>
+            <td>
+              <strong>CeraVe</strong><br/>Hydrating Facial Cleanser
+              <br/><a href="https://world.openbeautyfacts.org/product/3606000537576/hydrating-facial-cleanser-cerave" target="_blank" style="color: #3B1F2B; font-size: 11px;">View on Open Beauty Facts &rarr;</a>
+            </td>
+            <td>
+              <strong style="color: #198754;">
+                100%
+              </strong>
+            </td>
+            <td><code>3606000537576</code></td>
+            <td>
+              <span class="badge badge-accepted">
+                Auto-Accepted
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>CeraVe</strong><br/>
+              Daily Moisturizing Lotion<br/>
+              <small style="color: #888;">Moisturizer · cer-02</small>
+            </td>
+            <td>
+              <strong>cerave</strong><br/>daily moisturizing cream
+              
+            </td>
+            <td>
+              <strong style="color: #e67e22;">
+                75%
+              </strong>
+            </td>
+            <td><code>3606000537743</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>CeraVe</strong><br/>
+              PM Facial Moisturizing Lotion with Niacinamide<br/>
+              <small style="color: #888;">Moisturizer · cer-03</small>
+            </td>
+            <td>
+              <strong>cerave</strong><br/>daily moisturizing cream
+              
+            </td>
+            <td>
+              <strong style="color: #e67e22;">
+                71%
+              </strong>
+            </td>
+            <td><code>3606000537743</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>COSRX</strong><br/>
+              Advanced Snail 96 Mucin Power Essence<br/>
+              <small style="color: #888;">Toner · csx-01</small>
+            </td>
+            <td>
+              <strong>Cosrx</strong><br/>cosrx cream
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                9%
+              </strong>
+            </td>
+            <td><code>8809598450912</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>COSRX</strong><br/>
+              BHA Blackhead Power Liquid<br/>
+              <small style="color: #888;">Treatment · csx-02</small>
+            </td>
+            <td>
+              <strong>Cosrx</strong><br/>cosrx cream
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                8%
+              </strong>
+            </td>
+            <td><code>8809598450912</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Plum</strong><br/>
+              15% Vitamin C Face Serum with Mandarin<br/>
+              <small style="color: #888;">Serum · plm-01</small>
+            </td>
+            <td>
+              <strong>Plum</strong><br/>Saffron & papaya glow bright face wash
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                22%
+              </strong>
+            </td>
+            <td><code>8906118416370</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Plum</strong><br/>
+              Green Tea Pore Cleansing Face Wash<br/>
+              <small style="color: #888;">Cleanser · plm-02</small>
+            </td>
+            <td>
+              <strong>Plum</strong><br/>Saffron & papaya glow bright face wash
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                23%
+              </strong>
+            </td>
+            <td><code>8906118416370</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Plum</strong><br/>
+              2% Niacinamide & Rice Water Clear Moisture Gel<br/>
+              <small style="color: #888;">Moisturizer · plm-03</small>
+            </td>
+            <td>
+              <strong>Plum</strong><br/>Saffron & papaya glow bright face wash
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                44%
+              </strong>
+            </td>
+            <td><code>8906118416370</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Dot & Key</strong><br/>
+              Watermelon Cooling Sunscreen Matte Fluid SPF 50<br/>
+              <small style="color: #888;">Sunscreen · dnk-01</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Dot & Key</strong><br/>
+              Barrier Repair Cica Calming Night Gel<br/>
+              <small style="color: #888;">Moisturizer · dnk-02</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <img class="img-thumb" src="../public/images/products/cetaphil-gentle-skin-cleanser.webp" alt="Gentle Skin Cleanser" />
+            </td>
+            <td>
+              <strong>Cetaphil</strong><br/>
+              Gentle Skin Cleanser<br/>
+              <small style="color: #888;">Cleanser · cet-01</small>
+            </td>
+            <td>
+              <strong>Cetaphil</strong><br/>Gentle Skin Cleanser
+              <br/><a href="https://world.openbeautyfacts.org/product/3499320015431/gentle-skin-cleanser-cetaphil" target="_blank" style="color: #3B1F2B; font-size: 11px;">View on Open Beauty Facts &rarr;</a>
+            </td>
+            <td>
+              <strong style="color: #198754;">
+                100%
+              </strong>
+            </td>
+            <td><code>3499320015431</code></td>
+            <td>
+              <span class="badge badge-accepted">
+                Auto-Accepted
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Cetaphil</strong><br/>
+              Moisturizing Cream for Dry & Sensitive Skin<br/>
+              <small style="color: #888;">Moisturizer · cet-02</small>
+            </td>
+            <td>
+              <strong>cetaphil</strong><br/>nourishing oil
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                39%
+              </strong>
+            </td>
+            <td><code>0302990532371</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>The Derma Co</strong><br/>
+              10% Niacinamide Face Serum with Zinc<br/>
+              <small style="color: #888;">Serum · dmc-01</small>
+            </td>
+            <td>
+              <strong>The Derma Co.</strong><br/>Face moisturizer
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                27%
+              </strong>
+            </td>
+            <td><code>8906087779292</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>The Derma Co</strong><br/>
+              1% Hyaluronic Sunscreen Aqua Gel SPF 50<br/>
+              <small style="color: #888;">Sunscreen · dmc-02</small>
+            </td>
+            <td>
+              <strong>The Derma Co.</strong><br/>Face moisturizer
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                4%
+              </strong>
+            </td>
+            <td><code>8906087779292</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>La Roche-Posay</strong><br/>
+              Cicaplast Baume B5+ Ultra-Repairing Balm<br/>
+              <small style="color: #888;">Treatment · lrp-01</small>
+            </td>
+            <td>
+              <strong>La Roche-Posay</strong><br/>Effaclar duo+
+              
+            </td>
+            <td>
+              <strong style="color: #e67e22;">
+                55%
+              </strong>
+            </td>
+            <td><code>3337875863377</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>La Roche-Posay</strong><br/>
+              Effaclar Duo (+) Anti-Imperfections Treatment<br/>
+              <small style="color: #888;">Treatment · lrp-02</small>
+            </td>
+            <td>
+              <strong>La Roche-Posay</strong><br/>Effaclar duo+
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                41%
+              </strong>
+            </td>
+            <td><code>3337875863377</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Paula's Choice</strong><br/>
+              Skin Perfecting 2% BHA Liquid Exfoliant<br/>
+              <small style="color: #888;">Treatment · pc-01</small>
+            </td>
+            <td>
+              <strong>Paula’s choice</strong><br/>Pro-collagen peptide plumping moisturiser
+              
+            </td>
+            <td>
+              <strong style="color: #e67e22;">
+                65%
+              </strong>
+            </td>
+            <td><code>0655439015103</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Paula's Choice</strong><br/>
+              C15 Super Booster (15% Vitamin C + Ferulic)<br/>
+              <small style="color: #888;">Serum · pc-02</small>
+            </td>
+            <td>
+              <strong>Paula’s choice</strong><br/>Pro-collagen peptide plumping moisturiser
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                7%
+              </strong>
+            </td>
+            <td><code>0655439015103</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Beauty of Joseon</strong><br/>
+              Relief Sun : Rice + Probiotics SPF50+ PA++++<br/>
+              <small style="color: #888;">Sunscreen · boj-01</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Beauty of Joseon</strong><br/>
+              Glow Serum : Propolis + Niacinamide<br/>
+              <small style="color: #888;">Serum · boj-02</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Laneige</strong><br/>
+              Water Bank Blue Hyaluronic Cream Moisturizer<br/>
+              <small style="color: #888;">Moisturizer · lan-01</small>
+            </td>
+            <td>
+              <strong>LANEIGE</strong><br/>NYX Professional Makeup 03 My Supermodel Fat Oil Lip Drip Lipolie
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                38%
+              </strong>
+            </td>
+            <td><code>0800897233938</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Laneige</strong><br/>
+              Lip Sleeping Mask Berry<br/>
+              <small style="color: #888;">Treatment · lan-02</small>
+            </td>
+            <td>
+              <strong>LANEIGE</strong><br/>NYX Professional Makeup 03 My Supermodel Fat Oil Lip Drip Lipolie
+              
+            </td>
+            <td>
+              <strong style="color: #e67e22;">
+                78%
+              </strong>
+            </td>
+            <td><code>0800897233938</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Re'equil</strong><br/>
+              Ultra Matte Dry Touch Sunscreen Gel SPF 50<br/>
+              <small style="color: #888;">Sunscreen · req-01</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Re'equil</strong><br/>
+              Ceramide & Hyaluronic Acid Moisturiser<br/>
+              <small style="color: #888;">Moisturizer · req-02</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Simple</strong><br/>
+              Kind to Skin Refreshing Facial Wash<br/>
+              <small style="color: #888;">Cleanser · smp-01</small>
+            </td>
+            <td>
+              <strong>Simple</strong><br/>simple
+              
+            </td>
+            <td>
+              <strong style="color: #e67e22;">
+                62%
+              </strong>
+            </td>
+            <td><code>5011451103863</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Simple</strong><br/>
+              Water Boost Hydrating Gel Cream<br/>
+              <small style="color: #888;">Moisturizer · smp-02</small>
+            </td>
+            <td>
+              <strong>Simple</strong><br/>simple
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                26%
+              </strong>
+            </td>
+            <td><code>5011451103863</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Dr. Sheth's</strong><br/>
+              Centella & Niacinamide Oil & Acne Control Serum<br/>
+              <small style="color: #888;">Serum · drs-01</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Dr. Sheth's</strong><br/>
+              Kesar & Kojic Acid Daily Pigmentation Serum<br/>
+              <small style="color: #888;">Serum · drs-02</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Foxtale</strong><br/>
+              CoverUp Dewy Finish Sunscreen SPF 70 PA++++<br/>
+              <small style="color: #888;">Sunscreen · fox-01</small>
+            </td>
+            <td>
+              <strong>Foxtale</strong><br/>Skin radiance purple mask
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                2%
+              </strong>
+            </td>
+            <td><code>4908474775881</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Foxtale</strong><br/>
+              Super Glow Vitamin C Face Serum with L-Ascorbic<br/>
+              <small style="color: #888;">Serum · fox-02</small>
+            </td>
+            <td>
+              <strong>Foxtale</strong><br/>Skin radiance purple mask
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                5%
+              </strong>
+            </td>
+            <td><code>4908474775881</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Dear, Klairs</strong><br/>
+              Supple Preparation Unscented Toner<br/>
+              <small style="color: #888;">Toner · klr-01</small>
+            </td>
+            <td>
+              <strong>Palmolive</strong><br/>Palmolive apple shampoo
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                0%
+              </strong>
+            </td>
+            <td><code>6001067089827</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <div class="img-placeholder">Coming Soon</div>
+            </td>
+            <td>
+              <strong>Bioré</strong><br/>
+              UV Aqua Rich Watery Essence SPF 50+ PA++++<br/>
+              <small style="color: #888;">Sunscreen · bio-01</small>
+            </td>
+            <td>
+              <strong>Bioré</strong><br/>Anti-boutons
+              
+            </td>
+            <td>
+              <strong style="color: #dc3545;">
+                11%
+              </strong>
+            </td>
+            <td><code>5017634247843</code></td>
+            <td>
+              <span class="badge badge-rejected">
+                Low Match
+              </span>
+            </td>
+          </tr>
+        
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

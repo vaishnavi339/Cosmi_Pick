@@ -1,0 +1,158 @@
+{
+  "search:cerave": {
+    "timestamp": 1790766963805,
+    "data": [
+      {
+        "id": "obf-3606000537705",
+        "name": "cerave",
+        "brand": "cerave",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F360%2F600%2F053%2F7705%2Ffront_en.14.400.jpg",
+        "barcode": "3606000537705",
+        "ingredientsText": "",
+        "category": "Skincare",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3606000537705/cerave"
+      },
+      {
+        "id": "obf-3337875837279",
+        "name": "CeraVe",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F333%2F787%2F583%2F7279%2Ffront_ru.8.400.jpg",
+        "barcode": "3337875837279",
+        "ingredientsText": "123244",
+        "category": "ru:2",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3337875837279/cerave"
+      },
+      {
+        "id": "obf-3337875598996",
+        "name": "moisturising cream",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F333%2F787%2F559%2F8996%2Ffront_en.28.400.jpg",
+        "barcode": "3337875598996",
+        "ingredientsText": "Eau, glycérine, alcool cétéarylique, triglycéride caprylique/caprique, alcool cétylique, céteareth-20, vaseline, phosphate de potassium, céramide NP, céramide AP, céramide EOP, carbomère, diméthicone, méthosulfate de béhentrimonium, lauryllactylate de sodium, hyaluronate de sodium, cholestérol, phénoxyéthanol, edta disodique, phosphate dipotassique, tocophérol, phytosphingosine, gomme xanthane, éthylhexylglycérine. (Code F.I.L. D213768/2)",
+        "category": "fr:baume hydratant",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3337875598996/moisturising-cream-cerave"
+      },
+      {
+        "id": "obf-3606000537972",
+        "name": "Moisturizing Cream",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F360%2F600%2F053%2F7972%2Ffront_en.10.400.jpg",
+        "barcode": "3606000537972",
+        "ingredientsText": "",
+        "category": "Skincare",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3606000537972/moisturizing-cream-cerave"
+      },
+      {
+        "id": "obf-8715748428659",
+        "name": "Feuchtigkeits lotion",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F871%2F574%2F842%2F8659%2Ffront_nl.3.400.jpg",
+        "barcode": "8715748428659",
+        "ingredientsText": "",
+        "category": "Skincare",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/8715748428659/feuchtigkeits-lotion-cerave"
+      },
+      {
+        "id": "obf-3606000560239",
+        "name": "Moisturizing Lotion",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F360%2F600%2F056%2F0239%2Ffront_en.9.400.jpg",
+        "barcode": "3606000560239",
+        "ingredientsText": "AQUA/WATER/EAU, CETEARYL ALCOHOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, CETYL ALCOHOL, PHENOXYETHANOL, NIACINAMIDE, DIMETHICONE, ALLANTOIN, POTASSIUM PHOSPHATE, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, CARBOMER, ZINC CITRATE, BEHENTRIMONIUM METHOSULFATE, SODIUM LAUROYL LACTYLATE, SODIUM PCA, ARGININE PCA, SODIUM HYALURONATE, CHOLESTEROL, DIPOTASSIUM PHOSPHATE, DISODIUM EDTA, TOCOPHERYL ACETATE, TOCOPHEROL, LAURIC ACID, PHYTOSPHINGOSINE, XANTHAN GUM, POLYGLYCERYL-3 DIISOSTEARATE, POLYSORBATE 60, ETHYLHEXYLGLYCERIN (CODE F.I.L. D235677/1) L'Oréal USA S/D, Inc., Dist., New York, NY 10001 Made in USA of US and/or Imported Ingredients www.cerave.com Questions or comments? 1-888-768-2915 3612624222736 LOT 20Z103 3 606000 560239",
+        "category": "Baby Lotion",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3606000560239/moisturizing-lotion-cerave"
+      }
+    ]
+  },
+  "barcode:3606000537576": {
+    "timestamp": 1790766978942,
+    "data": {
+      "id": "obf-3606000537576",
+      "name": "Hydrating Facial Cleanser",
+      "brand": "CeraVe",
+      "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F360%2F600%2F053%2F7576%2Ffront_en.11.400.jpg",
+      "barcode": "3606000537576",
+      "ingredientsText": "AQUA/WATER/EAU, GLYCERIN, CETEARYL ALCOHOL, PEG-40 STEARATE, STEARYL ALCOHOL, POTASSIUM PHOSPHATE, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, CARBOMER, GLYCERYL STEARATE, BEHENTRIMONIUM METHOSULFATE, SODIUM LAUROYL LACTYLATE, SODIUM HYALURONATE, CHOLESTEROL, PHENOXYETHANOL, DISODIUM EDTA, DIPOTASSIUM PHOSPHATE, TOCOPHEROL, PHYTOSPHINGOSINE, XANTHAN GUM, CETYL ALCOHOL, POLYSORBATE 20, ETHYLHEXYLGLYCERIN (CODE F.I.L. D214633/3)",
+      "category": "facial-cleanser",
+      "source": "open_beauty_facts",
+      "obfUrl": "https://world.openbeautyfacts.org/product/3606000537576"
+    }
+  },
+  "search:cerave hydrating": {
+    "timestamp": 1790767513171,
+    "data": [
+      {
+        "id": "cer-01",
+        "name": "Hydrating Facial Cleanser",
+        "brand": "CeraVe",
+        "imageUrl": "/images/products/cerave-hydrating-facial-cleanser.webp",
+        "barcode": "3606000537576",
+        "ingredientsText": "",
+        "category": "Cleanser",
+        "source": "local_catalog",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3606000537576/hydrating-facial-cleanser-cerave"
+      },
+      {
+        "id": "obf-3606000537705",
+        "name": "cerave",
+        "brand": "cerave",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F360%2F600%2F053%2F7705%2Ffront_en.14.400.jpg",
+        "barcode": "3606000537705",
+        "ingredientsText": "",
+        "category": "Skincare",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3606000537705/cerave"
+      },
+      {
+        "id": "obf-3337875837279",
+        "name": "CeraVe",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F333%2F787%2F583%2F7279%2Ffront_ru.8.400.jpg",
+        "barcode": "3337875837279",
+        "ingredientsText": "123244",
+        "category": "ru:2",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3337875837279/cerave"
+      },
+      {
+        "id": "obf-3337875743563",
+        "name": "Hydrating cream-to-foam cleanser",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F333%2F787%2F574%2F3563%2Ffront_fr.12.400.jpg",
+        "barcode": "3337875743563",
+        "ingredientsText": "AQUA/WATER, GLYCERIN, SODIUM METHYL COCOYL TAURATE, COCO-BETAINE, SODIUM COCOYL ISETHIONATE, SODIUM CHLORIDE, PCA, PPG-5-CETETH-20, PEG-100 STEARATE, PEG-150 PENTAERYTHRITYL TETRASTEARATE, PEG-6 CAPRYLIC/CAPRIC GLYCERIDES, PEG-30 DIPOLYHYDROXYSTEARATE, CI 77891/TITANIUM DIOXIDE, ASPARTIC ACID, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, SORBITAN ISOSTEARATE, CARBOMER, GLYCOL DISTEARATE, GLYCERYL STEARATE, GLYCERYL OLEATE, GLYCINE, TRIDECETH-6, CETEARYL ALCOHOL, BEHENTRIMONIUM METHOSULFATE, THREONINE, SODIUM HYDROXIDE, SALICYLIC ACID, SODIUM PCA, SODIUM LACTATE, ARGININE, SODIUM LAUROYL LACTYLATE, SERINE, SODIUM BENZOATE, VALINE, SODIUM HYALURONATE, PROLINE, ISOLEUCINE, CHOLESTEROL, PHENOXYETHANOL, ALANINE, PHENYLALANINE, COCONUT ACID, COCO-GLUCOSIDE, CHLORPHENESIN, DISODIUM EDTA, HYDROXYETHYL UREA, CITRIC ACID, HYDROXYETHYL ACRYLATE/SODIUM ACRYLOYLDIMETHYL TAURATE COPOLYMER, CAPRYLYL GLYCOL, PHYTOSPHINGOSINE, XANTHAN GUM, HISTIDINE, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, POLYQUATERNIUM-53, POLYQUATERNIUM-39, POLYSORBATE 60, ETHYLHEXYLGLYCERIN, BENZOIC ACID. (F.I.L. Code D253447/1) 743563",
+        "category": "Cleansers",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3337875743563/hydrating-cream-to-foam-cleanser-cerave"
+      },
+      {
+        "id": "obf-3606000560239",
+        "name": "Moisturizing Lotion",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F360%2F600%2F056%2F0239%2Ffront_en.9.400.jpg",
+        "barcode": "3606000560239",
+        "ingredientsText": "AQUA/WATER/EAU, CETEARYL ALCOHOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, CETYL ALCOHOL, PHENOXYETHANOL, NIACINAMIDE, DIMETHICONE, ALLANTOIN, POTASSIUM PHOSPHATE, CERAMIDE NP, CERAMIDE AP, CERAMIDE EOP, CARBOMER, ZINC CITRATE, BEHENTRIMONIUM METHOSULFATE, SODIUM LAUROYL LACTYLATE, SODIUM PCA, ARGININE PCA, SODIUM HYALURONATE, CHOLESTEROL, DIPOTASSIUM PHOSPHATE, DISODIUM EDTA, TOCOPHERYL ACETATE, TOCOPHEROL, LAURIC ACID, PHYTOSPHINGOSINE, XANTHAN GUM, POLYGLYCERYL-3 DIISOSTEARATE, POLYSORBATE 60, ETHYLHEXYLGLYCERIN (CODE F.I.L. D235677/1) L'Oréal USA S/D, Inc., Dist., New York, NY 10001 Made in USA of US and/or Imported Ingredients www.cerave.com Questions or comments? 1-888-768-2915 3612624222736 LOT 20Z103 3 606000 560239",
+        "category": "Baby Lotion",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3606000560239/moisturizing-lotion-cerave"
+      },
+      {
+        "id": "obf-3337875598996",
+        "name": "moisturising cream",
+        "brand": "CeraVe",
+        "imageUrl": "/api/product-image?url=https%3A%2F%2Fimages.openbeautyfacts.org%2Fimages%2Fproducts%2F333%2F787%2F559%2F8996%2Ffront_en.28.400.jpg",
+        "barcode": "3337875598996",
+        "ingredientsText": "Eau, glycérine, alcool cétéarylique, triglycéride caprylique/caprique, alcool cétylique, céteareth-20, vaseline, phosphate de potassium, céramide NP, céramide AP, céramide EOP, carbomère, diméthicone, méthosulfate de béhentrimonium, lauryllactylate de sodium, hyaluronate de sodium, cholestérol, phénoxyéthanol, edta disodique, phosphate dipotassique, tocophérol, phytosphingosine, gomme xanthane, éthylhexylglycérine. (Code F.I.L. D213768/2)",
+        "category": "fr:baume hydratant",
+        "source": "open_beauty_facts",
+        "obfUrl": "https://world.openbeautyfacts.org/product/3337875598996/moisturising-cream-cerave"
+      }
+    ]
+  }
+}

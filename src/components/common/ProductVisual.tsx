@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   Droplets,
   Sun,
@@ -17,6 +19,7 @@ interface Props {
   size?: 'sm' | 'md' | 'lg' | 'hero' | 'fill';
   className?: string;
   showHoverEffect?: boolean;
+  showAttribution?: boolean;
 }
 
 export function ProductVisual({
@@ -24,9 +27,9 @@ export function ProductVisual({
   size = 'md',
   className = '',
   showHoverEffect = true,
+  showAttribution = true,
 }: Props) {
   const [imageError, setImageError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   // Category Icon Resolver
   const getCategoryIcon = (category: string) => {
@@ -55,26 +58,42 @@ export function ProductVisual({
 
   return (
     <div
-      className={`relative rounded-2xl overflow-hidden flex items-center justify-center transition-all duration-300 ${
+      className={`relative rounded-2xl overflow-hidden flex items-center justify-center transition-all duration-300 group/visual ${
         showHoverEffect ? 'hover:-translate-y-1 hover:shadow-soft-luxury' : ''
       } ${sizeClasses[size]} ${className}`}
     >
-      {/* Real Photography Slot */}
-      {hasImage && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={product.image}
-          alt={`${product.brand} ${product.name}`}
-          onError={() => setImageError(true)}
-          onLoad={() => setImageLoaded(true)}
-          className={`w-full h-full object-contain p-2 rounded-2xl transition-opacity duration-500 ${
-            imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-          }`}
-        />
-      )}
+      {/* Real Photography Slot on Clean White Rounded Tile */}
+      {hasImage ? (
+        <div className="relative w-full h-full rounded-2xl bg-white p-2.5 sm:p-3 border border-[#E8D3C0]/80 shadow-sm flex items-center justify-center overflow-hidden">
+          <Image
+            src={product.image!}
+            alt={`${product.brand} ${product.name}`}
+            fill
+            sizes={
+              size === 'hero'
+                ? '(max-width: 768px) 240px, 300px'
+                : size === 'lg'
+                ? '(max-width: 768px) 180px, 220px'
+                : '120px'
+            }
+            loading="lazy"
+            onError={() => setImageError(true)}
+            className="object-contain p-2 rounded-xl transition-transform duration-300 group-hover/visual:scale-105"
+          />
 
-      {/* Neutral "Image Coming Soon" Luxury Fallback Tile */}
-      {(!hasImage || !imageLoaded) && (
+          {/* Small Attribution for larger tiles */}
+          {showAttribution && (size === 'lg' || size === 'hero') && (
+            <Link
+              href="/credits"
+              title="Photo: Open Beauty Facts contributors, CC BY-SA"
+              className="absolute bottom-1 right-1.5 z-10 px-1.5 py-0.5 rounded bg-white/90 dark:bg-[#180F14]/90 backdrop-blur-xs text-[8px] sm:text-[9px] font-medium text-[#7E636E] dark:text-[#B59FA9] border border-[#E8D3C0]/50 hover:text-[#3B1F2B] dark:hover:text-[#FAF3F0] transition-colors line-clamp-1 max-w-[90%]"
+            >
+              Photo: Open Beauty Facts (CC BY-SA)
+            </Link>
+          )}
+        </div>
+      ) : (
+        /* Neutral "Image Coming Soon" Luxury Fallback Tile */
         <div className="w-full h-full rounded-2xl bg-gradient-to-b from-[#F4D9D6]/35 via-[#FBF7F4] to-[#E8D3C0]/30 dark:from-[#3B1F2B]/40 dark:via-[#24181E] dark:to-[#180F14] border border-[#E8D3C0]/70 dark:border-white/10 p-3 flex flex-col items-center justify-center text-center shadow-inner select-none">
           {/* Category Icon Badge */}
           <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/80 dark:bg-white/10 shadow-sm border border-[#E8D3C0]/50 dark:border-white/10 flex items-center justify-center mb-1.5 flex-shrink-0">
