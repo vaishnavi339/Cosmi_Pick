@@ -24,16 +24,16 @@ export function FeaturesGrid() {
       description:
         'Transparent 0–100% compatibility scores calculated via modular weights, accompanied by 2–3 sentence AI justifications referencing your specific skin indicators.',
       icon: BrainCircuit,
-      color: 'text-cyan-400',
-      borderGlow: 'hover:border-cyan-500/40',
+      color: 'text-moss-400',
+      borderGlow: 'hover:border-moss-500/40',
     },
     {
       title: 'Live Conversational Re-Ranking',
       description:
         'Simply type adjustments like "cheaper", "fragrance-free", or "only lightweight gels" to dynamically re-score and re-order the catalog in real time.',
       icon: RefreshCw,
-      color: 'text-indigo-400',
-      borderGlow: 'hover:border-indigo-500/40',
+      color: 'text-forest-400',
+      borderGlow: 'hover:border-forest-500/40',
     },
     {
       title: 'Side-by-Side Product Comparison',
@@ -65,7 +65,7 @@ export function FeaturesGrid() {
     <section id="features" className="py-20 md:py-28 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-xs font-bold tracking-widest text-indigo-600 dark:text-cyan-400 uppercase">
+          <span className="text-xs font-bold tracking-widest text-forest-600 dark:text-moss-400 uppercase">
             Platform Capabilities
           </span>
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 dark:text-white tracking-tight">
@@ -96,7 +96,7 @@ export function FeaturesGrid() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-200/50 dark:border-white/5 flex items-center text-xs font-medium text-slate-400 group-hover:text-cyan-400 transition-colors">
+                <div className="mt-6 pt-4 border-t border-slate-200/50 dark:border-white/5 flex items-center text-xs font-medium text-slate-400 group-hover:text-moss-400 transition-colors">
                   <span>Learn more</span>
                   <ChevronRight className="w-3.5 h-3.5 ml-1" />
                 </div>

@@ -79,7 +79,7 @@ export default function ScanWizardPage() {
             particleCount: 50,
             spread: 60,
             origin: { y: 0.6 },
-            colors: ['#3B1F2B', '#CE7F79', '#D9B99B', '#8CA583', '#F4D9D6'],
+            colors: ['#213A30', '#B86A4B', '#C7A77A', '#71896C', '#E2EADD'],
           });
         } catch {
           // ignore confetti error on headless/ssr
@@ -105,7 +105,7 @@ export default function ScanWizardPage() {
   };
 
   return (
-    <div className="min-h-[85vh] py-8 relative">
+    <div className="scan-shell min-h-[85vh] py-5 sm:py-9 relative">
       {/* Progress Bar Header */}
       <ScanProgressBar
         currentStep={currentStep}

@@ -124,21 +124,21 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
       role="dialog"
       aria-modal="true"
       aria-labelledby="routine-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#1E0C15]/75 backdrop-blur-md animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#111B15]/75 backdrop-blur-md animate-fadeIn"
     >
-      <div className="relative w-full max-w-4xl rounded-3xl glass-card bg-[#FBF7F4] dark:bg-[#1C1218] border border-[#E8D3C0] dark:border-white/10 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="relative w-full max-w-4xl rounded-3xl glass-card bg-[#F7F6F0] dark:bg-[#1E2822] border border-[#DCDACD] dark:border-white/10 shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
         
         {/* Header */}
-        <div className="px-6 py-5 border-b border-[#E8D3C0]/70 dark:border-white/10 flex items-center justify-between bg-white/70 dark:bg-white/[0.02]">
+        <div className="px-6 py-5 border-b border-[#DCDACD]/70 dark:border-white/10 flex items-center justify-between bg-white/70 dark:bg-white/[0.02]">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-[#F4D9D6] dark:bg-[#3B1F2B] border border-[#E8D3C0] flex items-center justify-center text-[#3B1F2B] dark:text-[#F4D9D6]">
+            <div className="w-9 h-9 rounded-full bg-[#E2EADD] dark:bg-[#213A30] border border-[#DCDACD] flex items-center justify-center text-[#213A30] dark:text-[#E2EADD]">
               <Sparkles className="w-4 h-4" />
             </div>
             <div>
-              <h3 id="routine-modal-title" className="font-serif font-bold text-xl text-[#3B1F2B] dark:text-[#FAF3F0]">
+              <h3 id="routine-modal-title" className="font-serif font-bold text-xl text-[#213A30] dark:text-[#F7F6F0]">
                 Your Custom AM / PM Routine
               </h3>
-              <p className="text-xs text-[#7E636E] dark:text-[#B59FA9]">
+              <p className="text-xs text-[#68766C] dark:text-[#A6B0A5]">
                 Calibrated for your {traits.faceShape.value} face shape & {traits.skinTone.value} skin tone
               </p>
             </div>
@@ -148,22 +148,22 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
             type="button"
             onClick={onClose}
             aria-label="Close routine modal"
-            className="p-2 rounded-full border border-[#E8D3C0] dark:border-white/10 text-[#7E636E] dark:text-[#B59FA9] hover:bg-[#F4D9D6]/40 transition-colors"
+            className="p-2 rounded-full border border-[#DCDACD] dark:border-white/10 text-[#68766C] dark:text-[#A6B0A5] hover:bg-[#E2EADD]/40 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* AM / PM Tab Switcher */}
-        <div className="px-6 py-3.5 border-b border-[#E8D3C0]/60 dark:border-white/10 bg-[#FAF5F0]/50 dark:bg-white/[0.01] flex items-center justify-between gap-4">
+        <div className="px-6 py-3.5 border-b border-[#DCDACD]/60 dark:border-white/10 bg-[#F7F6F0]/50 dark:bg-white/[0.01] flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <button
               type="button"
               onClick={() => setActiveTab('am')}
               className={`px-5 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${
                 activeTab === 'am'
-                  ? 'bg-[#3B1F2B] text-white shadow-soft-luxury dark:bg-[#F4D9D6] dark:text-[#3B1F2B]'
-                  : 'bg-white/80 dark:bg-white/5 text-[#7E636E] dark:text-[#B59FA9] border border-[#E8D3C0] dark:border-white/10 hover:bg-[#F4D9D6]/30'
+                  ? 'bg-[#213A30] text-white shadow-soft-luxury dark:bg-[#E2EADD] dark:text-[#213A30]'
+                  : 'bg-white/80 dark:bg-white/5 text-[#68766C] dark:text-[#A6B0A5] border border-[#DCDACD] dark:border-white/10 hover:bg-[#E2EADD]/30'
               }`}
             >
               <Sun className="w-3.5 h-3.5 text-amber-400" />
@@ -175,16 +175,16 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
               onClick={() => setActiveTab('pm')}
               className={`px-5 py-2 rounded-full text-xs font-bold flex items-center gap-2 transition-all ${
                 activeTab === 'pm'
-                  ? 'bg-[#3B1F2B] text-white shadow-soft-luxury dark:bg-[#F4D9D6] dark:text-[#3B1F2B]'
-                  : 'bg-white/80 dark:bg-white/5 text-[#7E636E] dark:text-[#B59FA9] border border-[#E8D3C0] dark:border-white/10 hover:bg-[#F4D9D6]/30'
+                  ? 'bg-[#213A30] text-white shadow-soft-luxury dark:bg-[#E2EADD] dark:text-[#213A30]'
+                  : 'bg-white/80 dark:bg-white/5 text-[#68766C] dark:text-[#A6B0A5] border border-[#DCDACD] dark:border-white/10 hover:bg-[#E2EADD]/30'
               }`}
             >
-              <Moon className="w-3.5 h-3.5 text-indigo-400" />
+              <Moon className="w-3.5 h-3.5 text-forest-400" />
               <span>Evening Ritual (PM)</span>
             </button>
           </div>
 
-          <span className="hidden sm:inline text-xs font-medium text-[#7E636E] dark:text-[#B59FA9]">
+          <span className="hidden sm:inline text-xs font-medium text-[#68766C] dark:text-[#A6B0A5]">
             {activeTab === 'am' ? '4 Simple Steps' : '3 Restorative Steps'}
           </span>
         </div>
@@ -196,38 +196,38 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
             return (
               <div
                 key={step}
-                className="p-5 sm:p-6 rounded-3xl bg-white/90 dark:bg-white/[0.03] border border-[#E8D3C0] dark:border-white/10 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
+                className="p-5 sm:p-6 rounded-3xl bg-white/90 dark:bg-white/[0.03] border border-[#DCDACD] dark:border-white/10 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
               >
                 {/* Left: Step Badge & Product Photography Slot */}
                 <div className="flex items-center gap-4 min-w-0">
-                  <div className="w-10 h-10 rounded-2xl bg-[#F4D9D6]/50 dark:bg-[#3B1F2B]/60 border border-[#E8D3C0] flex items-center justify-center font-serif font-bold text-lg text-[#3B1F2B] dark:text-[#FAF3F0] flex-shrink-0">
+                  <div className="w-10 h-10 rounded-2xl bg-[#E2EADD]/50 dark:bg-[#213A30]/60 border border-[#DCDACD] flex items-center justify-center font-serif font-bold text-lg text-[#213A30] dark:text-[#F7F6F0] flex-shrink-0">
                     {step}
                   </div>
 
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden border border-[#E8D3C0]/60 dark:border-white/10 flex-shrink-0">
+                  <div className="w-16 h-16 rounded-2xl overflow-hidden border border-[#DCDACD]/60 dark:border-white/10 flex-shrink-0">
                     <ProductVisual product={product.product} size="fill" />
                   </div>
 
                   <div className="min-w-0">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#CE7F79] dark:text-[#D9B99B] block">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#B86A4B] dark:text-[#C7A77A] block">
                       Step {step} • {role}
                     </span>
-                    <h4 className="font-serif font-bold text-base text-[#3B1F2B] dark:text-[#FAF3F0] truncate">
+                    <h4 className="font-serif font-bold text-base text-[#213A30] dark:text-[#F7F6F0] truncate">
                       {product.product.name}
                     </h4>
-                    <span className="text-xs text-[#7E636E] dark:text-[#B59FA9]">
+                    <span className="text-xs text-[#68766C] dark:text-[#A6B0A5]">
                       {product.product.brand} • {formatINR(product.product.priceINR)}
                     </span>
                   </div>
                 </div>
 
                 {/* Right: Application Guidance & Dosage */}
-                <div className="sm:max-w-xs space-y-1.5 border-t sm:border-t-0 sm:border-l border-[#E8D3C0]/60 dark:border-white/10 pt-3 sm:pt-0 sm:pl-6 text-xs">
-                  <div className="flex items-center gap-1.5 font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
-                    <Clock className="w-3.5 h-3.5 text-[#8CA583]" />
+                <div className="sm:max-w-xs space-y-1.5 border-t sm:border-t-0 sm:border-l border-[#DCDACD]/60 dark:border-white/10 pt-3 sm:pt-0 sm:pl-6 text-xs">
+                  <div className="flex items-center gap-1.5 font-bold text-[#213A30] dark:text-[#F7F6F0]">
+                    <Clock className="w-3.5 h-3.5 text-[#71896C]" />
                     <span>Dose: {time}</span>
                   </div>
-                  <p className="text-[#7E636E] dark:text-[#B59FA9] leading-relaxed">
+                  <p className="text-[#68766C] dark:text-[#A6B0A5] leading-relaxed">
                     {instructions}
                   </p>
                 </div>
@@ -237,8 +237,8 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-[#E8D3C0]/70 dark:border-white/10 bg-white/70 dark:bg-white/[0.02] flex items-center justify-between">
-          <div className="flex items-center gap-1.5 text-xs text-[#8CA583] font-semibold">
+        <div className="px-6 py-4 border-t border-[#DCDACD]/70 dark:border-white/10 bg-white/70 dark:bg-white/[0.02] flex items-center justify-between">
+          <div className="flex items-center gap-1.5 text-xs text-[#71896C] font-semibold">
             <ShieldCheck className="w-4 h-4" />
             <span>Formulation harmony verified</span>
           </div>
@@ -247,7 +247,7 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
             <button
               type="button"
               onClick={() => window.print()}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold border border-[#E8D3C0] dark:border-white/10 text-[#3B1F2B] dark:text-[#FAF3F0] hover:bg-[#F4D9D6]/30 transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold border border-[#DCDACD] dark:border-white/10 text-[#213A30] dark:text-[#F7F6F0] hover:bg-[#E2EADD]/30 transition-colors"
             >
               <Printer className="w-3.5 h-3.5" />
               <span>Print Routine</span>
@@ -255,7 +255,7 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
             <button
               type="button"
               onClick={onClose}
-              className="px-5 py-2 rounded-full text-xs font-bold text-white bg-[#3B1F2B] dark:bg-[#F4D9D6] dark:text-[#3B1F2B] shadow-sm"
+              className="px-5 py-2 rounded-full text-xs font-bold text-white bg-[#213A30] dark:bg-[#E2EADD] dark:text-[#213A30] shadow-sm"
             >
               Done
             </button>

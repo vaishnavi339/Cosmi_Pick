@@ -4,43 +4,41 @@
 
 @layer base {
   :root {
-    --background: #FBF7F4;
-    --foreground: #3B1F2B;
+    --background: #F7F6F0;
+    --foreground: #213A30;
     --card-bg: rgba(255, 255, 255, 0.88);
     --card-glass: rgba(255, 255, 255, 0.75);
-    --border-color: rgba(230, 218, 214, 0.85);
-    --border-highlight: rgba(217, 185, 155, 0.6);
-    --muted: #7E636E;
-    --muted-bg: rgba(244, 217, 214, 0.25);
+    --border-color: rgba(218, 220, 207, 0.9);
+    --border-highlight: rgba(199, 167, 122, 0.55);
+    --muted: #68766C;
+    --muted-bg: rgba(226, 234, 221, 0.5);
     /* Consistent Z-Index Scale */
     --z-background: 0;
     --z-content: 10;
     --z-sticky-nav: 50;
     --z-modal: 100;
-    --luxury-glow: 
-      radial-gradient(circle at 20% 10%, rgba(244, 217, 214, 0.45) 0%, transparent 50%),
-      radial-gradient(circle at 85% 60%, rgba(201, 214, 195, 0.35) 0%, transparent 50%),
-      radial-gradient(circle at 50% 90%, rgba(217, 185, 155, 0.20) 0%, transparent 55%);
+    --luxury-glow:
+      radial-gradient(ellipse at 4% 0%, rgba(226, 234, 221, 0.38) 0%, transparent 35%),
+      radial-gradient(ellipse at 96% 24%, rgba(212, 226, 210, 0.3) 0%, transparent 32%);
   }
 
   .dark {
-    --background: #180F14;
-    --foreground: #FAF3F0;
-    --card-bg: rgba(33, 21, 29, 0.78);
-    --card-glass: rgba(41, 27, 36, 0.85);
+    --background: #17201B;
+    --foreground: #F7F6F0;
+    --card-bg: rgba(31, 43, 35, 0.9);
+    --card-glass: rgba(37, 51, 41, 0.92);
     --border-color: rgba(255, 255, 255, 0.09);
-    --border-highlight: rgba(244, 217, 214, 0.3);
-    --muted: #B59FA9;
+    --border-highlight: rgba(226, 234, 221, 0.3);
+    --muted: #A6B0A5;
     --muted-bg: rgba(255, 255, 255, 0.05);
     /* Consistent Z-Index Scale */
     --z-background: 0;
     --z-content: 10;
     --z-sticky-nav: 50;
     --z-modal: 100;
-    --luxury-glow: 
-      radial-gradient(circle at 25% 10%, rgba(59, 31, 43, 0.5) 0%, transparent 55%),
-      radial-gradient(circle at 80% 65%, rgba(45, 26, 36, 0.4) 0%, transparent 50%),
-      radial-gradient(circle at 50% 90%, rgba(30, 18, 25, 0.4) 0%, transparent 55%);
+    --luxury-glow:
+      radial-gradient(ellipse at 4% 0%, rgba(68, 100, 78, 0.24) 0%, transparent 42%),
+      radial-gradient(ellipse at 96% 24%, rgba(50, 80, 60, 0.18) 0%, transparent 38%);
   }
 
   * {
@@ -49,6 +47,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -63,20 +62,20 @@
     min-height: 100vh;
     overflow-x: hidden;
     background-image: var(--luxury-glow);
-    background-attachment: fixed;
+    background-attachment: scroll;
     transition: background-color 0.4s ease, color 0.4s ease;
     position: relative;
     font-family: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
-  /* Editorial Fine Grain Overlay */
+  /* Subtle paper texture for the editorial skincare palette. */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
     width: 100%;
     height: 100%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.018'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 1;
   }
@@ -86,15 +85,40 @@
     font-family: var(--font-fraunces), 'Fraunces', 'Playfair Display', Georgia, serif;
   }
 
+  ::selection {
+    background: #E2EADD;
+    color: #213A30;
+  }
+
+  button, a, input, select, textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   /* Accessibility Focus Rings */
   *:focus-visible {
-    outline: 2px solid #3B1F2B;
+    outline: 2px solid #213A30;
     outline-offset: 2px;
   }
 
   .dark *:focus-visible {
-    outline: 2px solid #F4D9D6;
+    outline: 2px solid #E2EADD;
     outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .site-header {
+    background: color-mix(in srgb, var(--background) 88%, transparent);
+    border-color: color-mix(in srgb, var(--border-color) 76%, transparent);
+    box-shadow: 0 8px 30px -24px rgba(33, 58, 48, 0.35);
+    backdrop-filter: blur(18px) saturate(145%);
+    -webkit-backdrop-filter: blur(18px) saturate(145%);
+  }
+
+  .scan-shell {
+    background:
+      radial-gradient(ellipse at 50% 4%, rgba(226, 234, 221, 0.38), transparent 42%),
+      linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--background) 58%, transparent) 100%);
   }
 }
 
@@ -106,51 +130,51 @@
     font-family: var(--font-dm-sans), 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
-  .btn-plum-primary {
-    background-color: #3B1F2B;
-    color: #FBF7F4;
+  .btn-forest-primary {
+    background-color: #213A30;
+    color: #F7F6F0;
     transition: all 0.2s ease;
-    box-shadow: 0 10px 25px -5px rgba(59, 31, 43, 0.15), 0 2px 6px -2px rgba(59, 31, 43, 0.1);
+    box-shadow: 0 10px 25px -5px rgba(33, 58, 48, 0.16), 0 2px 6px -2px rgba(33, 58, 48, 0.1);
   }
-  .btn-plum-primary:hover {
-    background-color: #26111B;
+  .btn-forest-primary:hover {
+    background-color: #14271F;
     transform: translateY(-2px);
-    box-shadow: 0 14px 30px -5px rgba(59, 31, 43, 0.25), 0 4px 10px -2px rgba(59, 31, 43, 0.15);
+    box-shadow: 0 14px 30px -5px rgba(33, 58, 48, 0.26), 0 4px 10px -2px rgba(33, 58, 48, 0.15);
   }
-  .dark .btn-plum-primary {
-    background-color: #F4D9D6;
-    color: #3B1F2B;
-    box-shadow: 0 10px 25px -5px rgba(244, 217, 214, 0.15);
+  .dark .btn-forest-primary {
+    background-color: #E2EADD;
+    color: #213A30;
+    box-shadow: 0 10px 25px -5px rgba(212, 226, 210, 0.15);
   }
-  .dark .btn-plum-primary:hover {
-    background-color: #E9BDB9;
+  .dark .btn-forest-primary:hover {
+    background-color: #CAD8C8;
     transform: translateY(-2px);
   }
 
-  .btn-plum-secondary {
-    border: 1.5px solid #3B1F2B;
-    color: #3B1F2B;
+  .btn-forest-secondary {
+    border: 1.5px solid #213A30;
+    color: #213A30;
     background-color: transparent;
     transition: all 0.2s ease;
   }
-  .btn-plum-secondary:hover {
-    background-color: rgba(244, 217, 214, 0.3);
+  .btn-forest-secondary:hover {
+    background-color: rgba(226, 234, 221, 0.5);
     transform: translateY(-1px);
   }
-  .dark .btn-plum-secondary {
-    border-color: #F4D9D6;
-    color: #FAF3F0;
+  .dark .btn-forest-secondary {
+    border-color: #E2EADD;
+    color: #F7F6F0;
   }
-  .dark .btn-plum-secondary:hover {
-    background-color: rgba(244, 217, 214, 0.1);
-  }
-
-  .text-plum {
-    color: #3B1F2B;
+  .dark .btn-forest-secondary:hover {
+    background-color: rgba(212, 226, 210, 0.12);
   }
 
-  .bg-plum {
-    background-color: #3B1F2B;
+  .text-forest {
+    color: #213A30;
+  }
+
+  .bg-forest {
+    background-color: #213A30;
   }
 
   .glass-luxury {
@@ -179,7 +203,7 @@
   .animated-gradient-border {
     position: relative;
     background: linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
-                linear-gradient(135deg, #F4D9D6, #D9B99B, #C9D6C3, #F4D9D6) border-box;
+                linear-gradient(135deg, #E2EADD, #C7A77A, #D4E2D2, #E2EADD) border-box;
     border: 1.5px solid transparent;
     background-size: 100% 100%, 300% 300%;
     animation: luxuryBorderShift 10s ease infinite;
@@ -201,11 +225,15 @@
   background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(126, 99, 110, 0.25);
+  background: rgba(104, 118, 108, 0.25);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(126, 99, 110, 0.45);
+  background: rgba(104, 118, 108, 0.45);
+}
+
+@media (max-width: 640px) {
+  body::before { opacity: 0.55; }
 }
 
 /* Reduced motion preference */

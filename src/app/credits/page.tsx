@@ -19,55 +19,55 @@ export default function CreditsPage() {
         {/* Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#7E636E] dark:text-[#B59FA9] hover:text-[#3B1F2B] dark:hover:text-white transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#68766C] dark:text-[#A6B0A5] hover:text-[#213A30] dark:hover:text-white transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </Link>
 
         {/* Hero Header */}
-        <div className="border-b border-[#E8D3C0]/70 dark:border-white/10 pb-8 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F4D9D6]/40 dark:bg-[#3B1F2B]/60 border border-[#E8D3C0] dark:border-white/10 text-xs font-semibold text-[#8C4A5A] dark:text-[#F4D9D6] mb-4">
+        <div className="border-b border-[#DCDACD]/70 dark:border-white/10 pb-8 mb-12">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E2EADD]/40 dark:bg-[#213A30]/60 border border-[#DCDACD] dark:border-white/10 text-xs font-semibold text-[#416A57] dark:text-[#E2EADD] mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Ethical Sourcing & Open Attribution</span>
           </div>
-          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#3B1F2B] dark:text-[#FAF3F0] mb-4">
+          <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#213A30] dark:text-[#F7F6F0] mb-4">
             Image & Data Credits
           </h1>
-          <p className="text-base sm:text-lg text-[#7E636E] dark:text-[#B59FA9] max-w-2xl leading-relaxed">
+          <p className="text-base sm:text-lg text-[#68766C] dark:text-[#A6B0A5] max-w-2xl leading-relaxed">
             CosmicPick is built on open standards and community contributions. We strictly adhere to real product photography, open licenses, and transparent data attribution.
           </p>
         </div>
 
         {/* Section 1: Open Beauty Facts Attribution */}
-        <section className="mb-14 p-6 sm:p-8 rounded-3xl bg-white dark:bg-white/[0.02] border border-[#E8D3C0] dark:border-white/10 shadow-soft-luxury">
+        <section className="mb-14 p-6 sm:p-8 rounded-3xl bg-white dark:bg-white/[0.02] border border-[#DCDACD] dark:border-white/10 shadow-soft-luxury">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#EAF2E8] dark:bg-[#8CA583]/20 border border-[#C9D6C3] dark:border-white/10 flex items-center justify-center flex-shrink-0 text-[#44633B] dark:text-[#A7C19E]">
+            <div className="w-12 h-12 rounded-2xl bg-[#EAF2E8] dark:bg-[#71896C]/20 border border-[#D4E2D2] dark:border-white/10 flex items-center justify-center flex-shrink-0 text-[#405C45] dark:text-[#A7C19E]">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#3B1F2B] dark:text-[#FAF3F0] mb-2">
+              <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#213A30] dark:text-[#F7F6F0] mb-2">
                 Open Beauty Facts (world.openbeautyfacts.org)
               </h2>
-              <p className="text-sm text-[#7E636E] dark:text-[#B59FA9] leading-relaxed mb-4">
+              <p className="text-sm text-[#68766C] dark:text-[#A6B0A5] leading-relaxed mb-4">
                 Product photos are sourced from the contributor-curated <strong>Open Beauty Facts</strong> database and official brand or retailer product catalogs. Each catalog entry links to the image source and names its contributor where available.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs mt-4">
-                <div className="p-4 rounded-xl bg-[#FBF7F4] dark:bg-white/[0.03] border border-[#E8D3C0]/60 dark:border-white/5">
-                  <strong className="block text-[#3B1F2B] dark:text-[#FAF3F0] mb-1 font-semibold">
+                <div className="p-4 rounded-xl bg-[#F7F6F0] dark:bg-white/[0.03] border border-[#DCDACD]/60 dark:border-white/5">
+                  <strong className="block text-[#213A30] dark:text-[#F7F6F0] mb-1 font-semibold">
                     Product Photography License:
                   </strong>
-                  <span className="text-[#7E636E] dark:text-[#B59FA9]">
+                  <span className="text-[#68766C] dark:text-[#A6B0A5]">
                     Open Beauty Facts product photos are shared under <strong>CC BY-SA</strong>. Brand and retailer catalog photos retain their source owners&apos; terms and are credited on each product entry.
                   </span>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#FBF7F4] dark:bg-white/[0.03] border border-[#E8D3C0]/60 dark:border-white/5">
-                  <strong className="block text-[#3B1F2B] dark:text-[#FAF3F0] mb-1 font-semibold">
+                <div className="p-4 rounded-xl bg-[#F7F6F0] dark:bg-white/[0.03] border border-[#DCDACD]/60 dark:border-white/5">
+                  <strong className="block text-[#213A30] dark:text-[#F7F6F0] mb-1 font-semibold">
                     Database & Ingredient Listings License:
                   </strong>
-                  <span className="text-[#7E636E] dark:text-[#B59FA9]">
+                  <span className="text-[#68766C] dark:text-[#A6B0A5]">
                     The Open Beauty Facts database is made available under the <strong>Open Database License (ODbL)</strong>.
                   </span>
                 </div>
@@ -78,7 +78,7 @@ export default function CreditsPage() {
                   href="https://world.openbeautyfacts.org/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#3B1F2B] text-white dark:bg-[#F4D9D6] dark:text-[#3B1F2B] hover:opacity-90 transition-opacity"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#213A30] text-white dark:bg-[#E2EADD] dark:text-[#213A30] hover:opacity-90 transition-opacity"
                 >
                   <span>Visit Open Beauty Facts</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -87,7 +87,7 @@ export default function CreditsPage() {
                   href="https://creativecommons.org/licenses/by-sa/4.0/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#FAF5F0] dark:bg-white/10 text-[#3B1F2B] dark:text-[#FAF3F0] border border-[#E8D3C0] dark:border-white/15 hover:bg-[#F4D9D6]/30 transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold bg-[#F7F6F0] dark:bg-white/10 text-[#213A30] dark:text-[#F7F6F0] border border-[#DCDACD] dark:border-white/15 hover:bg-[#E2EADD]/30 transition-colors"
                 >
                   <span>CC BY-SA 4.0 Legal Code</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -101,14 +101,14 @@ export default function CreditsPage() {
         <section className="mb-14">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="font-serif text-2xl font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
+              <h2 className="font-serif text-2xl font-bold text-[#213A30] dark:text-[#F7F6F0]">
                 Catalog Products Manifest
               </h2>
-              <p className="text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9] mt-1">
+              <p className="text-xs sm:text-sm text-[#68766C] dark:text-[#A6B0A5] mt-1">
                 Local product photos with their source, contributor, and license details.
               </p>
             </div>
-            <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#EAF2E8] dark:bg-[#8CA583]/20 text-[#44633B] dark:text-[#C9D6C3] border border-[#C9D6C3]">
+            <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#EAF2E8] dark:bg-[#71896C]/20 text-[#405C45] dark:text-[#D4E2D2] border border-[#D4E2D2]">
               {productsWithImages.length} of {products.length} Photographed
             </span>
           </div>
@@ -117,9 +117,9 @@ export default function CreditsPage() {
             {productsWithImages.map((product) => (
               <div
                 key={product.id}
-                className="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-[#E8D3C0]/80 dark:border-white/10 flex items-center gap-4 hover:border-[#8CA583] transition-colors"
+                className="p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-[#DCDACD]/80 dark:border-white/10 flex items-center gap-4 hover:border-[#71896C] transition-colors"
               >
-                <div className="relative w-20 h-20 rounded-xl bg-white border border-[#E8D3C0]/60 p-2 flex-shrink-0 flex items-center justify-center">
+                <div className="relative w-20 h-20 rounded-xl bg-white border border-[#DCDACD]/60 p-2 flex-shrink-0 flex items-center justify-center">
                   <Image
                     src={product.image!}
                     alt={`${product.brand} ${product.name}`}
@@ -129,16 +129,16 @@ export default function CreditsPage() {
                   />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#7E636E] dark:text-[#B59FA9] block">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#68766C] dark:text-[#A6B0A5] block">
                     {product.brand}
                   </span>
-                  <h4 className="font-serif font-bold text-sm text-[#3B1F2B] dark:text-[#FAF3F0] line-clamp-1">
+                  <h4 className="font-serif font-bold text-sm text-[#213A30] dark:text-[#F7F6F0] line-clamp-1">
                     {product.name}
                   </h4>
-                  <div className="mt-1 text-[11px] text-[#7E636E] dark:text-[#B59FA9] space-y-0.5">
-                    <div>Barcode: <code className="text-[#3B1F2B] dark:text-[#F4D9D6]">{product.barcode || '—'}</code></div>
+                  <div className="mt-1 text-[11px] text-[#68766C] dark:text-[#A6B0A5] space-y-0.5">
+                    <div>Barcode: <code className="text-[#213A30] dark:text-[#E2EADD]">{product.barcode || '—'}</code></div>
                     <div>Photo: <span className="italic">{product.imageSource?.contributor || 'Open Beauty Facts contributors'}</span></div>
-                    <div className="text-[10px] text-[#8CA583] font-semibold">{product.imageSource?.license || 'CC BY-SA'}</div>
+                    <div className="text-[10px] text-[#71896C] font-semibold">{product.imageSource?.license || 'CC BY-SA'}</div>
                     {product.imageGallery?.length ? (
                       <div>{product.imageGallery.length} additional product photo{product.imageGallery.length === 1 ? '' : 's'}</div>
                     ) : null}
@@ -149,7 +149,7 @@ export default function CreditsPage() {
                     href={product.imageSource.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#7E636E] hover:text-[#3B1F2B] dark:hover:text-[#FAF3F0] p-2"
+                    className="text-[#68766C] hover:text-[#213A30] dark:hover:text-[#F7F6F0] p-2"
                     title="View on Open Beauty Facts"
                   >
                     <ExternalLink className="w-4 h-4" />
@@ -161,11 +161,11 @@ export default function CreditsPage() {
         </section>
 
         {/* Section 3: Documentation Reference */}
-        <section className="p-6 rounded-2xl bg-[#FAF5F0] dark:bg-white/[0.02] border border-[#E8D3C0] dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <section className="p-6 rounded-2xl bg-[#F7F6F0] dark:bg-white/[0.02] border border-[#DCDACD] dark:border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <BookOpen className="w-5 h-5 text-[#8C4A5A] flex-shrink-0" />
-            <div className="text-xs text-[#7E636E] dark:text-[#B59FA9]">
-              Detailed verification logs, checklists, and mood photography sources are maintained in <code className="bg-white/80 dark:bg-white/10 px-1.5 py-0.5 rounded text-[#3B1F2B] dark:text-[#FAF3F0]">docs/IMAGE_CREDITS.md</code>.
+            <BookOpen className="w-5 h-5 text-[#416A57] flex-shrink-0" />
+            <div className="text-xs text-[#68766C] dark:text-[#A6B0A5]">
+              Detailed verification logs, checklists, and mood photography sources are maintained in <code className="bg-white/80 dark:bg-white/10 px-1.5 py-0.5 rounded text-[#213A30] dark:text-[#F7F6F0]">docs/IMAGE_CREDITS.md</code>.
             </div>
           </div>
         </section>

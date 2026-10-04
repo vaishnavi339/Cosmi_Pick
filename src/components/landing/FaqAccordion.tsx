@@ -29,7 +29,7 @@ export function FaqAccordion() {
     },
     {
       q: 'Can I use CosmicPick without turning on my camera?',
-      a: 'Yes! You can take our fast 3-question quiz or upload a still photo from your camera roll instead of using the live webcam.',
+      a: 'No. Browse catalog matches in the Ritual Studio by concern and budget without opening a camera. For a full personal match, use the private on-device scan.',
     },
   ];
 
@@ -40,21 +40,21 @@ export function FaqAccordion() {
   return (
     <section
       id="faq"
-      className="py-20 relative isolate overflow-clip scroll-mt-24 bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      className="py-20 relative isolate overflow-clip scroll-mt-24 bg-[#F7F6F0] dark:bg-[#17201B] section-stack"
       style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-14 space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4D9D6]/60 dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-xs font-bold text-[#CE7F79] dark:text-[#FAF3F0] uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E2EADD]/60 dark:bg-white/5 border border-[#DCDACD] dark:border-white/10 text-xs font-bold text-[#B86A4B] dark:text-[#F7F6F0] uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Questions & Answers</span>
           </div>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#3B1F2B] dark:text-[#FAF3F0] tracking-tight">
+          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#213A30] dark:text-[#F7F6F0] tracking-tight">
             Everything you need to know
           </h2>
-          <p className="text-sm sm:text-base text-[#7E636E] dark:text-[#B59FA9] max-w-xl mx-auto">
+          <p className="text-sm sm:text-base text-[#68766C] dark:text-[#A6B0A5] max-w-xl mx-auto">
             Clear, honest answers about our optical formulation engine, safety, and routines.
           </p>
         </div>
@@ -66,24 +66,24 @@ export function FaqAccordion() {
             return (
               <div
                 key={faq.q}
-                className="rounded-3xl glass-card bg-white/80 dark:bg-[#20151C]/80 border border-[#E8D3C0] dark:border-white/10 overflow-hidden transition-all duration-300 shadow-sm"
+                className="rounded-3xl glass-card bg-white/80 dark:bg-[#222B25]/80 border border-[#DCDACD] dark:border-white/10 overflow-hidden transition-all duration-300 shadow-sm"
               >
                 <button
                   type="button"
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left text-[#3B1F2B] dark:text-[#FAF3F0] font-serif font-bold text-base sm:text-lg hover:text-[#CE7F79] transition-colors"
+                  className="w-full px-6 py-5 flex items-center justify-between text-left text-[#213A30] dark:text-[#F7F6F0] font-serif font-bold text-base sm:text-lg hover:text-[#B86A4B] transition-colors"
                 >
                   <span className="pr-4">{faq.q}</span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center border border-[#E8D3C0] dark:border-white/10 flex-shrink-0 transition-transform duration-300 ${
-                    isOpen ? 'rotate-180 bg-[#F4D9D6]/50 text-[#3B1F2B]' : 'bg-[#FBF7F4] text-[#7E636E]'
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center border border-[#DCDACD] dark:border-white/10 flex-shrink-0 transition-transform duration-300 ${
+                    isOpen ? 'rotate-180 bg-[#E2EADD]/50 text-[#213A30]' : 'bg-[#F7F6F0] text-[#68766C]'
                   }`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm text-[#7E636E] dark:text-[#B59FA9] leading-relaxed border-t border-[#E8D3C0]/50 dark:border-white/5 animate-fadeIn">
+                  <div className="px-6 pb-6 pt-1 text-sm text-[#68766C] dark:text-[#A6B0A5] leading-relaxed border-t border-[#DCDACD]/50 dark:border-white/5 animate-fadeIn">
                     {faq.a}
                   </div>
                 )}

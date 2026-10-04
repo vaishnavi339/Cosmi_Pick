@@ -116,20 +116,20 @@ export function PinnedScrollStory() {
   return (
     <section
       id="how-it-works"
-      className="relative isolate overflow-clip scroll-mt-24 bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      className="relative isolate overflow-clip scroll-mt-24 bg-[#F7F6F0] dark:bg-[#17201B] section-stack"
       style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
     >
       {/* ================= DESKTOP PINNED SCROLL (lg and above) ================= */}
       <div
         ref={containerRef}
-        className="hidden lg:block relative h-[300vh] isolate overflow-clip bg-[#FBF7F4] dark:bg-[#180F14]"
+        className="hidden lg:block relative h-[300vh] isolate overflow-clip bg-[#F7F6F0] dark:bg-[#17201B]"
       >
         {/* Sticky 100vh Viewport */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between py-12 px-6 sm:px-10 lg:px-16 bg-[#FBF7F4] dark:bg-[#180F14] z-0">
+        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between py-12 px-6 sm:px-10 lg:px-16 bg-[#F7F6F0] dark:bg-[#17201B] z-0">
           {/* Background Images Crossfading with Depth (z-0, NO negative z-index) */}
-          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#FBF7F4] dark:bg-[#180F14]">
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#F7F6F0] dark:bg-[#17201B]">
             {/* Solid opaque background layer under any image */}
-            <div className="absolute inset-0 bg-[#FBF7F4] dark:bg-[#180F14] z-0" />
+            <div className="absolute inset-0 bg-[#F7F6F0] dark:bg-[#17201B] z-0" />
 
             {/* Step 1 Image */}
             <motion.div
@@ -212,14 +212,14 @@ export function PinnedScrollStory() {
               />
             </motion.div>
 
-            {/* High-legibility Ivory & Blush Glass Gradient scrim */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FBF7F4]/95 via-[#FBF7F4]/80 to-[#F4D9D6]/30 dark:from-[#180F14]/88 dark:via-[#180F14]/65 dark:to-[#180F14]/25" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#FBF7F4] via-transparent to-[#FBF7F4]/40 dark:from-[#180F14] dark:to-[#180F14]/40" />
+            {/* High-legibility Ivory & Moss Glass Gradient scrim */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F7F6F0]/95 via-[#F7F6F0]/80 to-[#E2EADD]/30 dark:from-[#17201B]/88 dark:via-[#17201B]/65 dark:to-[#17201B]/25" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#F7F6F0] via-transparent to-[#F7F6F0]/40 dark:from-[#17201B] dark:to-[#17201B]/40" />
           </div>
 
           {/* Top Section Header (z-10) */}
           <div className="max-w-7xl mx-auto w-full flex items-center justify-between relative z-10">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#3B1F2B]/5 dark:bg-white/10 border border-[#3B1F2B]/15 dark:border-white/10 text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#213A30]/5 dark:bg-white/10 border border-[#213A30]/15 dark:border-white/10 text-xs font-bold text-[#213A30] dark:text-[#F7F6F0] uppercase tracking-wider">
               <span>The 3-Step Precision Story</span>
             </div>
 
@@ -230,8 +230,8 @@ export function PinnedScrollStory() {
                   key={st.number}
                   className={`flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300 ${
                     activeStep === idx
-                      ? 'bg-[#3B1F2B] text-white dark:bg-[#F4D9D6] dark:text-[#3B1F2B] shadow-sm scale-105'
-                      : 'bg-white/70 dark:bg-white/5 text-[#7E636E] dark:text-[#B59FA9] border border-[#E8D3C0]/60 dark:border-white/5'
+                      ? 'bg-[#213A30] text-white dark:bg-[#E2EADD] dark:text-[#213A30] shadow-sm scale-105'
+                      : 'bg-white/70 dark:bg-white/5 text-[#68766C] dark:text-[#A6B0A5] border border-[#DCDACD]/60 dark:border-white/5'
                   }`}
                 >
                   <span className="font-serif">{st.number}</span>
@@ -258,31 +258,31 @@ export function PinnedScrollStory() {
                           : 'opacity-0 translate-y-4 absolute pointer-events-none'
                       }`}
                     >
-                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F4D9D6]/80 dark:bg-[#3B1F2B]/80 border border-[#E8D3C0] dark:border-white/10 text-xs font-bold text-[#3B1F2B] dark:text-[#F4D9D6] mb-4">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E2EADD]/80 dark:bg-[#213A30]/80 border border-[#DCDACD] dark:border-white/10 text-xs font-bold text-[#213A30] dark:text-[#E2EADD] mb-4">
                         <Icon className="w-3.5 h-3.5" />
                         <span>{step.pill}</span>
                       </div>
 
                       <div className="flex items-baseline gap-4 mb-2">
-                        <span className="font-serif text-5xl font-bold text-[#CE7F79] dark:text-[#D9B99B]">
+                        <span className="font-serif text-5xl font-bold text-[#B86A4B] dark:text-[#C7A77A]">
                           {step.number}
                         </span>
-                        <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#3B1F2B] dark:text-[#FAF3F0] tracking-tight">
+                        <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#213A30] dark:text-[#F7F6F0] tracking-tight">
                           {step.title}
                         </h2>
                       </div>
 
-                      <p className="text-sm font-semibold text-[#856453] dark:text-[#D9B99B] mb-4">
+                      <p className="text-sm font-semibold text-[#846A4F] dark:text-[#C7A77A] mb-4">
                         {step.subtitle}
                       </p>
 
-                      <p className="text-base text-[#5A404C] dark:text-[#E0CFD7] leading-relaxed max-w-lg mb-8">
+                      <p className="text-base text-[#4B5A4F] dark:text-[#E0CFD7] leading-relaxed max-w-lg mb-8">
                         {step.description}
                       </p>
 
                       <Link
                         href="/scan"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-[#FBF7F4] bg-[#3B1F2B] hover:bg-[#2B141F] shadow-[0_4px_16px_rgba(59,31,43,0.25)] hover:shadow-[0_8px_24px_rgba(59,31,43,0.35)] hover:-translate-y-0.5 transition-all"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-[#F7F6F0] bg-[#213A30] hover:bg-[#14271F] shadow-[0_4px_16px_rgba(59,31,43,0.25)] hover:shadow-[0_8px_24px_rgba(59,31,43,0.35)] hover:-translate-y-0.5 transition-all"
                       >
                         <span>Experience Step {step.number}</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -293,9 +293,9 @@ export function PinnedScrollStory() {
               </div>
 
               {/* Progress Bar */}
-              <div className="w-full bg-[#E8D3C0]/40 dark:bg-white/10 h-1.5 rounded-full overflow-hidden max-w-md">
+              <div className="w-full bg-[#DCDACD]/40 dark:bg-white/10 h-1.5 rounded-full overflow-hidden max-w-md">
                 <motion.div
-                  className="bg-[#3B1F2B] dark:bg-[#F4D9D6] h-full"
+                  className="bg-[#213A30] dark:bg-[#E2EADD] h-full"
                   style={{
                     width: shouldReduceMotion
                       ? `${((activeStep + 1) / 3) * 100}%`
@@ -308,7 +308,7 @@ export function PinnedScrollStory() {
             {/* Right Column: Dynamic Mock UI Stage */}
             <div className="col-span-6 relative flex items-center justify-center z-10">
               {/* Glass Frame Container */}
-              <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl glass-card bg-white/85 dark:bg-[#1C1218]/90 border border-white/80 dark:border-white/15 p-6 shadow-2xl backdrop-blur-xl overflow-hidden z-10">
+              <div className="relative w-full max-w-lg aspect-[4/3] rounded-3xl glass-card bg-white/85 dark:bg-[#1E2822]/90 border border-white/80 dark:border-white/15 p-6 shadow-2xl backdrop-blur-xl overflow-hidden z-10">
                 
                 {/* Step 1 Mock UI: Optical Camera & Face Landmarker Radar */}
                 <motion.div
@@ -328,44 +328,44 @@ export function PinnedScrollStory() {
                   }}
                   className="absolute inset-0 p-6 flex flex-col justify-between"
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#DCDACD]/50 dark:border-white/10 relative z-10">
                     <div className="flex items-center gap-2">
                       <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                      <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
+                      <span className="text-xs font-bold text-[#213A30] dark:text-[#F7F6F0]">
                         On-Device Optical Vision
                       </span>
                     </div>
-                    <span className="text-[10px] font-mono text-[#CE7F79] font-bold">
+                    <span className="text-[10px] font-mono text-[#B86A4B] font-bold">
                       478 Landmark Nodes Locked
                     </span>
                   </div>
 
                   {/* Simulated Face Oval with Scanning Laser (strictly kept inside mock scanner area, z-0 below text) */}
-                  <div className="relative my-auto w-40 h-52 mx-auto rounded-[50%] border-2 border-dashed border-[#CE7F79]/60 flex items-center justify-center overflow-hidden z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-[#F4D9D6]/20 via-transparent to-[#F4D9D6]/30 z-0" />
+                  <div className="relative my-auto w-40 h-52 mx-auto rounded-[50%] border-2 border-dashed border-[#B86A4B]/60 flex items-center justify-center overflow-hidden z-0">
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#E2EADD]/20 via-transparent to-[#E2EADD]/30 z-0" />
                     {/* Scanning radar line */}
-                    <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#3B1F2B] dark:via-[#F4D9D6] to-transparent animate-bounce opacity-80 z-0" />
+                    <div className="absolute w-full h-1 bg-gradient-to-r from-transparent via-[#213A30] dark:via-[#E2EADD] to-transparent animate-bounce opacity-80 z-0" />
                     <div className="text-center space-y-1 relative z-10">
-                      <Camera className="w-6 h-6 text-[#3B1F2B] dark:text-[#FAF3F0] mx-auto opacity-70" />
-                      <span className="text-[10px] font-semibold text-[#3B1F2B] dark:text-[#FAF3F0] block">
+                      <Camera className="w-6 h-6 text-[#213A30] dark:text-[#F7F6F0] mx-auto opacity-70" />
+                      <span className="text-[10px] font-semibold text-[#213A30] dark:text-[#F7F6F0] block">
                         Align Face
                       </span>
                     </div>
                   </div>
 
                   {/* Real-time telemetry badges */}
-                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
-                    <div className="p-2 rounded-xl bg-[#FBF7F4] dark:bg-white/5 text-center">
-                      <span className="text-[9px] text-[#7E636E] dark:text-[#B59FA9] block">Undertone</span>
-                      <strong className="text-xs text-[#3B1F2B] dark:text-[#FAF3F0]">Warm Peach</strong>
+                  <div className="grid grid-cols-3 gap-2 pt-2 border-t border-[#DCDACD]/50 dark:border-white/10 relative z-10">
+                    <div className="p-2 rounded-xl bg-[#F7F6F0] dark:bg-white/5 text-center">
+                      <span className="text-[9px] text-[#68766C] dark:text-[#A6B0A5] block">Undertone</span>
+                      <strong className="text-xs text-[#213A30] dark:text-[#F7F6F0]">Warm Peach</strong>
                     </div>
-                    <div className="p-2 rounded-xl bg-[#FBF7F4] dark:bg-white/5 text-center">
-                      <span className="text-[9px] text-[#7E636E] dark:text-[#B59FA9] block">Hydration</span>
-                      <strong className="text-xs text-[#3B1F2B] dark:text-[#FAF3F0]">Balanced</strong>
+                    <div className="p-2 rounded-xl bg-[#F7F6F0] dark:bg-white/5 text-center">
+                      <span className="text-[9px] text-[#68766C] dark:text-[#A6B0A5] block">Hydration</span>
+                      <strong className="text-xs text-[#213A30] dark:text-[#F7F6F0]">Balanced</strong>
                     </div>
-                    <div className="p-2 rounded-xl bg-[#FBF7F4] dark:bg-white/5 text-center">
-                      <span className="text-[9px] text-[#7E636E] dark:text-[#B59FA9] block">Privacy</span>
-                      <strong className="text-xs text-[#44633B] dark:text-[#C9D6C3] flex items-center justify-center gap-1">
+                    <div className="p-2 rounded-xl bg-[#F7F6F0] dark:bg-white/5 text-center">
+                      <span className="text-[9px] text-[#68766C] dark:text-[#A6B0A5] block">Privacy</span>
+                      <strong className="text-xs text-[#405C45] dark:text-[#D4E2D2] flex items-center justify-center gap-1">
                         <Lock className="w-2.5 h-2.5" /> 100% Local
                       </strong>
                     </div>
@@ -390,55 +390,55 @@ export function PinnedScrollStory() {
                   }}
                   className="absolute inset-0 p-6 flex flex-col justify-between"
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#DCDACD]/50 dark:border-white/10 relative z-10">
                     <div className="flex items-center gap-2">
-                      <Sliders className="w-4 h-4 text-[#CE7F79]" />
-                      <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
+                      <Sliders className="w-4 h-4 text-[#B86A4B]" />
+                      <span className="text-xs font-bold text-[#213A30] dark:text-[#F7F6F0]">
                         Custom Rule Constraints
                       </span>
                     </div>
-                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#8CA583]/20 text-[#44633B] dark:text-[#C9D6C3] font-bold">
+                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#71896C]/20 text-[#405C45] dark:text-[#D4E2D2] font-bold">
                       Strict Mode Active
                     </span>
                   </div>
 
                   <div className="space-y-3.5 my-auto relative z-10">
                     {/* Primary Goal */}
-                    <div className="p-3 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/60 dark:border-white/10 flex items-center justify-between">
-                      <span className="text-xs text-[#7E636E] dark:text-[#B59FA9]">Focus Concern:</span>
-                      <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0] bg-white dark:bg-white/10 px-2.5 py-1 rounded-lg border border-[#E8D3C0]/50 dark:border-white/10">
+                    <div className="p-3 rounded-2xl bg-[#F7F6F0] dark:bg-white/5 border border-[#DCDACD]/60 dark:border-white/10 flex items-center justify-between">
+                      <span className="text-xs text-[#68766C] dark:text-[#A6B0A5]">Focus Concern:</span>
+                      <span className="text-xs font-bold text-[#213A30] dark:text-[#F7F6F0] bg-white dark:bg-white/10 px-2.5 py-1 rounded-lg border border-[#DCDACD]/50 dark:border-white/10">
                         Barrier Repair & Redness
                       </span>
                     </div>
 
                     {/* Excluded Ingredients */}
-                    <div className="p-3 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/60 dark:border-white/10 space-y-2">
-                      <span className="text-[11px] font-bold text-[#CE7F79] block">
+                    <div className="p-3 rounded-2xl bg-[#F7F6F0] dark:bg-white/5 border border-[#DCDACD]/60 dark:border-white/10 space-y-2">
+                      <span className="text-[11px] font-bold text-[#B86A4B] block">
                         Strictly Avoid:
                       </span>
                       <div className="flex flex-wrap gap-1.5">
-                        <span className="px-2 py-0.5 rounded-md bg-[#CE7F79]/15 text-[#3B1F2B] dark:text-[#F4D9D6] text-[10px] font-semibold">
+                        <span className="px-2 py-0.5 rounded-md bg-[#B86A4B]/15 text-[#213A30] dark:text-[#E2EADD] text-[10px] font-semibold">
                           ✕ Synthetic Fragrance
                         </span>
-                        <span className="px-2 py-0.5 rounded-md bg-[#CE7F79]/15 text-[#3B1F2B] dark:text-[#F4D9D6] text-[10px] font-semibold">
+                        <span className="px-2 py-0.5 rounded-md bg-[#B86A4B]/15 text-[#213A30] dark:text-[#E2EADD] text-[10px] font-semibold">
                           ✕ Essential Oils
                         </span>
-                        <span className="px-2 py-0.5 rounded-md bg-[#CE7F79]/15 text-[#3B1F2B] dark:text-[#F4D9D6] text-[10px] font-semibold">
+                        <span className="px-2 py-0.5 rounded-md bg-[#B86A4B]/15 text-[#213A30] dark:text-[#E2EADD] text-[10px] font-semibold">
                           ✕ Drying Alcohols
                         </span>
                       </div>
                     </div>
 
                     {/* Price Tier */}
-                    <div className="p-3 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/60 dark:border-white/10 flex items-center justify-between">
-                      <span className="text-xs text-[#7E636E] dark:text-[#B59FA9]">Budget Range:</span>
-                      <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
+                    <div className="p-3 rounded-2xl bg-[#F7F6F0] dark:bg-white/5 border border-[#DCDACD]/60 dark:border-white/10 flex items-center justify-between">
+                      <span className="text-xs text-[#68766C] dark:text-[#A6B0A5]">Budget Range:</span>
+                      <span className="text-xs font-bold text-[#213A30] dark:text-[#F7F6F0]">
                         ₹500 — ₹1,500 / item
                       </span>
                     </div>
                   </div>
 
-                  <div className="text-center pt-2 text-[11px] text-[#7E636E] dark:text-[#B59FA9] relative z-10">
+                  <div className="text-center pt-2 text-[11px] text-[#68766C] dark:text-[#A6B0A5] relative z-10">
                     Recommendations are filtered strictly against your constraints.
                   </div>
                 </motion.div>
@@ -461,40 +461,40 @@ export function PinnedScrollStory() {
                   }}
                   className="absolute inset-0 p-6 flex flex-col justify-between z-10"
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-[#E8D3C0]/50 dark:border-white/10 relative z-10">
+                  <div className="flex items-center justify-between pb-3 border-b border-[#DCDACD]/50 dark:border-white/10 relative z-10">
                     <div className="flex items-center gap-2">
-                      <Sparkles className="w-4 h-4 text-[#CE7F79]" />
-                      <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
+                      <Sparkles className="w-4 h-4 text-[#B86A4B]" />
+                      <span className="text-xs font-bold text-[#213A30] dark:text-[#F7F6F0]">
                         Top Routine Recommendation
                       </span>
                     </div>
-                    <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#3B1F2B] text-white text-[10px] font-bold">
+                    <div className="flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#213A30] text-white text-[10px] font-bold">
                       <span>Match score based on preferences</span>
                     </div>
                   </div>
 
                   {/* Recommendation Card */}
-                  <div className="my-auto p-4 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/70 dark:border-white/10 space-y-3 relative z-10">
+                  <div className="my-auto p-4 rounded-2xl bg-[#F7F6F0] dark:bg-white/5 border border-[#DCDACD]/70 dark:border-white/10 space-y-3 relative z-10">
                     <div className="flex items-start justify-between">
                       <div>
-                        <span className="text-[10px] uppercase tracking-wider font-bold text-[#7E636E] dark:text-[#B59FA9]">
+                        <span className="text-[10px] uppercase tracking-wider font-bold text-[#68766C] dark:text-[#A6B0A5]">
                           Step 2 · Active Serum (AM & PM)
                         </span>
-                        <h4 className="font-serif font-bold text-base text-[#3B1F2B] dark:text-[#FAF3F0]">
+                        <h4 className="font-serif font-bold text-base text-[#213A30] dark:text-[#F7F6F0]">
                           Ceramides 0.3% + Madecassoside
                         </h4>
                       </div>
                       <div className="text-right">
-                        <span className="text-xs font-bold text-[#3B1F2B] dark:text-[#FAF3F0] block">
+                        <span className="text-xs font-bold text-[#213A30] dark:text-[#F7F6F0] block">
                           ₹599
                         </span>
-                        <span className="text-[9px] text-[#CE7F79] font-medium block">
+                        <span className="text-[9px] text-[#B86A4B] font-medium block">
                           (demo data)
                         </span>
                       </div>
                     </div>
 
-                    <div className="space-y-1.5 text-xs text-[#5A404C] dark:text-[#E0CFD7]">
+                    <div className="space-y-1.5 text-xs text-[#4B5A4F] dark:text-[#E0CFD7]">
                       <div className="flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
                         <span>Restores compromised barrier lipids</span>
@@ -505,15 +505,15 @@ export function PinnedScrollStory() {
                       </div>
                     </div>
 
-                    <div className="flex items-center justify-between pt-2 border-t border-[#E8D3C0]/50 dark:border-white/5 text-[10px] text-[#7E636E] dark:text-[#B59FA9]">
+                    <div className="flex items-center justify-between pt-2 border-t border-[#DCDACD]/50 dark:border-white/5 text-[10px] text-[#68766C] dark:text-[#A6B0A5]">
                       <span>Key Actives: Pure Ceramide NP + Centella</span>
-                      <span className="font-medium text-[#7E636E] dark:text-[#B59FA9]">Suggestions, not medical advice</span>
+                      <span className="font-medium text-[#68766C] dark:text-[#A6B0A5]">Suggestions, not medical advice</span>
                     </div>
                   </div>
 
                   <div className="pt-2 flex items-center justify-between text-xs relative z-10">
-                    <span className="text-[#7E636E] dark:text-[#B59FA9]">Full 3-step routine ready</span>
-                    <span className="font-bold text-[#3B1F2B] dark:text-[#FAF3F0]">
+                    <span className="text-[#68766C] dark:text-[#A6B0A5]">Full 3-step routine ready</span>
+                    <span className="font-bold text-[#213A30] dark:text-[#F7F6F0]">
                       Cleanser · Serum · SPF
                     </span>
                   </div>
@@ -524,7 +524,7 @@ export function PinnedScrollStory() {
           </div>
 
           {/* Bottom subtle scroll helper cue (z-10) */}
-          <div className="max-w-7xl mx-auto w-full text-center text-xs text-[#7E636E] dark:text-[#B59FA9] relative z-10">
+          <div className="max-w-7xl mx-auto w-full text-center text-xs text-[#68766C] dark:text-[#A6B0A5] relative z-10">
             <span>Scroll downward to progress through the optical story</span>
           </div>
         </div>
@@ -532,19 +532,19 @@ export function PinnedScrollStory() {
 
       {/* ================= MOBILE / TABLET VIEW (< lg) ================= */}
       <div
-        className="block lg:hidden py-16 px-4 sm:px-6 relative isolate overflow-clip bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+        className="block lg:hidden py-16 px-4 sm:px-6 relative isolate overflow-clip bg-[#F7F6F0] dark:bg-[#17201B] section-stack"
         style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
       >
         <div className="max-w-xl mx-auto space-y-10">
           {/* Header */}
           <div className="text-center space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4D9D6]/60 dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-xs font-bold text-[#CE7F79] dark:text-[#FAF3F0] uppercase tracking-wider">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E2EADD]/60 dark:bg-white/5 border border-[#DCDACD] dark:border-white/10 text-xs font-bold text-[#B86A4B] dark:text-[#F7F6F0] uppercase tracking-wider">
               <span>The 3-Step Precision Story</span>
             </div>
-            <h2 className="font-serif font-bold text-3xl text-[#3B1F2B] dark:text-[#FAF3F0] tracking-tight">
+            <h2 className="font-serif font-bold text-3xl text-[#213A30] dark:text-[#F7F6F0] tracking-tight">
               How CosmicPick works
             </h2>
-            <p className="text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9]">
+            <p className="text-xs sm:text-sm text-[#68766C] dark:text-[#A6B0A5]">
               Three simple steps replacing beauty trial-and-error with private, preference-based matching. Suggestions, not medical advice.
             </p>
           </div>
@@ -562,7 +562,7 @@ export function PinnedScrollStory() {
               return (
                 <div
                   key={st.number}
-                  className="rounded-3xl glass-card bg-white/85 dark:bg-[#20151C]/85 border border-[#E8D3C0] dark:border-white/10 p-6 shadow-soft-luxury space-y-4"
+                  className="rounded-3xl glass-card bg-white/85 dark:bg-[#222B25]/85 border border-[#DCDACD] dark:border-white/10 p-6 shadow-soft-luxury space-y-4"
                 >
                   <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-inner">
                     <Image
@@ -572,22 +572,22 @@ export function PinnedScrollStory() {
                       quality={85}
                       className="object-cover"
                     />
-                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#3B1F2B] text-white text-xs font-serif font-bold shadow-md">
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#213A30] text-white text-xs font-serif font-bold shadow-md">
                       Step {st.number}
                     </div>
                   </div>
 
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#CE7F79] block mb-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#B86A4B] block mb-1">
                       {st.tag}
                     </span>
-                    <h3 className="font-serif font-bold text-2xl text-[#3B1F2B] dark:text-[#FAF3F0]">
+                    <h3 className="font-serif font-bold text-2xl text-[#213A30] dark:text-[#F7F6F0]">
                       {st.title}
                     </h3>
-                    <p className="text-xs font-semibold text-[#856453] dark:text-[#D9B99B] mb-2">
+                    <p className="text-xs font-semibold text-[#846A4F] dark:text-[#C7A77A] mb-2">
                       {st.subtitle}
                     </p>
-                    <p className="text-xs text-[#7E636E] dark:text-[#B59FA9] leading-relaxed">
+                    <p className="text-xs text-[#68766C] dark:text-[#A6B0A5] leading-relaxed">
                       {st.description}
                     </p>
                   </div>
@@ -595,7 +595,7 @@ export function PinnedScrollStory() {
                   <div className="pt-2">
                     <Link
                       href="/scan"
-                      className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full text-xs font-bold text-[#FBF7F4] bg-[#3B1F2B] hover:bg-[#2B141F] shadow-sm transition-colors"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-full text-xs font-bold text-[#F7F6F0] bg-[#213A30] hover:bg-[#14271F] shadow-sm transition-colors"
                     >
                       <span>Start with Step {st.number}</span>
                       <ArrowRight className="w-3.5 h-3.5" />

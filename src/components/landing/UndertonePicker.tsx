@@ -74,7 +74,7 @@ export function UndertonePicker() {
       sunResponse: 'Tans gradually with occasional light sun flush',
       jewelryClue: 'Both gold and silver look equally flattering',
       recommendedActives: ['Niacinamide', 'Squalane', 'Peptides', 'Barrier Lipids'],
-      swatches: ['#F7E5D8', '#E9CEBF', '#C2A391', '#856453'],
+      swatches: ['#F7E5D8', '#E9CEBF', '#C2A391', '#846A4F'],
       description:
         'Neutral undertones feature an even equilibrium between warm and cool pigments. Balanced moisture barriers with plant-derived Squalane and multi-peptides thrive on this dermal canvas.',
       sampleProduct: {
@@ -114,21 +114,21 @@ export function UndertonePicker() {
   return (
     <section
       id="undertone"
-      className="py-20 sm:py-24 relative isolate overflow-clip scroll-mt-24 bg-[#FBF7F4] dark:bg-[#180F14] section-stack"
+      className="py-20 sm:py-24 relative isolate overflow-clip scroll-mt-24 bg-[#F7F6F0] dark:bg-[#17201B] section-stack"
       style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8D3C0]/40 dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-xs font-bold text-[#CE7F79] dark:text-[#FAF3F0] uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCDACD]/40 dark:bg-white/5 border border-[#DCDACD] dark:border-white/10 text-xs font-bold text-[#B86A4B] dark:text-[#F7F6F0] uppercase tracking-wider">
             <Palette className="w-3.5 h-3.5" />
             <span>Interactive Undertone Analysis</span>
           </div>
-          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#3B1F2B] dark:text-[#FAF3F0] tracking-tight">
+          <h2 className="font-serif font-bold text-3xl sm:text-4xl text-[#213A30] dark:text-[#F7F6F0] tracking-tight">
             Discover your skin undertone
           </h2>
-          <p className="text-sm sm:text-base text-[#7E636E] dark:text-[#B59FA9] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#68766C] dark:text-[#A6B0A5] leading-relaxed">
             Unlike surface tanning, undertones never change. Tap each undertone below to see how our optical scan matches your pigments to personalized routines in real time. Suggestions, not medical advice.
           </p>
         </div>
@@ -144,8 +144,8 @@ export function UndertonePicker() {
                 onClick={() => setSelected(ut)}
                 className={`px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold border transition-all duration-300 flex items-center gap-3 shadow-sm cursor-pointer ${
                   isSelected
-                    ? 'bg-[#3B1F2B] text-white border-[#3B1F2B] dark:bg-[#F4D9D6] dark:text-[#3B1F2B] shadow-soft-luxury scale-105'
-                    : 'bg-white/80 dark:bg-[#20151C]/80 border-[#E8D3C0] dark:border-white/10 text-[#3B1F2B] dark:text-[#FAF3F0] hover:bg-[#F4D9D6]/30'
+                    ? 'bg-[#213A30] text-white border-[#213A30] dark:bg-[#E2EADD] dark:text-[#213A30] shadow-soft-luxury scale-105'
+                    : 'bg-white/80 dark:bg-[#222B25]/80 border-[#DCDACD] dark:border-white/10 text-[#213A30] dark:text-[#F7F6F0] hover:bg-[#E2EADD]/30'
                 }`}
               >
                 <div className="flex items-center -space-x-1">
@@ -165,12 +165,12 @@ export function UndertonePicker() {
         </div>
 
         {/* Selected Undertone Interactive Display Card */}
-        <div className="max-w-5xl mx-auto rounded-3xl glass-card bg-white/85 dark:bg-[#20151C]/85 border border-[#E8D3C0] dark:border-white/10 p-8 sm:p-10 shadow-soft-luxury">
+        <div className="max-w-5xl mx-auto rounded-3xl glass-card bg-white/85 dark:bg-[#222B25]/85 border border-[#DCDACD] dark:border-white/10 p-8 sm:p-10 shadow-soft-luxury">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
             {/* Left: Swatches Spectrum & Visual Cues */}
             <div className="lg:col-span-4 space-y-4">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#7E636E] dark:text-[#B59FA9] block">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#68766C] dark:text-[#A6B0A5] block">
                 Chromatic Spectrum Swatches
               </span>
               <div className="grid grid-cols-4 gap-2">
@@ -180,23 +180,23 @@ export function UndertonePicker() {
                       className="w-full aspect-square rounded-2xl border border-black/10 shadow-sm transition-transform duration-300 hover:scale-105"
                       style={{ backgroundColor: color }}
                     />
-                    <span className="text-[9px] font-mono text-[#7E636E] dark:text-[#B59FA9]">
+                    <span className="text-[9px] font-mono text-[#68766C] dark:text-[#A6B0A5]">
                       {color}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="p-4 rounded-2xl bg-[#FBF7F4] dark:bg-white/5 border border-[#E8D3C0]/60 dark:border-white/10 space-y-2.5 text-xs">
+              <div className="p-4 rounded-2xl bg-[#F7F6F0] dark:bg-white/5 border border-[#DCDACD]/60 dark:border-white/10 space-y-2.5 text-xs">
                 <div className="flex items-start gap-2">
-                  <Sun className="w-4 h-4 text-[#CE7F79] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#3B1F2B] dark:text-[#FAF3F0] font-medium leading-snug">
+                  <Sun className="w-4 h-4 text-[#B86A4B] flex-shrink-0 mt-0.5" />
+                  <span className="text-[#213A30] dark:text-[#F7F6F0] font-medium leading-snug">
                     <strong>Sun Response:</strong> {selected.sunResponse}
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <Shield className="w-4 h-4 text-[#8CA583] flex-shrink-0 mt-0.5" />
-                  <span className="text-[#3B1F2B] dark:text-[#FAF3F0] font-medium leading-snug">
+                  <Shield className="w-4 h-4 text-[#71896C] flex-shrink-0 mt-0.5" />
+                  <span className="text-[#213A30] dark:text-[#F7F6F0] font-medium leading-snug">
                     <strong>Vein Cue:</strong> {selected.veinCheck}
                   </span>
                 </div>
@@ -206,30 +206,30 @@ export function UndertonePicker() {
             {/* Middle: Undertone Description & Actives */}
             <div className="lg:col-span-4 space-y-4">
               <div>
-                <h3 className="font-serif font-bold text-2xl text-[#3B1F2B] dark:text-[#FAF3F0] mb-2">
+                <h3 className="font-serif font-bold text-2xl text-[#213A30] dark:text-[#F7F6F0] mb-2">
                   {selected.name}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#7E636E] dark:text-[#B59FA9] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#68766C] dark:text-[#A6B0A5] leading-relaxed">
                   {selected.description}
                 </p>
               </div>
 
               {/* Jewelry Clue */}
-              <div className="p-3 rounded-2xl bg-[#F4D9D6]/30 dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-xs text-[#3B1F2B] dark:text-[#FAF3F0] font-medium">
+              <div className="p-3 rounded-2xl bg-[#E2EADD]/30 dark:bg-white/5 border border-[#DCDACD] dark:border-white/10 text-xs text-[#213A30] dark:text-[#F7F6F0] font-medium">
                 ✨ <strong>Quick Test:</strong> {selected.jewelryClue}.
               </div>
 
               {/* Recommended Actives */}
               <div className="space-y-2 pt-1">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#3B1F2B] dark:text-[#FAF3F0] flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-[#CE7F79]" />
+                <span className="text-xs font-bold uppercase tracking-wider text-[#213A30] dark:text-[#F7F6F0] flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-[#B86A4B]" />
                   Ideal Actives For This Undertone:
                 </span>
                 <div className="flex flex-wrap gap-1.5">
                   {selected.recommendedActives.map((act) => (
                     <span
                       key={act}
-                      className="px-2.5 py-1 rounded-xl bg-white dark:bg-white/10 border border-[#E8D3C0] dark:border-white/10 text-[11px] font-semibold text-[#3B1F2B] dark:text-[#FAF3F0] shadow-sm"
+                      className="px-2.5 py-1 rounded-xl bg-white dark:bg-white/10 border border-[#DCDACD] dark:border-white/10 text-[11px] font-semibold text-[#213A30] dark:text-[#F7F6F0] shadow-sm"
                     >
                       {act}
                     </span>
@@ -240,7 +240,7 @@ export function UndertonePicker() {
 
             {/* Right: Live Updating Sample Recommendation Card */}
             <div className="lg:col-span-4">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#CE7F79] dark:text-[#D9B99B] block mb-2 flex items-center gap-1.5">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[#B86A4B] dark:text-[#C7A77A] block mb-2 flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                 Live Matched Formulation:
               </span>
@@ -252,39 +252,39 @@ export function UndertonePicker() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="rounded-2xl p-5 bg-gradient-to-b from-[#FBF7F4] to-[#F4D9D6]/25 dark:from-white/10 dark:to-white/5 border border-[#E8D3C0] dark:border-white/10 shadow-sm space-y-3.5"
+                  className="rounded-2xl p-5 bg-gradient-to-b from-[#F7F6F0] to-[#E2EADD]/25 dark:from-white/10 dark:to-white/5 border border-[#DCDACD] dark:border-white/10 shadow-sm space-y-3.5"
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#7E636E] dark:text-[#B59FA9] block">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#68766C] dark:text-[#A6B0A5] block">
                         {selected.sampleProduct.brand}
                       </span>
-                      <h4 className="font-serif font-bold text-base text-[#3B1F2B] dark:text-[#FAF3F0] leading-snug">
+                      <h4 className="font-serif font-bold text-base text-[#213A30] dark:text-[#F7F6F0] leading-snug">
                         {selected.sampleProduct.name}
                       </h4>
                     </div>
-                    <div className="px-2.5 py-1 rounded-full bg-[#3B1F2B] text-white text-[10px] font-bold flex-shrink-0 shadow-sm">
+                    <div className="px-2.5 py-1 rounded-full bg-[#213A30] text-white text-[10px] font-bold flex-shrink-0 shadow-sm">
                       Match Score: {selected.sampleProduct.matchScore}
                     </div>
                   </div>
 
-                  <p className="text-xs text-[#5A404C] dark:text-[#E0CFD7] leading-relaxed">
+                  <p className="text-xs text-[#4B5A4F] dark:text-[#E0CFD7] leading-relaxed">
                     {selected.sampleProduct.rationale}
                   </p>
 
-                  <div className="p-2.5 rounded-xl bg-white/70 dark:bg-white/5 border border-[#E8D3C0]/50 dark:border-white/5 text-[11px] text-[#7E636E] dark:text-[#B59FA9]">
-                    <strong className="text-[#3B1F2B] dark:text-[#FAF3F0]">Key Actives:</strong>{' '}
+                  <div className="p-2.5 rounded-xl bg-white/70 dark:bg-white/5 border border-[#DCDACD]/50 dark:border-white/5 text-[11px] text-[#68766C] dark:text-[#A6B0A5]">
+                    <strong className="text-[#213A30] dark:text-[#F7F6F0]">Key Actives:</strong>{' '}
                     {selected.sampleProduct.actives}
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between border-t border-[#E8D3C0]/50 dark:border-white/5">
-                    <span className="font-bold text-sm text-[#3B1F2B] dark:text-[#FAF3F0]">
+                  <div className="pt-2 flex items-center justify-between border-t border-[#DCDACD]/50 dark:border-white/5">
+                    <span className="font-bold text-sm text-[#213A30] dark:text-[#F7F6F0]">
                       ₹{selected.sampleProduct.priceINR}
                     </span>
 
                     <Link
                       href="/scan"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-[#FBF7F4] bg-[#3B1F2B] hover:bg-[#2B141F] shadow-sm transition-all"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-bold text-[#F7F6F0] bg-[#213A30] hover:bg-[#14271F] shadow-sm transition-all"
                     >
                       <span>Match your face</span>
                       <ArrowRight className="w-3 h-3" />

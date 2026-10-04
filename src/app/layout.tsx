@@ -4,6 +4,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/common/ThemeProvider';
 import { Navbar } from '@/components/common/Navbar';
 import { Footer } from '@/components/common/Footer';
+import { Chatbot } from '@/components/common/Chatbot';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -26,9 +27,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'CosmicPick | Personalized Skincare Tailored to Your Face',
+  title: 'CosmicPick | Skincare that feels personal',
   description:
-    'Skincare picked for your unique facial profile. Instant, private, on-device analysis with plain-language recommendations and custom AM/PM routines.',
+    'Discover a skincare routine shaped around your skin, concerns, ingredients, and budget. Private on-device analysis, real product photos, and clear recommendations.',
   keywords: [
     'skincare recommendation',
     'face scan skincare',
@@ -46,11 +47,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`} suppressHydrationWarning>
-      <body className="font-sans antialiased bg-[#FBF7F4] dark:bg-[#180F14] text-[#3B1F2B] dark:text-[#FAF3F0] min-h-screen flex flex-col relative selection:bg-[#F4D9D6] selection:text-[#3B1F2B]">
+      <body className="font-sans antialiased bg-[#F7F6F0] dark:bg-[#17201B] text-[#213A30] dark:text-[#F7F6F0] min-h-screen flex flex-col relative selection:bg-[#E2EADD] selection:text-[#213A30]">
         <ThemeProvider>
           <Navbar />
           <main className="flex-1 relative z-10">{children}</main>
           <Footer />
+          <Chatbot />
         </ThemeProvider>
       </body>
     </html>

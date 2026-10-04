@@ -179,7 +179,7 @@ export function StepResults({
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="max-w-5xl mx-auto px-4 py-8 space-y-8 pb-32"
+      className="max-w-6xl mx-auto px-4 py-6 sm:py-8 space-y-8 pb-32"
     >
       {/* 1. TOP SUMMARY STRIP WITH EDIT LINKS & ROUTINE BUTTON */}
       <motion.div variants={itemVariants}>
@@ -196,17 +196,17 @@ export function StepResults({
 
       {/* 2. REFINEMENT SEARCH BAR (Warm luxury styling) */}
       <motion.div variants={itemVariants}>
-        <div className="p-4 sm:p-5 rounded-3xl glass-card bg-white/80 dark:bg-[#20151C]/80 border border-[#E8D3C0] dark:border-white/10 shadow-soft-luxury">
+        <div className="p-4 sm:p-5 rounded-3xl glass-card bg-white/80 dark:bg-[#222B25]/80 border border-[#DCDACD] dark:border-white/10 shadow-soft-luxury">
           <form onSubmit={handleRefineSubmit} className="flex flex-col sm:flex-row items-center gap-3">
             <div className="relative flex-1 w-full">
-              <Search className="w-4 h-4 text-[#7E636E] dark:text-[#B59FA9] absolute left-4 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-[#68766C] dark:text-[#A6B0A5] absolute left-4 top-1/2 -translate-y-1/2" />
               <input
                 id="refine-query-input"
                 type="text"
                 value={refineQuery}
                 onChange={(e) => setRefineQuery(e.target.value)}
                 placeholder="Refine in plain text (e.g. 'under ₹1000', 'strictly fragrance-free', 'lightweight gel texture')..."
-                className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#FAF5F0] dark:bg-white/[0.04] border border-[#E8D3C0] dark:border-white/10 text-xs sm:text-sm text-[#3B1F2B] dark:text-[#FAF3F0] placeholder:text-[#7E636E]/60 focus:outline-none focus:ring-2 focus:ring-[#CE7F79] transition-all"
+                className="w-full pl-11 pr-4 py-3 rounded-2xl bg-[#F7F6F0] dark:bg-white/[0.04] border border-[#DCDACD] dark:border-white/10 text-xs sm:text-sm text-[#213A30] dark:text-[#F7F6F0] placeholder:text-[#68766C]/60 focus:outline-none focus:ring-2 focus:ring-[#B86A4B] transition-all"
               />
             </div>
 
@@ -214,7 +214,7 @@ export function StepResults({
               id="apply-refine-btn"
               type="submit"
               disabled={isRefining || !refineQuery.trim()}
-              className="w-full sm:w-auto px-6 py-3 rounded-full font-bold text-white bg-[#3B1F2B] hover:bg-[#2B141F] dark:bg-[#F4D9D6] dark:text-[#3B1F2B] dark:hover:bg-[#E9BDB9] text-xs shadow-soft-luxury transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+              className="w-full sm:w-auto px-6 py-3 rounded-full font-bold text-white bg-[#213A30] hover:bg-[#14271F] dark:bg-[#E2EADD] dark:text-[#213A30] dark:hover:bg-[#CAD8C8] text-xs shadow-soft-luxury transition-all flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {isRefining ? <RefreshCw className="w-3.5 h-3.5 animate-spin" /> : <Sparkles className="w-3.5 h-3.5 text-amber-300" />}
               <span>{isRefining ? 'Re-Ranking...' : 'Re-Rank'}</span>
@@ -223,13 +223,13 @@ export function StepResults({
 
           {/* Quick Suggestions Chips */}
           <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
-            <span className="text-[#7E636E] dark:text-[#B59FA9] text-[11px] font-medium">Quick adjustments:</span>
+            <span className="text-[#68766C] dark:text-[#A6B0A5] text-[11px] font-medium">Quick adjustments:</span>
             {['show cheaper ones', 'only sunscreens', 'more soothing & gentle', 'only serums'].map((sug) => (
               <button
                 key={sug}
                 type="button"
                 onClick={() => setRefineQuery(sug)}
-                className="px-2.5 py-1 rounded-xl bg-white/70 dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-[#7E636E] dark:text-[#B59FA9] hover:text-[#3B1F2B] dark:hover:text-white hover:border-[#CE7F79]/50 text-[11px] transition-colors"
+                className="px-2.5 py-1 rounded-xl bg-white/70 dark:bg-white/5 border border-[#DCDACD] dark:border-white/10 text-[#68766C] dark:text-[#A6B0A5] hover:text-[#213A30] dark:hover:text-white hover:border-[#B86A4B]/50 text-[11px] transition-colors"
               >
                 &ldquo;{sug}&rdquo;
               </button>
@@ -242,11 +242,11 @@ export function StepResults({
       {heroProduct && (
         <motion.div variants={itemVariants} className="space-y-3">
           <div className="flex items-center justify-between px-2">
-            <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#3B1F2B] dark:text-[#FAF3F0] flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-[#CE7F79]" />
+            <h3 className="font-serif font-bold text-xl sm:text-2xl text-[#213A30] dark:text-[#F7F6F0] flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-[#B86A4B]" />
               <span>Your Recommended Pick</span>
             </h3>
-            <span className="text-xs font-semibold text-[#7E636E] dark:text-[#B59FA9]">
+            <span className="text-xs font-semibold text-[#68766C] dark:text-[#A6B0A5]">
               Suggestions, not medical advice
             </span>
           </div>
@@ -264,11 +264,11 @@ export function StepResults({
 
       {/* 4. STICKY FILTER & SORT BAR (Warm luxury aesthetic) */}
       <div className="sticky top-16 sm:top-20 z-30 py-2">
-        <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl glass-card bg-white/95 dark:bg-[#180F14]/95 backdrop-blur-xl border border-[#E8D3C0] dark:border-white/10 shadow-soft-luxury">
+        <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl glass-card bg-white/95 dark:bg-[#17201B]/95 backdrop-blur-xl border border-[#DCDACD] dark:border-white/10 shadow-soft-luxury">
           {/* Category Tabs */}
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <span className="text-xs font-bold text-[#7E636E] dark:text-[#B59FA9] uppercase tracking-wider hidden sm:flex items-center gap-1 mr-1">
-              <Filter className="w-3.5 h-3.5 text-[#CE7F79]" />
+            <span className="text-xs font-bold text-[#68766C] dark:text-[#A6B0A5] uppercase tracking-wider hidden sm:flex items-center gap-1 mr-1">
+              <Filter className="w-3.5 h-3.5 text-[#B86A4B]" />
               Filter:
             </span>
             <button
@@ -276,8 +276,8 @@ export function StepResults({
               onClick={() => setFilterCategory('all')}
               className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                 filterCategory === 'all'
-                  ? 'bg-[#3B1F2B] text-white dark:bg-[#F4D9D6] dark:text-[#3B1F2B] shadow-sm'
-                  : 'bg-white/80 dark:bg-white/5 text-[#7E636E] dark:text-[#B59FA9] hover:text-[#3B1F2B] dark:hover:text-white border border-[#E8D3C0] dark:border-white/10'
+                  ? 'bg-[#213A30] text-white dark:bg-[#E2EADD] dark:text-[#213A30] shadow-sm'
+                  : 'bg-white/80 dark:bg-white/5 text-[#68766C] dark:text-[#A6B0A5] hover:text-[#213A30] dark:hover:text-white border border-[#DCDACD] dark:border-white/10'
               }`}
             >
               All Types ({results.length})
@@ -289,8 +289,8 @@ export function StepResults({
                 onClick={() => setFilterCategory(cat)}
                 className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                   filterCategory === cat
-                    ? 'bg-[#3B1F2B] text-white dark:bg-[#F4D9D6] dark:text-[#3B1F2B] shadow-sm'
-                    : 'bg-white/80 dark:bg-white/5 text-[#7E636E] dark:text-[#B59FA9] hover:text-[#3B1F2B] dark:hover:text-white border border-[#E8D3C0] dark:border-white/10'
+                    ? 'bg-[#213A30] text-white dark:bg-[#E2EADD] dark:text-[#213A30] shadow-sm'
+                    : 'bg-white/80 dark:bg-white/5 text-[#68766C] dark:text-[#A6B0A5] hover:text-[#213A30] dark:hover:text-white border border-[#DCDACD] dark:border-white/10'
                 }`}
               >
                 {cat}
@@ -300,15 +300,15 @@ export function StepResults({
 
           {/* Sort Dropdown & Count */}
           <div className="flex items-center gap-2 ml-auto">
-            <span className="text-xs font-bold text-[#7E636E] dark:text-[#B59FA9] uppercase tracking-wider hidden sm:flex items-center gap-1">
-              <ArrowUpDown className="w-3.5 h-3.5 text-[#8CA583]" />
+            <span className="text-xs font-bold text-[#68766C] dark:text-[#A6B0A5] uppercase tracking-wider hidden sm:flex items-center gap-1">
+              <ArrowUpDown className="w-3.5 h-3.5 text-[#71896C]" />
               Sort:
             </span>
             <select
               id="results-sort-select"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
-              className="px-3.5 py-1.5 rounded-xl bg-white dark:bg-[#20151C] border border-[#E8D3C0] dark:border-white/15 text-xs font-semibold text-[#3B1F2B] dark:text-[#FAF3F0] focus:outline-none focus:ring-1 focus:ring-[#CE7F79] cursor-pointer"
+              className="px-3.5 py-1.5 rounded-xl bg-white dark:bg-[#222B25] border border-[#DCDACD] dark:border-white/15 text-xs font-semibold text-[#213A30] dark:text-[#F7F6F0] focus:outline-none focus:ring-1 focus:ring-[#B86A4B] cursor-pointer"
             >
               <option value="match">Match Score (Highest)</option>
               <option value="price_asc">Price: Low to High</option>
@@ -323,10 +323,10 @@ export function StepResults({
       {remainingProducts.length > 0 && (
         <motion.div variants={itemVariants} className="space-y-4">
           <div className="flex items-center justify-between px-2 pt-2">
-            <h4 className="font-serif font-bold text-lg sm:text-xl text-[#3B1F2B] dark:text-[#FAF3F0]">
+            <h4 className="font-serif font-bold text-lg sm:text-xl text-[#213A30] dark:text-[#F7F6F0]">
               Complementary Formulations
             </h4>
-            <span className="text-xs text-[#7E636E] dark:text-[#B59FA9]">
+            <span className="text-xs text-[#68766C] dark:text-[#A6B0A5]">
               Showing {remainingProducts.length} more picks
             </span>
           </div>
@@ -350,12 +350,12 @@ export function StepResults({
 
       {/* Empty State */}
       {filteredAndSorted.length === 0 && (
-        <div className="p-12 text-center rounded-3xl glass-card border border-[#E8D3C0] dark:border-white/10 space-y-3 bg-white/70 dark:bg-white/[0.02]">
+        <div className="p-12 text-center rounded-3xl glass-card border border-[#DCDACD] dark:border-white/10 space-y-3 bg-white/70 dark:bg-white/[0.02]">
           <AlertCircle className="w-8 h-8 text-amber-500 mx-auto" />
-          <h4 className="font-serif font-bold text-lg text-[#3B1F2B] dark:text-[#FAF3F0]">
+          <h4 className="font-serif font-bold text-lg text-[#213A30] dark:text-[#F7F6F0]">
             No matching products found
           </h4>
-          <p className="text-xs text-[#7E636E] dark:text-[#B59FA9] max-w-sm mx-auto">
+          <p className="text-xs text-[#68766C] dark:text-[#A6B0A5] max-w-sm mx-auto">
             Try adjusting your category filter or resetting conversational refinement criteria.
           </p>
           <button
@@ -364,7 +364,7 @@ export function StepResults({
               setFilterCategory('all');
               setSortBy('match');
             }}
-            className="px-5 py-2.5 rounded-full text-xs font-semibold bg-[#3B1F2B] text-white hover:bg-[#2B141F] dark:bg-white/10 dark:text-white"
+            className="px-5 py-2.5 rounded-full text-xs font-semibold bg-[#213A30] text-white hover:bg-[#14271F] dark:bg-white/10 dark:text-white"
           >
             Reset Filters
           </button>
@@ -385,7 +385,7 @@ export function StepResults({
           transition={{ duration: 0.3 }}
           className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-full max-w-xl px-4"
         >
-          <div className="p-3.5 sm:p-4 rounded-3xl glass-card bg-[#20151C]/95 border border-[#CE7F79]/50 shadow-2xl flex items-center justify-between gap-4 backdrop-blur-2xl text-white">
+          <div className="p-3.5 sm:p-4 rounded-3xl glass-card bg-[#222B25]/95 border border-[#B86A4B]/50 shadow-2xl flex items-center justify-between gap-4 backdrop-blur-2xl text-white">
             {/* Left Thumbnails & Counter */}
             <div className="flex items-center gap-3 min-w-0">
               <div className="flex items-center -space-x-2 overflow-hidden flex-shrink-0">
@@ -404,7 +404,7 @@ export function StepResults({
                 <span className="text-xs font-bold text-white block">
                   {comparedIds.length} of 3 Selected
                 </span>
-                <span className="text-[10px] text-[#D9B99B] truncate block">
+                <span className="text-[10px] text-[#C7A77A] truncate block">
                   {comparedResults.map((r) => r.product.brand).join(', ')}
                 </span>
               </div>
@@ -415,7 +415,7 @@ export function StepResults({
               <button
                 type="button"
                 onClick={() => setComparedIds([])}
-                className="p-1.5 rounded-lg text-[#B59FA9] hover:text-white hover:bg-white/10 transition-colors"
+                className="p-1.5 rounded-lg text-[#A6B0A5] hover:text-white hover:bg-white/10 transition-colors"
                 title="Clear all selected"
               >
                 <X className="w-4 h-4" />
@@ -425,7 +425,7 @@ export function StepResults({
                 id="open-compare-modal-btn"
                 type="button"
                 onClick={() => setIsCompareModalOpen(true)}
-                className="px-4 py-2 rounded-full font-bold text-xs text-[#3B1F2B] bg-[#F4D9D6] hover:bg-[#E9BDB9] shadow-md flex items-center gap-1.5 transition-all"
+                className="px-4 py-2 rounded-full font-bold text-xs text-[#213A30] bg-[#E2EADD] hover:bg-[#CAD8C8] shadow-md flex items-center gap-1.5 transition-all"
               >
                 <Columns className="w-3.5 h-3.5" />
                 <span>Compare ({comparedIds.length})</span>

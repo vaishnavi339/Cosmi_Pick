@@ -31,21 +31,21 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="compare-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#180F14]/70 backdrop-blur-md animate-fadeIn"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#17201B]/70 backdrop-blur-md animate-fadeIn"
     >
-      <div className="relative w-full max-w-5xl rounded-3xl glass-card border border-[#E8D3C0] dark:border-white/15 bg-[#FBF7F4] dark:bg-[#20151C] shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div className="relative w-full max-w-5xl rounded-3xl glass-card border border-[#DCDACD] dark:border-white/15 bg-[#F7F6F0] dark:bg-[#222B25] shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
         
         {/* Header */}
-        <div className="px-6 py-5 border-b border-[#E8D3C0] dark:border-white/10 flex items-center justify-between bg-white/60 dark:bg-white/[0.02]">
+        <div className="px-6 py-5 border-b border-[#DCDACD] dark:border-white/10 flex items-center justify-between bg-white/60 dark:bg-white/[0.02]">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-full bg-[#F4D9D6] dark:bg-white/10 text-[#CE7F79] flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-[#CE7F79]" />
+            <div className="w-8 h-8 rounded-full bg-[#E2EADD] dark:bg-white/10 text-[#B86A4B] flex items-center justify-center">
+              <Sparkles className="w-4 h-4 text-[#B86A4B]" />
             </div>
             <div>
-              <h3 id="compare-modal-title" className="font-serif font-bold text-lg sm:text-xl text-[#3B1F2B] dark:text-[#FAF3F0]">
+              <h3 id="compare-modal-title" className="font-serif font-bold text-lg sm:text-xl text-[#213A30] dark:text-[#F7F6F0]">
                 Side-by-Side Product Comparison
               </h3>
-              <p className="text-xs text-[#7E636E] dark:text-[#B59FA9]">
+              <p className="text-xs text-[#68766C] dark:text-[#A6B0A5]">
                 Comparing {results.length} formulation{results.length > 1 ? 's' : ''} against your facial profile
               </p>
             </div>
@@ -55,7 +55,7 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
             type="button"
             onClick={onClose}
             aria-label="Close comparison modal"
-            className="p-2 rounded-full border border-[#E8D3C0] dark:border-white/10 text-[#7E636E] dark:text-[#B59FA9] hover:text-[#3B1F2B] hover:bg-[#F4D9D6]/40 transition-colors"
+            className="p-2 rounded-full border border-[#DCDACD] dark:border-white/10 text-[#68766C] dark:text-[#A6B0A5] hover:text-[#213A30] hover:bg-[#E2EADD]/40 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -66,7 +66,7 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
           <div className="min-w-[600px] grid grid-cols-4 gap-4">
             
             {/* Row 1: Attribute Labels Column */}
-            <div className="space-y-6 pt-24 text-xs font-bold uppercase tracking-wider text-[#7E636E] dark:text-[#B59FA9] border-r border-[#E8D3C0] dark:border-white/10 pr-4">
+            <div className="space-y-6 pt-24 text-xs font-bold uppercase tracking-wider text-[#68766C] dark:text-[#A6B0A5] border-r border-[#DCDACD] dark:border-white/10 pr-4">
               <div className="h-10 flex items-center">Match Compatibility</div>
               <div className="h-8 flex items-center">Price & Volume</div>
               <div className="h-8 flex items-center">Rating & Reviews</div>
@@ -83,28 +83,28 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
               return (
                 <div
                   key={product.id}
-                  className="space-y-6 p-4 rounded-2xl bg-white/80 dark:bg-white/[0.03] border border-[#E8D3C0] dark:border-white/10 relative flex flex-col shadow-sm"
+                  className="space-y-6 p-4 rounded-2xl bg-white/80 dark:bg-white/[0.03] border border-[#DCDACD] dark:border-white/10 relative flex flex-col shadow-sm"
                 >
                   {/* Remove Button */}
                   <button
                     type="button"
                     onClick={() => onRemove(product.id)}
                     aria-label={`Remove ${product.name} from comparison`}
-                    className="absolute top-3 right-3 p-1.5 rounded-lg text-[#7E636E] hover:text-rose-500 hover:bg-rose-50 transition-colors"
+                    className="absolute top-3 right-3 p-1.5 rounded-lg text-[#68766C] hover:text-rose-500 hover:bg-rose-50 transition-colors"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
 
                   {/* Product Header */}
                   <div className="h-20 flex items-start gap-3">
-                    <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border border-[#E8D3C0] dark:border-white/10 flex items-center justify-center bg-[#FAF5F0] dark:bg-white/5">
+                    <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 border border-[#DCDACD] dark:border-white/10 flex items-center justify-center bg-[#F7F6F0] dark:bg-white/5">
                       <ProductVisual product={product} size="sm" className="w-12 h-12" />
                     </div>
                     <div className="min-w-0 pr-4">
-                      <span className="text-[10px] font-bold text-[#7E636E] dark:text-[#B59FA9] uppercase tracking-wider block">
+                      <span className="text-[10px] font-bold text-[#68766C] dark:text-[#A6B0A5] uppercase tracking-wider block">
                         {product.brand}
                       </span>
-                      <h4 className="font-serif font-bold text-xs text-[#3B1F2B] dark:text-[#FAF3F0] line-clamp-2">
+                      <h4 className="font-serif font-bold text-xs text-[#213A30] dark:text-[#F7F6F0] line-clamp-2">
                         {product.name}
                       </h4>
                     </div>
@@ -112,7 +112,7 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
 
                   {/* Match Compatibility */}
                   <div className="h-10 flex items-center">
-                    <span className="px-3 py-1 rounded-full bg-[#C9D6C3]/40 border border-[#8CA583]/40 text-[#44633B] dark:text-[#C9D6C3] font-bold text-sm flex items-center gap-1.5">
+                    <span className="px-3 py-1 rounded-full bg-[#D4E2D2]/40 border border-[#71896C]/40 text-[#405C45] dark:text-[#D4E2D2] font-bold text-sm flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
                       {matchScore}% Match
                     </span>
@@ -120,21 +120,21 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
 
                   {/* Price & Volume */}
                   <div className="h-8 flex items-center">
-                    <span className="font-serif font-bold text-[#3B1F2B] dark:text-[#FAF3F0] text-sm">
+                    <span className="font-serif font-bold text-[#213A30] dark:text-[#F7F6F0] text-sm">
                       {formatINR(product.priceINR)}
                     </span>
-                    <span className="text-[10px] text-[#CE7F79] ml-1">(demo)</span>
-                    <span className="text-xs text-[#7E636E] dark:text-[#B59FA9] ml-1.5">({product.volumeOrWeight})</span>
+                    <span className="text-[10px] text-[#B86A4B] ml-1">(demo)</span>
+                    <span className="text-xs text-[#68766C] dark:text-[#A6B0A5] ml-1.5">({product.volumeOrWeight})</span>
                   </div>
 
                   {/* Rating */}
-                  <div className="h-8 flex items-center text-xs text-[#7E636E] dark:text-[#B59FA9] gap-1">
-                    <span>Score: <strong className="text-[#3B1F2B] dark:text-[#FAF3F0]">{product.rating}</strong></span>
-                    <span className="text-[10px] text-[#CE7F79]">(demo)</span>
+                  <div className="h-8 flex items-center text-xs text-[#68766C] dark:text-[#A6B0A5] gap-1">
+                    <span>Score: <strong className="text-[#213A30] dark:text-[#F7F6F0]">{product.rating}</strong></span>
+                    <span className="text-[10px] text-[#B86A4B]">(demo)</span>
                   </div>
 
                   {/* Category */}
-                  <div className="h-8 flex items-center text-xs font-semibold text-[#CE7F79] dark:text-[#D9B99B]">
+                  <div className="h-8 flex items-center text-xs font-semibold text-[#B86A4B] dark:text-[#C7A77A]">
                     {product.category}
                   </div>
 
@@ -144,7 +144,7 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
                       {product.keyIngredients.map((ing) => (
                         <span
                           key={ing}
-                          className="px-2 py-0.5 rounded-lg bg-[#FAF5F0] dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-[11px] text-[#3B1F2B] dark:text-[#FAF3F0]"
+                          className="px-2 py-0.5 rounded-lg bg-[#F7F6F0] dark:bg-white/5 border border-[#DCDACD] dark:border-white/10 text-[11px] text-[#213A30] dark:text-[#F7F6F0]"
                         >
                           {ing}
                         </span>
@@ -158,7 +158,7 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
                       {product.targetedConcerns.map((tc) => (
                         <span
                           key={tc}
-                          className="px-2 py-0.5 rounded-lg bg-[#F4D9D6]/40 dark:bg-white/5 border border-[#E8D3C0] dark:border-white/10 text-[10px] text-[#3B1F2B] dark:text-[#FAF3F0] capitalize"
+                          className="px-2 py-0.5 rounded-lg bg-[#E2EADD]/40 dark:bg-white/5 border border-[#DCDACD] dark:border-white/10 text-[10px] text-[#213A30] dark:text-[#F7F6F0] capitalize"
                         >
                           {tc.replace('_', ' ')}
                         </span>
@@ -169,7 +169,7 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
                   {/* Avoid Flags */}
                   <div className="h-12 flex items-center text-xs">
                     {product.avoidFlags.length === 0 ? (
-                      <span className="text-[#8CA583] font-semibold">Clean • 0 Avoid Flags</span>
+                      <span className="text-[#71896C] font-semibold">Clean • 0 Avoid Flags</span>
                     ) : (
                       <span className="text-rose-600 font-semibold text-[11px]">
                         Contains: {product.avoidFlags.join(', ')}
@@ -183,7 +183,7 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
                       href={product.buyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold text-white bg-[#3B1F2B] hover:bg-[#2B141F] dark:bg-[#F4D9D6] dark:text-[#3B1F2B] transition-colors"
+                      className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold text-white bg-[#213A30] hover:bg-[#14271F] dark:bg-[#E2EADD] dark:text-[#213A30] transition-colors"
                     >
                       <span>Buy Direct</span>
                       <ExternalLink className="w-3 h-3" />
@@ -196,11 +196,11 @@ export function CompareModal({ results, isOpen, onClose, onRemove }: Props) {
         </div>
 
         {/* Footer */}
-        <div className="px-6 py-4 border-t border-[#E8D3C0] dark:border-white/10 bg-white/60 dark:bg-white/[0.02] flex justify-end">
+        <div className="px-6 py-4 border-t border-[#DCDACD] dark:border-white/10 bg-white/60 dark:bg-white/[0.02] flex justify-end">
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2 rounded-full text-xs font-semibold bg-[#E8D3C0] dark:bg-white/10 text-[#3B1F2B] dark:text-white hover:bg-[#D9B99B] transition-colors"
+            className="px-5 py-2 rounded-full text-xs font-semibold bg-[#DCDACD] dark:bg-white/10 text-[#213A30] dark:text-white hover:bg-[#C7A77A] transition-colors"
           >
             Close Comparison
           </button>

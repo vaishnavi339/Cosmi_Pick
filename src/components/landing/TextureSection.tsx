@@ -21,11 +21,11 @@ export function TextureSection() {
   return (
     <section
       ref={containerRef}
-      className="relative isolate overflow-clip w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center bg-[#FBF7F4] dark:bg-[#180F14] section-stack my-12"
+      className="relative isolate overflow-clip w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center bg-[#F7F6F0] dark:bg-[#17201B] section-stack my-12"
       style={{ position: 'relative', isolation: 'isolate', overflow: 'clip' }}
     >
       {/* Parallax Background Photo (z-0, NO negative z-index) */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#FBF7F4] dark:bg-[#180F14]">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none bg-[#F7F6F0] dark:bg-[#17201B]">
         <motion.div
           style={{
             y: shouldReduceMotion ? 0 : y,
@@ -44,8 +44,8 @@ export function TextureSection() {
         </motion.div>
 
         {/* Ambient Overlay for High Legibility */}
-        <div className="absolute inset-0 bg-[#3B1F2B]/40 dark:bg-[#180F14]/55 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FBF7F4] via-transparent to-[#FBF7F4] dark:from-[#180F14] dark:to-[#180F14]" />
+        <div className="absolute inset-0 bg-[#213A30]/40 dark:bg-[#17201B]/55 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F7F6F0] via-transparent to-[#F7F6F0] dark:from-[#17201B] dark:to-[#17201B]" />
       </div>
 
       {/* Editorial Copy */}
@@ -55,9 +55,9 @@ export function TextureSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs font-bold tracking-wider uppercase text-[#FBF7F4]"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-xs font-bold tracking-wider uppercase text-[#F7F6F0]"
         >
-          <Droplets className="w-3.5 h-3.5 text-[#F4D9D6]" />
+          <Droplets className="w-3.5 h-3.5 text-[#E2EADD]" />
           <span>Dermal Bio-Compatibility</span>
         </motion.div>
 
@@ -66,7 +66,7 @@ export function TextureSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="font-serif font-bold text-3xl sm:text-5xl lg:text-6xl text-[#FBF7F4] tracking-tight leading-[1.15]"
+          className="font-serif font-bold text-3xl sm:text-5xl lg:text-6xl text-[#F7F6F0] tracking-tight leading-[1.15]"
         >
           Formulations chosen for how they feel, work, and sink into your skin.
         </motion.h2>
@@ -76,7 +76,7 @@ export function TextureSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-sm sm:text-lg text-[#F4D9D6] max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-sm"
+          className="text-sm sm:text-lg text-[#E2EADD] max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-sm"
         >
           Zero artificial silicones or heavy occlusive films. Only lightweight, bio-mimetic barrier lipids designed to melt into your epidermis without residue.
         </motion.p>

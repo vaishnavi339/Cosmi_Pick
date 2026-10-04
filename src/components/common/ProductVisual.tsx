@@ -38,13 +38,13 @@ export function ProductVisual({
     if (b.includes('minimalist') || b.includes('ordinary') || b.includes('paula')) {
       return 'bg-[#F8F5F2] dark:bg-[#211D1A] border-[#E5DDD4] dark:border-[#38312B] text-[#382F28] dark:text-[#EDE6DE]';
     }
-    if (b.includes('plum') || b.includes('dot') || b.includes('laneige') || b.includes('foxtale')) {
+    if (b.includes('forest') || b.includes('dot') || b.includes('laneige') || b.includes('foxtale')) {
       return 'bg-[#FAF3F4] dark:bg-[#25171F] border-[#EED4DC] dark:border-[#422533] text-[#4A2033] dark:text-[#F3DDE5]';
     }
     if (b.includes('cosrx') || b.includes('joseon') || b.includes('sheth') || b.includes('derma') || b.includes('equil')) {
       return 'bg-[#F6F7F3] dark:bg-[#1A2219] border-[#DCE4D5] dark:border-[#2D3D2B] text-[#2F3D2A] dark:text-[#DEE8D9]';
     }
-    return 'bg-[#FAF6F3] dark:bg-[#211B1F] border-[#E8DDD4] dark:border-[#382B33] text-[#3B2932] dark:text-[#EFE2E8]';
+    return 'bg-[#FAF6F3] dark:bg-[#211B1F] border-[#E8DDD4] dark:border-[#382B33] text-[#213A30] dark:text-[#EFE2E8]';
   };
 
   // Aspect sizes
@@ -68,7 +68,7 @@ export function ProductVisual({
     >
       {/* Real Photography Slot on Clean White Rounded Tile */}
       {hasImage ? (
-        <div className="relative w-full h-full rounded-2xl bg-white p-2.5 sm:p-3 border border-[#E8D3C0]/80 shadow-sm flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-full rounded-2xl bg-white p-2.5 sm:p-3 border border-[#DCDACD]/80 shadow-sm flex items-center justify-center overflow-hidden">
           <Image
             src={currentPhoto.image}
             alt={currentPhoto.alt || `${product.brand} ${product.name}, photo ${safeActivePhoto + 1} of ${photos.length}`}
@@ -87,7 +87,7 @@ export function ProductVisual({
 
           {showGalleryControls && (
             <>
-              <span className="absolute top-2 right-2 z-10 rounded-full bg-white/90 dark:bg-[#180F14]/90 px-2 py-1 text-[9px] font-semibold text-[#3B1F2B] dark:text-[#FAF3F0] shadow-sm">
+              <span className="absolute top-2 right-2 z-10 rounded-full bg-white/90 dark:bg-[#17201B]/90 px-2 py-1 text-[9px] font-semibold text-[#213A30] dark:text-[#F7F6F0] shadow-sm">
                 {String(safeActivePhoto + 1).padStart(2, '0')} / {String(photos.length).padStart(2, '0')}
               </span>
               <button
@@ -100,7 +100,7 @@ export function ProductVisual({
                   setImageError(false);
                   setActivePhoto((index) => (index - 1 + photos.length) % photos.length);
                 }}
-                className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/5 bg-white/90 p-1.5 text-[#3B1F2B] shadow-md transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8C4A5A]"
+                className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/5 bg-white/90 p-1.5 text-[#213A30] shadow-md transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416A57]"
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -114,11 +114,11 @@ export function ProductVisual({
                   setImageError(false);
                   setActivePhoto((index) => (index + 1) % photos.length);
                 }}
-                className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/5 bg-white/90 p-1.5 text-[#3B1F2B] shadow-md transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8C4A5A]"
+                className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-black/5 bg-white/90 p-1.5 text-[#213A30] shadow-md transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416A57]"
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
-              <div className="absolute bottom-2 left-2 z-10 flex items-center gap-1 rounded-full bg-white/80 dark:bg-[#180F14]/80 px-2 py-1.5 backdrop-blur-sm" aria-label="Choose product photo">
+              <div className="absolute bottom-2 left-2 z-10 flex items-center gap-1 rounded-full bg-white/80 dark:bg-[#17201B]/80 px-2 py-1.5 backdrop-blur-sm" aria-label="Choose product photo">
                 {photos.map((photo, index) => (
                   <button
                     key={`${photo.image}-${index}`}
@@ -132,7 +132,7 @@ export function ProductVisual({
                       setImageError(false);
                       setActivePhoto(index);
                     }}
-                    className={`h-1.5 rounded-full transition-all ${safeActivePhoto === index ? 'w-4 bg-[#3B1F2B] dark:bg-[#F4D9D6]' : 'w-1.5 bg-[#3B1F2B]/30 dark:bg-white/40 hover:bg-[#3B1F2B]/60'}`}
+                    className={`h-1.5 rounded-full transition-all ${safeActivePhoto === index ? 'w-4 bg-[#213A30] dark:bg-[#E2EADD]' : 'w-1.5 bg-[#213A30]/30 dark:bg-white/40 hover:bg-[#213A30]/60'}`}
                   />
                 ))}
               </div>
@@ -146,7 +146,7 @@ export function ProductVisual({
               target={currentPhoto.imageSource?.url ? '_blank' : undefined}
               rel={currentPhoto.imageSource?.url ? 'noopener noreferrer' : undefined}
               title={`Photo: ${currentPhoto.imageSource?.contributor || 'Open Beauty Facts contributors'} · ${currentPhoto.imageSource?.license || 'CC BY-SA'}`}
-              className="absolute bottom-1 right-1.5 z-10 px-1.5 py-0.5 rounded bg-white/90 dark:bg-[#180F14]/90 backdrop-blur-xs text-[8px] sm:text-[9px] font-medium text-[#7E636E] dark:text-[#B59FA9] border border-[#E8D3C0]/50 hover:text-[#3B1F2B] dark:hover:text-[#FAF3F0] transition-colors line-clamp-1 max-w-[90%]"
+              className="absolute bottom-1 right-1.5 z-10 px-1.5 py-0.5 rounded bg-white/90 dark:bg-[#17201B]/90 backdrop-blur-xs text-[8px] sm:text-[9px] font-medium text-[#68766C] dark:text-[#A6B0A5] border border-[#DCDACD]/50 hover:text-[#213A30] dark:hover:text-[#F7F6F0] transition-colors line-clamp-1 max-w-[90%]"
             >
               Photo: {currentPhoto.imageSource?.contributor || currentPhoto.imageSource?.name || 'Open Beauty Facts contributors'}
             </a>
@@ -165,7 +165,7 @@ export function ProductVisual({
           {/* Large Serif Product Title */}
           <div className="my-auto py-1 w-full px-1">
             <h4
-              className={`font-serif font-bold text-[#3B1F2B] dark:text-[#FAF3F0] line-clamp-2 leading-snug ${
+              className={`font-serif font-bold text-[#213A30] dark:text-[#F7F6F0] line-clamp-2 leading-snug ${
                 size === 'sm'
                   ? 'text-[10px]'
                   : size === 'md'
@@ -182,7 +182,7 @@ export function ProductVisual({
             <span className="inline-block text-[8px] sm:text-[9px] font-semibold px-2 py-0.5 rounded-full bg-white/80 dark:bg-white/10 border border-current/20 opacity-90 line-clamp-1">
               {product.category}
             </span>
-            <span className="text-[8px] sm:text-[9px] text-[#7E636E] dark:text-[#B59FA9] font-medium tracking-wide">
+            <span className="text-[8px] sm:text-[9px] text-[#68766C] dark:text-[#A6B0A5] font-medium tracking-wide">
               Photo coming soon
             </span>
           </div>

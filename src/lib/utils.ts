@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatINR(amount: number): string {
-  return `₹${amount.toLocaleString('en-IN')}`;
+  return `${String.fromCharCode(0x20b9)}${amount.toLocaleString('en-IN')}`;
 }
 
 export function truncate(text: string, maxLen: number): string {
