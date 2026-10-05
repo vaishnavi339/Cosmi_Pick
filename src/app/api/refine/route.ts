@@ -4,6 +4,7 @@ import { Product, ExtractedFaceTraits, UserRequirements } from '@/types';
 import { scoreAndRankProducts } from '@/lib/scoring';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { activeCategoryConfig } from '@/config/category.config';
+import { selectRoutineRecommendations } from '@/lib/routine-recommendations';
 
 export async function POST(req: NextRequest) {
   try {
@@ -43,11 +44,9 @@ export async function POST(req: NextRequest) {
       refinementQuery
     );
 
-    const top5 = rankedRecommendations.slice(0, 5);
-
     return NextResponse.json({
       success: true,
-      recommendations: top5,
+      recommendations: selectRoutineRecommendations(rankedRecommendations),
       appliedRefinement: refinementQuery,
     });
   } catch (error: any) {

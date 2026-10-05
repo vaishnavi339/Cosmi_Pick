@@ -17,6 +17,7 @@ export default function ScanWizardPage() {
   const [traits, setTraits] = useState<ExtractedFaceTraits | null>(null);
   const [requirements, setRequirements] = useState<UserRequirements | null>(null);
   const [recommendations, setRecommendations] = useState<RecommendationResult[]>([]);
+  const [routineRecommendations, setRoutineRecommendations] = useState<RecommendationResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -70,6 +71,7 @@ export default function ScanWizardPage() {
       const data = await response.json();
       if (data.recommendations && data.recommendations.length > 0) {
         setRecommendations(data.recommendations);
+        setRoutineRecommendations(data.routineRecommendations || data.recommendations);
         setRequirements(data.parsedRequirements);
         setCurrentStep(5);
 
@@ -101,6 +103,7 @@ export default function ScanWizardPage() {
     setTraits(null);
     setRequirements(null);
     setRecommendations([]);
+    setRoutineRecommendations([]);
     setErrorMessage(null);
   };
 
@@ -167,6 +170,7 @@ export default function ScanWizardPage() {
       {!loading && currentStep === 5 && traits && requirements && (
         <StepResults
           initialResults={recommendations}
+          routineResults={routineRecommendations}
           traits={traits}
           requirements={requirements}
           onRestart={handleRestart}

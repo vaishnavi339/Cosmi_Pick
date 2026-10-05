@@ -23,6 +23,7 @@ interface Props {
 
 export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props) {
   const [activeTab, setActiveTab] = useState<'am' | 'pm'>('am');
+  const [selectedProducts, setSelectedProducts] = useState<Record<string, string>>({});
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -54,13 +55,9 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
     r.product.category.toLowerCase().includes('spf')
   );
 
-  // Fallback product picker if specific category missing
-  const getProductForStep = (
-    candidates: RecommendationResult[],
-    fallbackIdx: number
-  ) => {
-    return candidates[0] || results[fallbackIdx % results.length];
-  };
+  // Keep each routine step in its own category and let the user choose an alternative.
+  const getProductForStep = (key: string, candidates: RecommendationResult[]) =>
+    candidates.find((candidate) => candidate.product.id === selectedProducts[key]) || candidates[0] || null;
 
   const amSteps = [
     {
@@ -68,28 +65,28 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
       role: 'Cleanse & Refresh',
       time: '1 minute',
       instructions: 'Wash with lukewarm water and a pea-sized amount. Pat dry gently with a clean towel—never rub.',
-      product: getProductForStep(cleansers, 0),
+      key: 'am-cleanser', candidates: cleansers, product: getProductForStep('am-cleanser', cleansers),
     },
     {
       step: 2,
       role: 'Calibrate & Target',
       time: '2–3 drops',
       instructions: 'Press 2–3 drops onto slightly damp skin. Pat across your T-zone and cheeks until fully absorbed.',
-      product: getProductForStep(serums, 0),
+      key: 'am-serum', candidates: serums, product: getProductForStep('am-serum', serums),
     },
     {
       step: 3,
       role: 'Seal Barrier Moisture',
       time: 'Dime-sized amount',
       instructions: 'Smooth over face and neck to lock in active hydration and protect against daily moisture loss.',
-      product: getProductForStep(moisturizers, 1),
+      key: 'am-moisturizer', candidates: moisturizers, product: getProductForStep('am-moisturizer', moisturizers),
     },
     {
       step: 4,
       role: 'Broad Spectrum Defense',
       time: 'Two finger lengths',
       instructions: 'Generously apply across face, ears, and neck 15 minutes before heading outdoors. Reapply every 2 hours.',
-      product: getProductForStep(sunscreens, 2),
+      key: 'am-sunscreen', candidates: sunscreens, product: getProductForStep('am-sunscreen', sunscreens),
     },
   ];
 
@@ -99,21 +96,21 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
       role: 'Purify Daily Buildup',
       time: '1–2 minutes',
       instructions: 'Gently dissolve sunscreen, excess sebum, and environmental pollution without stripping natural barrier lipids.',
-      product: getProductForStep(cleansers, 0),
+      key: 'pm-cleanser', candidates: cleansers, product: getProductForStep('pm-cleanser', cleansers),
     },
     {
       step: 2,
       role: 'Night Treatment & Renewal',
       time: '3–4 drops',
       instructions: 'Apply your restorative active treatment while cell turnover peaks during sleep. Wait 60 seconds before moisturizing.',
-      product: getProductForStep(serums, 1),
+      key: 'pm-serum', candidates: serums, product: getProductForStep('pm-serum', serums),
     },
     {
       step: 3,
       role: 'Overnight Barrier Recovery',
       time: 'Nickel-sized amount',
       instructions: 'Seal skin with ceramides and calming botanicals to prevent nocturnal transepidermal water loss.',
-      product: getProductForStep(moisturizers, 2),
+      key: 'pm-moisturizer', candidates: moisturizers, product: getProductForStep('pm-moisturizer', moisturizers),
     },
   ];
 
@@ -192,7 +189,7 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
         {/* Routine Steps Body */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
           {activeSteps.map((stepItem) => {
-            const { step, role, time, instructions, product } = stepItem;
+            const { step, role, time, instructions, product, key, candidates } = stepItem;
             return (
               <div
                 key={step}
@@ -204,20 +201,21 @@ export function RoutineBuilderModal({ results, traits, isOpen, onClose }: Props)
                     {step}
                   </div>
 
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden border border-[#DCDACD]/60 dark:border-white/10 flex-shrink-0">
+                  {product && <div className="w-16 h-16 rounded-2xl overflow-hidden border border-[#DCDACD]/60 dark:border-white/10 flex-shrink-0">
                     <ProductVisual product={product.product} size="fill" />
-                  </div>
+                  </div>}
 
                   <div className="min-w-0">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-[#B86A4B] dark:text-[#C7A77A] block">
                       Step {step} • {role}
                     </span>
-                    <h4 className="font-serif font-bold text-base text-[#213A30] dark:text-[#F7F6F0] truncate">
-                      {product.product.name}
-                    </h4>
-                    <span className="text-xs text-[#68766C] dark:text-[#A6B0A5]">
-                      {product.product.brand} • {formatINR(product.product.priceINR)}
-                    </span>
+                    {product ? <>
+                      <h4 className="font-serif font-bold text-base text-[#213A30] dark:text-[#F7F6F0] truncate">{product.product.name}</h4>
+                      <span className="text-xs text-[#68766C] dark:text-[#A6B0A5]">{product.product.brand} • {formatINR(product.product.priceINR)}</span>
+                      {candidates.length > 1 && <select aria-label={`Choose ${role} product`} value={product.product.id} onChange={(event) => setSelectedProducts((current) => ({ ...current, [key]: event.target.value }))} className="mt-2 block max-w-full rounded-lg border border-[#DCDACD] bg-white px-2 py-1 text-xs text-[#213A30]">
+                        {candidates.map((candidate) => <option key={candidate.product.id} value={candidate.product.id}>{candidate.product.brand} — {candidate.product.name}</option>)}
+                      </select>}
+                    </> : <p className="text-sm text-[#68766C]">No matching {role.toLowerCase()} in this product list yet.</p>}
                   </div>
                 </div>
 

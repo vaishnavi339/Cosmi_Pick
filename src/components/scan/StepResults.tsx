@@ -25,6 +25,7 @@ import { ProductLookupSection } from '@/components/results/ProductLookupSection'
 
 interface Props {
   initialResults: RecommendationResult[];
+  routineResults?: RecommendationResult[];
   traits: ExtractedFaceTraits;
   requirements: UserRequirements;
   onRestart: () => void;
@@ -36,6 +37,7 @@ type SortOption = 'match' | 'price_asc' | 'price_desc' | 'rating';
 
 export function StepResults({
   initialResults,
+  routineResults = initialResults,
   traits,
   requirements,
   onRestart,
@@ -451,7 +453,7 @@ export function StepResults({
       />
 
       <RoutineBuilderModal
-        results={results}
+        results={routineResults}
         traits={traits}
         isOpen={isRoutineModalOpen}
         onClose={() => setIsRoutineModalOpen(false)}

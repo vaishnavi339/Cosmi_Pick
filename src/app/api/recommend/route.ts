@@ -5,6 +5,7 @@ import { scoreAndRankProducts } from '@/lib/scoring';
 import { parseRequirementsWithClaude, generateExplanationsWithClaude } from '@/lib/claude';
 import { checkRateLimit } from '@/lib/rate-limit';
 import { activeCategoryConfig } from '@/config/category.config';
+import { selectRoutineRecommendations } from '@/lib/routine-recommendations';
 
 export async function POST(req: NextRequest) {
   try {
@@ -70,6 +71,7 @@ export async function POST(req: NextRequest) {
 
     // Take top 5
     const top5 = rankedRecommendations.slice(0, 5);
+    const routinePicks = selectRoutineRecommendations(rankedRecommendations);
 
     // 4. Try generating custom AI explanations with Claude for top 5
     const claudeExplanations = await generateExplanationsWithClaude(
@@ -88,7 +90,9 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      recommendations: top5,
+      recommendations: routinePicks,
+      // The routine builder needs category coverage beyond the five general picks.
+      routineRecommendations: rankedRecommendations,
       allCount: rankedRecommendations.length,
       parsedRequirements,
       scoringWeights: activeCategoryConfig.scoringWeights,
